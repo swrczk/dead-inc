@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d96e6629c744ea93169635a0ea2df7, type: 3}
   m_Name: NpcPartData_Chest_example
   m_EditorClassIdentifier: 
-  BodyPart: 0
+  BodyPart: 1
   Icon: {fileID: 0}
-  Weakness: {fileID: 0}
+  Weakness: {fileID: 11400000, guid: 27f003139168d994ca270bbf0415f1dd, type: 2}
