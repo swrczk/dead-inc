@@ -3,18 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+[CreateAssetMenu(fileName = "GameSettings", menuName = "GameSettings")]
 public class GameSettings : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int Time;
 }
