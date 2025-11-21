@@ -5,5 +5,4 @@ public class WeaknessTraitData : ScriptableObject
 {
     public string Name;
     public Sprite Icon;
-    public AudioClip Sound;
 }
