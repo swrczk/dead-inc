@@ -12,27 +12,27 @@ public class GameTimer : MonoBehaviour
     public float gameDuration = 120f;
 
     [Header("Zakres czasu pracy (wirtualny zegar)")]
-    [Tooltip("Godzina rozpoczêcia pracy (0-23).")]
+    [Tooltip("Godzina rozpocz?cia pracy (0-23).")]
     public int workStartHour = 8;
 
-    [Tooltip("Godzina zakoñczenia pracy (0-23).")]
+    [Tooltip("Godzina zako?czenia pracy (0-23).")]
     public int workEndHour = 16;
 
     [Header("UI")]
-    [Tooltip("Tekst w topbarze pokazuj¹cy czas, np. 08:00, 12:37, 15:59.")]
+    [Tooltip("Tekst w topbarze pokazuj?cy czas, np. 08:00, 12:37, 15:59.")]
     public TextMeshProUGUI timerText;
 
-    [Tooltip("Obrazek okrêgu pokazuj¹cy pozosta³y czas (Image typu Filled, Radial).")]
+    [Tooltip("Obrazek okr?gu pokazuj?cy pozosta?y czas (Image typu Filled, Radial).")]
     public Image timeCircleImage;
 
     [Header("Ustawienia")]
-    [Tooltip("Czy timer ma wystartowaæ automatycznie w Start().")]
+    [Tooltip("Czy timer ma wystartowa? automatycznie w Start().")]
     public bool autoStart = true;
 
-    [Tooltip("Jeœli true, po koñcu gry ustawiamy Time.timeScale = 0.")]
+    [Tooltip("Je?li true, po ko?cu gry ustawiamy Time.timeScale = 0.")]
     public bool stopTimeOnEnd = true;
 
-    private float elapsedTime = 0f;   // ile realnych sekund minê³o w tej rundzie
+    private float elapsedTime = 0f;   // ile realnych sekund min?o w tej rundzie
     private bool isRunning = false;
 
     public event Action GameEnded;
@@ -51,7 +51,7 @@ public class GameTimer : MonoBehaviour
     private void Start()
     {
         elapsedTime = 0f;
-        UpdateTimerUI();  // na start np. 08:00 i pe³ne kó³ko
+        UpdateTimerUI();  // na start np. 08:00 i pe?ne k?ko
 
         if (autoStart)
             StartTimer();
@@ -123,11 +123,11 @@ public class GameTimer : MonoBehaviour
             }
         }
 
-        // --- aktualizacja okrêgu czasu ---
+        // --- aktualizacja okr?gu czasu ---
         if (timeCircleImage != null && gameDuration > 0f)
         {
-            float t = Mathf.Clamp01(elapsedTime / gameDuration); // 0..1 (ile minê³o)
-            float remaining01 = 1f - t;                          // 1..0 (ile zosta³o)
+            float t = Mathf.Clamp01(elapsedTime / gameDuration); // 0..1 (ile min?o)
+            float remaining01 = 1f - t;                          // 1..0 (ile zosta?o)
 
             timeCircleImage.fillAmount = remaining01;
         }
@@ -148,14 +148,14 @@ public class GameTimer : MonoBehaviour
         if (penaltySeconds <= 0f)
             return;
 
-        // jeœli gra ju¿ nie trwa, nie ma sensu nak³adaæ kary
+        // je?li gra ju? nie trwa, nie ma sensu nak?ada? kary
         if (!isRunning)
             return;
 
-        // zwiêkszamy elapsedTime => mniej czasu zostaje
+        // zwi?kszamy elapsedTime => mniej czasu zostaje
         elapsedTime += penaltySeconds;
 
-        // upewniamy siê, ¿e nie przekroczymy koñca rundy
+        // upewniamy si?, ?e nie przekroczymy ko?ca rundy
         if (elapsedTime >= gameDuration)
         {
             elapsedTime = gameDuration;
@@ -164,7 +164,7 @@ public class GameTimer : MonoBehaviour
             return;
         }
 
-        // odœwie¿ UI po zmianie czasu
+        // od?wie? UI po zmianie czasu
         UpdateTimerUI();
 
         Debug.Log($"[GameTimer] Kara czasowa: -{penaltySeconds}s, elapsed={elapsedTime}, remaining={GetRemainingRealTime()}");

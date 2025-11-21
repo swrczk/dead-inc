@@ -44,16 +44,16 @@ public class JiraTaskUIManager : MonoBehaviour
 
     private void OnTaskCompleted(ActiveJiraTask active)
     {
-        // Opcjonalny efekt wizualny przy ukoñczeniu ticketa
+        // Opcjonalny efekt wizualny przy uko?czeniu ticketa
         if (entryMap.TryGetValue(active, out var entry) && entry != null)
         {
-            // np. rozjaœnij badge punktów
+            // np. rozja?nij badge punkt?w
             if (entry.pointsBackground != null)
             {
                 entry.pointsBackground.color = Color.white;
             }
 
-            // oraz zaktualizuj progress, gdyby coœ siê jeszcze nie odœwie¿y³o
+            // oraz zaktualizuj progress, gdyby co? si? jeszcze nie od?wie?y?o
             entry.UpdateProgressUI();
         }
     }

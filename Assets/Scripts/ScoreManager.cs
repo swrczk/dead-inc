@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
 
     [Header("Ustawienia")]
-    [Tooltip("Prefix/suffix do wyœwietlania punktów, np. ' pkt'.")]
+    [Tooltip("Prefix/suffix do wy?wietlania punkt?w, np. ' pkt'.")]
     public string pointsSuffix = " pkt";
 
     public int CurrentScore { get; private set; }
@@ -47,7 +47,7 @@ public class ScoreManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Hook, który zawo³asz przy zabiciu NPC (z dowoln¹ iloœci¹ punktów).
+    /// Hook, kt?ry zawo?asz przy zabiciu NPC (z dowoln? ilo?ci? punkt?w).
     /// </summary>
     public void OnNpcKilled(int baseKillPoints)
     {

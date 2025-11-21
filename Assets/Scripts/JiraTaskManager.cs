@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class JiraTaskManager : MonoBehaviour
 {
-    [Header("Dostêpne tickety (asset-y JiraTaskData)")]
+    [Header("Dost?pne tickety (asset-y JiraTaskData)")]
     public List<JiraTaskData> possibleTasks;
 
     [Header("Parametry systemu")]
@@ -12,12 +12,12 @@ public class JiraTaskManager : MonoBehaviour
     public float minDelayBetweenTasks = 5f;
     public float maxDelayBetweenTasks = 15f;
 
-    [Header("Aktywne tickety (podgl¹d)")]
+    [Header("Aktywne tickety (podgl?d)")]
     public List<ActiveJiraTask> activeTasks = new List<ActiveJiraTask>();
 
     private float taskTimer;
 
-    // Eventy do UI / punktów
+    // Eventy do UI / punkt?w
     public event Action<ActiveJiraTask> TaskAdded;
     public event Action<ActiveJiraTask> TaskCompleted;
     public event Action<ActiveJiraTask> TaskRemoved;
@@ -55,7 +55,7 @@ public class JiraTaskManager : MonoBehaviour
         if (chosen == null)
             return;
 
-        // np. nie chcemy duplikatów tego samego assetu
+        // np. nie chcemy duplikat?w tego samego assetu
         foreach (var t in activeTasks)
         {
             if (t.Data == chosen)
@@ -71,13 +71,13 @@ public class JiraTaskManager : MonoBehaviour
 
     private JiraTaskData GetRandomTask()
     {
-        // proste równomierne losowanie – mo¿esz póŸniej dodaæ wagi, jeœli chcesz
+        // proste r?wnomierne losowanie ? mo?esz p?niej doda? wagi, je?li chcesz
         return possibleTasks[UnityEngine.Random.Range(0, possibleTasks.Count)];
     }
 
     /// <summary>
-    /// Docelowa wersja – wo³aj to przy zabiciu NPC, gdy bêdziesz mia³ mechanikê killu.
-    /// Na razie mo¿esz tego nie u¿ywaæ.
+    /// Docelowa wersja ? wo?aj to przy zabiciu NPC, gdy b?dziesz mia? mechanik? killu.
+    /// Na razie mo?esz tego nie u?ywa?.
     /// </summary>
     public void ReportKill(NpcPartData killedBodyPart, MurderousItemData usedItem)
     {
@@ -91,7 +91,7 @@ public class JiraTaskManager : MonoBehaviour
             if (active.IsCompleted || active.IsFailed || active.Data == null)
                 continue;
 
-            // Forbidden – jeœli chcesz, mo¿esz traktowaæ je jako fail
+            // Forbidden ? je?li chcesz, mo?esz traktowa? je jako fail
             if (KillMatchesAnyTask(active.Data.Forbidden, killedBodyPart, usedItem))
             {
                 active.IsFailed = true;
@@ -100,7 +100,7 @@ public class JiraTaskManager : MonoBehaviour
                 continue;
             }
 
-            // Required – czy ten kill pasuje do któregoœ warunku?
+            // Required ? czy ten kill pasuje do kt?rego? warunku?
             bool matchesRequired = KillMatchesAnyTask(active.Data.Required, killedBodyPart, usedItem);
             if (!matchesRequired)
                 continue;
@@ -113,13 +113,13 @@ public class JiraTaskManager : MonoBehaviour
                 TaskCompleted?.Invoke(active);
                 completedNow.Add(active);
 
-                // punkty za ukoñczenie ticketa
+                // punkty za uko?czenie ticketa
                 if (ScoreManager.Instance != null)
                 {
                     ScoreManager.Instance.AddPoints(active.Data.Points);
                 }
 
-                Debug.Log($"JiraTaskManager: ticket ukoñczony! +{active.Data.Points} punktów");
+                Debug.Log($"JiraTaskManager: ticket uko?czony! +{active.Data.Points} punkt?w");
             }
         }
 
@@ -151,7 +151,7 @@ public class JiraTaskManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Debug: rêczne zwiêkszanie postêpu ticketa (do testowania UI bez zabijania NPC).
+    /// Debug: r?czne zwi?kszanie post?pu ticketa (do testowania UI bez zabijania NPC).
     /// </summary>
     public void DebugIncrementTask(ActiveJiraTask task)
     {
@@ -165,7 +165,7 @@ public class JiraTaskManager : MonoBehaviour
             task.IsCompleted = true;
             TaskCompleted?.Invoke(task);
 
-            // punkty za debugowe ukoñczenie ticketa
+            // punkty za debugowe uko?czenie ticketa
             if (ScoreManager.Instance != null)
             {
                 ScoreManager.Instance.AddPoints(task.Data.Points);
@@ -174,7 +174,7 @@ public class JiraTaskManager : MonoBehaviour
             activeTasks.Remove(task);
             TaskRemoved?.Invoke(task);
 
-            Debug.Log($"[DEBUG] JiraTaskManager: ticket ukoñczony! +{task.Data.Points} punktów");
+            Debug.Log($"[DEBUG] JiraTaskManager: ticket uko?czony! +{task.Data.Points} punkt?w");
         }
     }
 

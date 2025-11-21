@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameOverUI : MonoBehaviour
 {
     [Header("UI")]
-    [Tooltip("Panel z podsumowaniem (root GameObject, który w³¹czamy na koñcu gry).")]
+    [Tooltip("Panel z podsumowaniem (root GameObject, kt?ry w??czamy na ko?cu gry).")]
     public GameObject gameOverPanel;
 
     [Tooltip("Tekst z wynikiem gracza.")]
@@ -57,14 +57,14 @@ public class GameOverUI : MonoBehaviour
         }
     }
 
-    // Podpi¹æ pod przycisk "Zagraj jeszcze raz"
+    // Podpi?? pod przycisk "Zagraj jeszcze raz"
     public void OnRestartButton()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // Podpi¹æ pod przycisk "Wyjœcie" (opcjonalnie)
+    // Podpi?? pod przycisk "Wyj?cie" (opcjonalnie)
     public void OnQuitButton()
     {
         Application.Quit();

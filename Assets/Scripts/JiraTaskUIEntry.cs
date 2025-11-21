@@ -4,38 +4,38 @@ using UnityEngine.UI;
 public class JiraTaskUIEntry : MonoBehaviour
 {
     [Header("Ikony celu")]
-    [Tooltip("Ikona cechy NPC (np. w³osy, ubranie).")]
+    [Tooltip("Ikona cechy NPC (np. w?osy, ubranie).")]
     public Image bodyPartIcon;
 
-    [Tooltip("Ikona sposobu zabicia / przedmiotu (np. kabel, piorun, ogieñ).")]
+    [Tooltip("Ikona sposobu zabicia / przedmiotu (np. kabel, piorun, ogie?).")]
     public Image itemIcon;
 
     [Header("Punkty")]
-    [Tooltip("Tekst z iloœci¹ punktów, np. +15.")]
+    [Tooltip("Tekst z ilo?ci? punkt?w, np. +15.")]
     public Text pointsText;
 
-    [Tooltip("T³o / badge punktów, zmienia kolor w zale¿noœci od nagrody.")]
+    [Tooltip("T?o / badge punkt?w, zmienia kolor w zale?no?ci od nagrody.")]
     public Image pointsBackground;
 
     public Color lowPointsColor = Color.green;
     public Color mediumPointsColor = Color.yellow;
     public Color highPointsColor = Color.red;
 
-    [Tooltip("Punkty od których zaczyna siê œrednia nagroda.")]
+    [Tooltip("Punkty od kt?rych zaczyna si? ?rednia nagroda.")]
     public int mediumPointsThreshold = 15;
 
-    [Tooltip("Punkty od których zaczyna siê wysoka nagroda.")]
+    [Tooltip("Punkty od kt?rych zaczyna si? wysoka nagroda.")]
     public int highPointsThreshold = 30;
 
-    [Header("Powtórzenia")]
-    [Tooltip("Tekst z wymaganymi powtórzeniami, np. x3.")]
+    [Header("Powt?rzenia")]
+    [Tooltip("Tekst z wymaganymi powt?rzeniami, np. x3.")]
     public Text repetitionsText;
 
-    [Tooltip("Tekst postêpu, np. 1/3.")]
+    [Tooltip("Tekst post?pu, np. 1/3.")]
     public Text progressText;
 
     [Header("Debug")]
-    [Tooltip("Przycisk debugowy do rêcznego zwiêkszania progresu.")]
+    [Tooltip("Przycisk debugowy do r?cznego zwi?kszania progresu.")]
     public Button debugButton;
 
     [HideInInspector] public ActiveJiraTask activeTask;
@@ -50,7 +50,7 @@ public class JiraTaskUIEntry : MonoBehaviour
         {
             var data = activeTask.Data;
 
-            // Bierzemy pierwszy warunek Required jako „g³ówny”
+            // Bierzemy pierwszy warunek Required jako ?g??wny?
             Task primary = null;
             if (data.Required != null && data.Required.Count > 0)
                 primary = data.Required[0];
@@ -69,7 +69,7 @@ public class JiraTaskUIEntry : MonoBehaviour
                 }
             }
 
-            // --- IKONA PRZEDMIOTU / SPOSOBU ŒMIERCI (ItemToUse.Icon) ---
+            // --- IKONA PRZEDMIOTU / SPOSOBU ?MIERCI (ItemToUse.Icon) ---
             if (itemIcon != null)
             {
                 if (primary != null && primary.ItemToUse != null && primary.ItemToUse.Icon != null)
@@ -100,7 +100,7 @@ public class JiraTaskUIEntry : MonoBehaviour
                 pointsBackground.color = c;
             }
 
-            // --- POWTÓRZENIA ---
+            // --- POWT?RZENIA ---
             if (repetitionsText != null)
             {
                 repetitionsText.text = $"x{data.Amount}";

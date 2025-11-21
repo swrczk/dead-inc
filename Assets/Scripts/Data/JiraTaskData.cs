@@ -18,6 +18,6 @@ public class Task
     public MurderousItemData ItemToUse;
 
     [Header("Ikony do UI (opcjonalne)")]
-    public Sprite BodyPartIcon;   // np. blond w³osy / koszula w kratê
-    public Sprite ItemIcon;       // np. piorun / kabel / p³omieñ
+    public Sprite BodyPartIcon;   // np. blond w?osy / koszula w krat?
+    public Sprite ItemIcon;       // np. piorun / kabel / p?omie?
 }
