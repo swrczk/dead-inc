@@ -3816,6 +3816,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 579678553873219184, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dbbcd83bcc9f74f089f03d7d4a597863, type: 3}
     - target: {fileID: 757668960474090614, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4046,6 +4050,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6932735364964109800, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184591106256047782, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184591106256047782, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7501977812360197908, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
