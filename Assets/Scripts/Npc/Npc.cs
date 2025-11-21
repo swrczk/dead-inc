@@ -20,6 +20,7 @@ public class Npc : MonoBehaviour
 
     public void Setup(string id, NpcData npcData)
     {
+        Debug.Log($"[NPC] Setup called for id={id}, npcData={npcData?.name}");
         Id = id;
         _data = npcData;
         head.sprite = _data.Head.Icon;
@@ -28,42 +29,60 @@ public class Npc : MonoBehaviour
     }
 
     /// <summary>
-    /// Sprawdza, czy ten NPC jest wra¿liwy na dany typ ataku / przedmiot.
+    /// Czy ten NPC jest wra¿liwy na dany item – na podstawie Weakness
+    /// przypiêtego do Head/Body i Weakness z MurderousItemData.
     /// </summary>
     public bool IsVulnerableTo(MurderousItemData item)
     {
-        if (_data == null || _data.Vulnerabilities == null || item == null)
+        if (_data == null || item == null || item.Weakness == null)
             return false;
 
-        return _data.Vulnerabilities.Contains(item);
+        // g³owa
+        if (_data.Head != null && _data.Head.Weakness == item.Weakness)
+            return true;
+
+        // cia³o
+        if (_data.Body != null && _data.Body.Weakness == item.Weakness)
+            return true;
+
+        return false;
     }
 
     /// <summary>
-    /// Zabija NPC tym przedmiotem.
+    /// Zabija NPC, jeœli item pasuje do jego Weakness.
+    /// Zg³asza kill do punktów i systemu ticketów.
     /// </summary>
     public void Kill(MurderousItemData usedItem)
     {
-        if (!gameObject.activeInHierarchy)
+        if (!IsVulnerableTo(usedItem))
             return;
 
-        // Zatrzymaj ruch
+        // zatrzymanie ruchu
         if (pathController != null)
             pathController.enabled = false;
 
-        // Punkty za zabicie
+        // punkty za zabicie
         if (ScoreManager.Instance != null)
         {
-            int baseKillPoints = 5;
+            int baseKillPoints = 5; // albo wyci¹gniête z usedItem / NpcData
             ScoreManager.Instance.OnNpcKilled(baseKillPoints);
         }
 
-        // Zg³oœ zabójstwo do tasków
-        JiraTaskManager jira = FindObjectOfType<JiraTaskManager>();
-        if (jira != null && _data != null)
+        // ustalamy, która czêœæ cia³a by³a "trafiona" – przyda siê do ticketów
+        NpcPartData killedPart = null;
+        if (_data.Head != null && _data.Head.Weakness == usedItem.Weakness)
+            killedPart = _data.Head;
+        else if (_data.Body != null && _data.Body.Weakness == usedItem.Weakness)
+            killedPart = _data.Body;
+
+        // zg³oszenie do JiraTaskManager, ¿eby liczy³y siê tickety
+        var jira = FindObjectOfType<JiraTaskManager>();
+        if (jira != null && killedPart != null)
         {
-            jira.ReportKill(_data.Head, usedItem);
+            jira.ReportKill(killedPart, usedItem);
         }
 
+        // faktyczne "zabicie"
         Destroy(gameObject);
     }
 
