@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: UderzenieWeaknessTrait
   m_EditorClassIdentifier: 
   Name: Uderzenie
+  Icon: {fileID: 21300000, guid: b5b057af18dc35e4ea8382a7725957f9, type: 3}

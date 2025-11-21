@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: TemperaturaWeaknessTrait
   m_EditorClassIdentifier: 
   Name: Temperatura
+  Icon: {fileID: 21300000, guid: 3fa17e64311b15347980505f7b05e52d, type: 3}

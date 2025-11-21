@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PradWeaknessTrait
   m_EditorClassIdentifier: 
   Name: "Pr\u0105d"
+  Icon: {fileID: 21300000, guid: 080c8b7b2e14e7c499d0a62009c1ef35, type: 3}

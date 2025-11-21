@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: StrachWeaknessTrait
   m_EditorClassIdentifier: 
   Name: Strach
+  Icon: {fileID: 21300000, guid: 4c9858b8edfaa964187d0a2db94986ca, type: 3}

@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081169030fe74f2dba0a2253792362ea, type: 3}
-  m_Name: GodWeaknessTrait
+  m_Script: {fileID: 11500000, guid: 3c2194bf92854275ac977a2d2bf1b4f6, type: 3}
+  m_Name: ChemistryFalling
   m_EditorClassIdentifier: 
-  Name: Kara Boska
-  Icon: {fileID: 21300000, guid: 1cd14b87c02d01f438028223786c7193, type: 3}
+  Head: {fileID: 11400000, guid: 98287743979db7c4f9394ff7b0bedeaa, type: 2}
+  Body: {fileID: 11400000, guid: 3f5ccc76b9964f144950ba35238105d1, type: 2}
+  Vulnerabilities: []
