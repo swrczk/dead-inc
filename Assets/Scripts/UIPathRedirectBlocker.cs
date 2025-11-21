@@ -68,10 +68,10 @@ public class UIPathRedirectBlocker : MonoBehaviour, IPointerClickHandler
 
         foreach (var mover in movers)
         {
-            if (mover == null || mover.path == null) continue;
+            if (mover == null || mover.Path == null) continue;
 
             // interesuj? nas tylko NPC na tej alejce
-            if (mover.path != sourcePath) continue;
+            if (mover.Path != sourcePath) continue;
 
             // je?li NPC jest dalej ni? punkt blokady ? nie dotykamy go
             if (blockWaypointIndex >= 0 && mover.currentIndex > blockWaypointIndex) continue;

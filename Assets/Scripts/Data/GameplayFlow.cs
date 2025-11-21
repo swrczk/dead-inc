@@ -15,9 +15,9 @@ public class SingleStage
     public float NpcSpawnDelay = 1;
     public bool IsInfinite;
 
-    public List<NpcData> GetNpcQueue()
+    public List<NpcSet> GetNpcQueue()
     {
-        var result = new List<NpcData>();
+        var result = new List<NpcSet>();
 
         foreach (var npcSet in AvailableNpcs)
         {
@@ -25,7 +25,7 @@ public class SingleStage
 
             for (int i = 0; i < npcSet.Amount; i++)
             {
-                result.Add(npcSet.NpcType);
+                result.Add(npcSet);
             }
         }
 
@@ -34,7 +34,7 @@ public class SingleStage
         return result;
     }
 
-    private void Shuffle(List<NpcData> list)
+    private void Shuffle(List<NpcSet> list)
     {
         for (int i = list.Count - 1; i > 0; i--)
         {
@@ -58,4 +58,4 @@ public class NpcSet
     public WaypointPath shoppingPath;
     public WaypointPath exitPath;
     public int lapsToDo = 1;
-}
+} 

@@ -6,4 +6,5 @@ public class GameSettings : ScriptableObject
     public int Time;
     public int RewardPoints;
     public int PenaltyPoints;
+    public Vector3 NpcScale;
 }

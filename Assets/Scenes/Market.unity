@@ -730,6 +730,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 469699283472735164, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469699283472735164, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469699283472735164, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469699283472735164, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 757668960474090614, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -745,6 +761,22 @@ PrefabInstance:
     - target: {fileID: 757668960474090614, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 992592224443130510, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 992592224443130510, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 992592224443130510, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 992592224443130510, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1862977297460455338, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: supermarketCanvasTransform
@@ -833,6 +865,50 @@ PrefabInstance:
     - target: {fileID: 4448469880111477032, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_Name
       value: ComputerUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576672274595326741, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212479457737419794, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212479457737419794, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212479457737419794, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212479457737419794, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932735364964109800, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932735364964109800, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932735364964109800, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932735364964109800, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 108.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932735364964109800, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501977812360197908, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8103260274995425111, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchorMax.y

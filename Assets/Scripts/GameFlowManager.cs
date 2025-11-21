@@ -105,16 +105,16 @@ public class GameFlowManager : MonoBehaviour
 
         foreach (var npcData in queue)
         {
-            Debug.Log($"[GameFlow] Attempting to spawn NPC: {npcData.name}");
+            Debug.Log($"[GameFlow] Attempting to spawn NPC: {npcData.NpcType.name}");
 
-            if (_npcSpawner.TrySpawnNPC(npcData, out var npcObj))
+            if (_npcSpawner.TrySpawnNPC( npcData, _gameSettings.NpcScale, out var npcObj))
             {
                 _currentNpcs.Add(npcObj);
                 Debug.Log($"[GameFlow] Spawned NPC {npcObj.Id}. Active NPC count: {_currentNpcs.Count}");
             }
             else
             {
-                Debug.LogError($"[GameFlow] FAILED to spawn NPC {npcData.name}");
+                Debug.LogError($"[GameFlow] FAILED to spawn NPC {npcData.NpcType.name}");
             }
 
             await UniTask.Delay((int)(stage.NpcSpawnDelay * 1000));

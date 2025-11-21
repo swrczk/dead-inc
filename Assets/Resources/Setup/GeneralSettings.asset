@@ -15,3 +15,4 @@ MonoBehaviour:
   Time: 0
   RewardPoints: 0
   PenaltyPoints: 0
+  NpcScale: {x: 0.5, y: 0.5, z: 0.5}
