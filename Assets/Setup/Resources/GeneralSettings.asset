@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea655257c067e024bbc1f07ca8213631, type: 3}
-  m_Name: '!GeneralSettings'
+  m_Name: GeneralSettings
   m_EditorClassIdentifier: 
   Time: 0
   RewardPoints: 0
