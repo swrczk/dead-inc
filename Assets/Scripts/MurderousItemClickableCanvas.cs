@@ -130,9 +130,13 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
 
                 for (int i = 0; i < testPoints.Length; i++)
                 {
-                    if (RectTransformUtility.RectangleContainsScreenPoint(rangeVisual, testPoints[i], _uiCamera))
-                    {
-                        inRange = true;
+                    Debug.Log($"[MurderousItemClickableCanvas] Killing NPC {npc.name}");
+                    npc.Kill(itemData);
+                    killedSomeone = true;
+                    
+                    SoundManager.Instance.Play(itemData.Sound);
+
+                    if (killOnlyFirst)
                         break;
                     }
                 }
