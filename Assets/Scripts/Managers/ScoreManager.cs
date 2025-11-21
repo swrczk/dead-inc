@@ -1,18 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
 
-    [Header("UI")]
-    [Tooltip("Tekst w top barze, np. '2137 pkt'.")]
-    public TextMeshProUGUI scoreText;
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
 
-    [Header("Ustawienia")]
-    [Tooltip("Prefix/suffix do wy?wietlania punkt?w, np. ' pkt'.")]
-    public string pointsSuffix = " pkt";
+    [SerializeField]
+    private string pointsSuffix = " pkt";
+
+    [SerializeField]
+    private int baseKillPoints;
 
     public int CurrentScore { get; private set; }
 
@@ -23,42 +23,38 @@ public class ScoreManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
     }
 
     private void Start()
     {
+        NpcTypeKilledSignal.AddListener(OnNpcKilled);
+        JiraTicketCompleted.AddListener(OnJiraTicketCompleted);
         UpdateScoreUI();
     }
 
-    public void ResetScore()
+    private void OnJiraTicketCompleted(int points)
     {
-        CurrentScore = 0;
-        UpdateScoreUI();
+        AddPoints(points);
+    }
+
+    private void OnNpcKilled(NpcData npcData, MurderousItemData murderousItemData)
+    {
+        AddPoints(baseKillPoints);
     }
 
     public void AddPoints(int amount)
     {
         CurrentScore += amount;
-        if (CurrentScore < 0)
-            CurrentScore = 0;
-
         UpdateScoreUI();
-    }
-
-    /// <summary>
-    /// Hook, kt?ry zawo?asz przy zabiciu NPC (z dowoln? ilo?ci? punkt?w).
-    /// </summary>
-    public void OnNpcKilled(int baseKillPoints)
-    {
-        AddPoints(baseKillPoints);
     }
 
     private void UpdateScoreUI()
     {
         if (scoreText != null)
         {
-            scoreText.text = CurrentScore.ToString() + pointsSuffix;
+            scoreText.text = CurrentScore + pointsSuffix;
         }
     }
 }

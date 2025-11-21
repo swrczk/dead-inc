@@ -1,1 +1,1 @@
-public class NpcTypeKilledSignal : Signal<NpcData> { }
+public class NpcTypeKilledSignal : Signal<NpcData, MurderousItemData> { }

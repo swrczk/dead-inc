@@ -3,15 +3,8 @@ using UnityEngine.UI;
 
 public class JiraTaskUIEntry : MonoBehaviour
 {
-    [Header("Ikony celu")]
-    [Tooltip("Ikona cechy NPC (np. w?osy, ubranie).")]
     public Image bodyPartIcon;
-
-    [Tooltip("Ikona sposobu zabicia / przedmiotu (np. kabel, piorun, ogie?).")]
     public Image itemIcon;
-
-    [Header("Punkty")]
-    [Tooltip("Tekst z ilo?ci? punkt?w, np. +15.")]
     public Text pointsText;
 
     [Tooltip("T?o / badge punkt?w, zmienia kolor w zale?no?ci od nagrody.")]
@@ -27,109 +20,79 @@ public class JiraTaskUIEntry : MonoBehaviour
     [Tooltip("Punkty od kt?rych zaczyna si? wysoka nagroda.")]
     public int highPointsThreshold = 30;
 
-    [Header("Powt?rzenia")]
-    [Tooltip("Tekst z wymaganymi powt?rzeniami, np. x3.")]
+    [Tooltip("  x3 ")]
     public Text repetitionsText;
 
-    [Tooltip("Tekst post?pu, np. 1/3.")]
+    [Tooltip("  1/3 ")]
     public Text progressText;
 
-    [Header("Debug")]
-    [Tooltip("Przycisk debugowy do r?cznego zwi?kszania progresu.")]
-    public Button debugButton;
 
-    [HideInInspector] public ActiveJiraTask activeTask;
-    private JiraTaskManager manager;
+    private JiraTaskData data;
 
-    public void Init(ActiveJiraTask task, JiraTaskManager mgr)
-    {
-        activeTask = task;
-        manager = mgr;
+    private int CurrentCount;
+    public JiraTaskData Data => data;
+    public bool IsCompleted { get; set; }
 
-        if (activeTask != null && activeTask.Data != null)
+
+    public void Init(JiraTaskData task)
+    { 
+        data = task;
+        Task primary = null;
+        if (data.Required != null && data.Required.Count > 0) primary = data.Required[0];
+
+        if (primary != null && primary.RequiredBodyPart != null && primary.RequiredBodyPart.Icon != null)
         {
-            var data = activeTask.Data;
-
-            // Bierzemy pierwszy warunek Required jako ?g??wny?
-            Task primary = null;
-            if (data.Required != null && data.Required.Count > 0)
-                primary = data.Required[0];
-
-            // --- IKONA CECHY NPC (RequiredBodyPart.Icon) ---
-            if (bodyPartIcon != null)
-            {
-                if (primary != null && primary.RequiredBodyPart != null && primary.RequiredBodyPart.Icon != null)
-                {
-                    bodyPartIcon.sprite = primary.RequiredBodyPart.Icon;
-                    bodyPartIcon.enabled = true;
-                }
-                else
-                {
-                    bodyPartIcon.enabled = false;
-                }
-            }
-
-            // --- IKONA PRZEDMIOTU / SPOSOBU ?MIERCI (ItemToUse.Icon) ---
-            if (itemIcon != null)
-            {
-                if (primary != null && primary.ItemToUse != null && primary.ItemToUse.Icon != null)
-                {
-                    itemIcon.sprite = primary.ItemToUse.Icon;
-                    itemIcon.enabled = true;
-                }
-                else
-                {
-                    itemIcon.enabled = false;
-                }
-            }
-
-            // --- PUNKTY ---
-            if (pointsText != null)
-            {
-                pointsText.text = $"+{data.Points}";
-            }
-
-            if (pointsBackground != null)
-            {
-                Color c = lowPointsColor;
-                if (data.Points >= highPointsThreshold)
-                    c = highPointsColor;
-                else if (data.Points >= mediumPointsThreshold)
-                    c = mediumPointsColor;
-
-                pointsBackground.color = c;
-            }
-
-            // --- POWT?RZENIA ---
-            if (repetitionsText != null)
-            {
-                repetitionsText.text = $"x{data.Amount}";
-            }
+            bodyPartIcon.sprite = primary.RequiredBodyPart.Icon;
+            bodyPartIcon.enabled = true;
         }
+        else
+        {
+            bodyPartIcon.enabled = false;
+        }
+
+        if (primary != null && primary.ItemToUse != null && primary.ItemToUse.Icon != null)
+        {
+            itemIcon.sprite = primary.ItemToUse.Icon;
+            itemIcon.enabled = true;
+        }
+        else
+        {
+            itemIcon.enabled = false;
+        }
+
+        pointsText.text = $"+{data.Points}";
+        Color c = lowPointsColor;
+        if (data.Points >= highPointsThreshold)
+            c = highPointsColor;
+        else if (data.Points >= mediumPointsThreshold) c = mediumPointsColor;
+
+        pointsBackground.color = c;
+        repetitionsText.text = $"x{data.Amount}";
 
         UpdateProgressUI();
-
-        if (debugButton != null)
-        {
-            debugButton.onClick.RemoveAllListeners();
-            debugButton.onClick.AddListener(OnDebugButtonClicked);
-        }
     }
 
     public void UpdateProgressUI()
     {
-        if (activeTask == null || activeTask.Data == null || progressText == null)
-            return;
-
-        progressText.text = $"{activeTask.CurrentCount} / {activeTask.Data.Amount}";
+        progressText.text = $"{ CurrentCount} / {data.Amount}";
     }
 
-    private void OnDebugButtonClicked()
+    public bool TryUpdateProgress(NpcData npc, MurderousItemData item)
     {
-        if (manager != null && activeTask != null)
+        var result = true;
+        foreach (var requirement in data.Required)
         {
-            manager.DebugIncrementTask(activeTask);
-            UpdateProgressUI();
+            if (requirement.RequiredBodyPart != null && requirement.RequiredBodyPart != npc.Body &&
+                requirement.RequiredBodyPart != npc.Head)
+            { 
+                result = false;
+            }
+
+            if (requirement.ItemToUse != null && requirement.ItemToUse != item)
+            { 
+                result = false;
+            }
         }
+        return result;
     }
 }

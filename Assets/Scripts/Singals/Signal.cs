@@ -18,7 +18,7 @@ public abstract class Signal
     {
         _listeners?.Invoke();
     }
-} 
+}
 
 public abstract class Signal<T>
 {
@@ -37,5 +37,25 @@ public abstract class Signal<T>
     public static void Invoke(T value)
     {
         _listeners?.Invoke(value);
+    }
+}
+
+public abstract class Signal<T, U>
+{
+    private static event Action<T, U> _listeners;
+
+    public static void AddListener(Action<T, U> listener)
+    {
+        _listeners += listener;
+    }
+
+    public static void RemoveListener(Action<T, U> listener)
+    {
+        _listeners -= listener;
+    }
+
+    public static void Invoke(T x, U y)
+    {
+        _listeners?.Invoke(x, y);
     }
 }

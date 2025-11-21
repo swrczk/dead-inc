@@ -34,7 +34,7 @@ public class GameFlowManager : MonoBehaviour
     {
         Debug.Log("[GameFlow] Start → Subscribing signals & launching Run()");
         
-        NpcKilledSignal.AddListener(RemoveNpc);
+        NpcDissappearedSignal.AddListener(RemoveNpc);
         Run();
     }
 

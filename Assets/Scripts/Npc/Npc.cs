@@ -34,82 +34,39 @@ public class Npc : MonoBehaviour
     /// </summary>
     public bool IsVulnerableTo(MurderousItemData item)
     {
-        Debug.Log(
-            $"[NPC {name}] IsVulnerableTo start: " +
-            $"_data={_data}, " +
-            $"head={_data?.Head}, body={_data?.Body}, " +
-            $"item={item}, item.Weakness={item?.Weakness}"
-        );
+        Debug.Log($"[NPC {name}] IsVulnerableTo start: " + $"_data={_data}, " +
+                  $"head={_data?.Head}, body={_data?.Body}, " + $"item={item}, item.Weakness={item?.Weakness}");
 
         if (_data == null || item == null || item.Weakness == null)
         {
-            Debug.LogWarning(
-                $"[NPC {name}] IsVulnerableTo -> FALSE, pow?d: " +
-                $"{(_data == null ? "_data==null; " : "")}" +
-                $"{(item == null ? "item==null; " : "")}" +
-                $"{(item != null && item.Weakness == null ? "item.Weakness==null; " : "")}"
-            );
+            Debug.LogWarning($"[NPC {name}] IsVulnerableTo -> FALSE, pow?d: " +
+                             $"{(_data == null ? "_data==null; " : "")}" + $"{(item == null ? "item==null; " : "")}" +
+                             $"{(item != null && item.Weakness == null ? "item.Weakness==null; " : "")}");
             return false;
         }
 
-        Debug.Log(
-            $"[NPC {name}] Weakness: " +
-            $"Head={_data.Head?.Weakness}, Body={_data.Body?.Weakness}, " +
-            $"Item={item.Weakness}"
-        );
+        Debug.Log($"[NPC {name}] Weakness: " + $"Head={_data.Head?.Weakness}, Body={_data.Body?.Weakness}, " +
+                  $"Item={item.Weakness}");
 
         bool headMatch = _data.Head != null && _data.Head.Weakness == item.Weakness;
         bool bodyMatch = _data.Body != null && _data.Body.Weakness == item.Weakness;
 
         Debug.Log($"[NPC {name}] headMatch={headMatch}, bodyMatch={bodyMatch}");
 
-        if (headMatch || bodyMatch)
-            return true;
+        if (headMatch || bodyMatch) return true;
 
         return false;
     }
 
-    /// <summary>
-    /// Zabija NPC, je?li item pasuje do jego Weakness.
-    /// Zg?asza kill do punkt?w i systemu ticket?w.
-    /// </summary>
     public void Kill(MurderousItemData usedItem)
     {
-        if (!IsVulnerableTo(usedItem))
-            return;
-
-        // zatrzymanie ruchu
-        if (pathController != null)
-            pathController.enabled = false;
-
-        // punkty za zabicie
-        if (ScoreManager.Instance != null)
-        {
-            int baseKillPoints = 5; // albo wyci?gni?te z usedItem / NpcData
-            ScoreManager.Instance.OnNpcKilled(baseKillPoints);
-        }
-
-        // ustalamy, kt?ra cz?? cia?a by?a "trafiona" ? przyda si? do ticket?w
-        NpcPartData killedPart = null;
-        if (_data.Head != null && _data.Head.Weakness == usedItem.Weakness)
-            killedPart = _data.Head;
-        else if (_data.Body != null && _data.Body.Weakness == usedItem.Weakness)
-            killedPart = _data.Body;
-
-        // zg?oszenie do JiraTaskManager, ?eby liczy?y si? tickety
-        var jira = FindObjectOfType<JiraTaskManager>();
-        if (jira != null && killedPart != null)
-        {
-            jira.ReportKill(killedPart, usedItem);
-        }
-
-        // faktyczne "zabicie"
+        if (!IsVulnerableTo(usedItem)) return;
+        NpcTypeKilledSignal.Invoke(_data, usedItem);
         Destroy(gameObject);
     }
 
     private void OnDestroy()
     {
-        NpcKilledSignal.Invoke(Id);
-        NpcTypeKilledSignal.Invoke(_data);
+        NpcDissappearedSignal.Invoke(Id);
     }
 }
