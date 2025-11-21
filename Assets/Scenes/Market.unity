@@ -643,13 +643,13 @@ MonoBehaviour:
   gameplayFlow:
     Stages:
     - AvailableNpcs:
-      - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
+      - NpcType: {fileID: 11400000, guid: 09efa5cb2c72c1f41a845f3b196f7602, type: 2}
         Amount: 1
         Speed: 113
         shoppingPath: {fileID: 34547435}
         exitPath: {fileID: 1184481708}
         lapsToDo: 1
-      - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
+      - NpcType: {fileID: 11400000, guid: 5f802a40093130e4e9d856fbb6da7a28, type: 2}
         Amount: 2
         Speed: 420
         shoppingPath: {fileID: 547462596}
@@ -1304,6 +1304,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1245610389869505300, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_Size
+      value: 0.99999994
+      objectReference: {fileID: 0}
     - target: {fileID: 1265495836434874693, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1424,6 +1428,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4915831373482820431, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_Size
+      value: 0.31902
+      objectReference: {fileID: 0}
     - target: {fileID: 5576672274595326741, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1450,6 +1458,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6881998692413398991, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881998692413398991, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6932735364964109800, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
@@ -1491,6 +1503,10 @@ PrefabInstance:
     - target: {fileID: 8103260274995425111, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241461700214923926, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00017013999
       objectReference: {fileID: 0}
     - target: {fileID: 9075753172320773373, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchorMax.y

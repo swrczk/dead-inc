@@ -15,4 +15,4 @@ MonoBehaviour:
   Head: {fileID: 11400000, guid: 006d94b775245c340b32030af3df1661, type: 2}
   Body: {fileID: 11400000, guid: a7d958cc8925ccc439de767350c1d2c9, type: 2}
   Vulnerabilities:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ad2708157bd0be84883c6e15480f8765, type: 2}

@@ -1,12 +1,8 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Npc : MonoBehaviour
 {
-    public NPCPathController PathController => pathController;
-    public HashSet<WeaknessTraitData> WeaknessTraits { get; private set; } = new HashSet<WeaknessTraitData>();
-    
     [SerializeField]
     private Image head;
 
@@ -16,9 +12,9 @@ public class Npc : MonoBehaviour
     [SerializeField]
     private NPCPathController pathController;
 
+    public NPCPathController PathController => pathController;
 
     private NpcData _data;
-
 
     public string Id { get; private set; }
 
@@ -30,35 +26,52 @@ public class Npc : MonoBehaviour
         head.sprite = _data.Head.Icon;
         body.sprite = _data.Body.Icon;
         gameObject.SetActive(true);
-
-        WeaknessTraits.Clear();
-        WeaknessTraits.Add(_data.Head.Weakness);
-        WeaknessTraits.Add(_data.Body.Weakness);
     }
 
     /// <summary>
-    /// Czy ten NPC jest wra?liwy na dany item ? na podstawie Weakness
-    /// przypi?tego do Head/Body i Weakness z MurderousItemData.
+    /// Czy ten NPC jest wra¿liwy na dany item – na podstawie Weakness
+    /// przypiêtego do Head/Body i Weakness z MurderousItemData.
     /// </summary>
     public bool IsVulnerableTo(MurderousItemData item)
     {
+        Debug.Log(
+            $"[NPC {name}] IsVulnerableTo start: " +
+            $"_data={_data}, " +
+            $"head={_data?.Head}, body={_data?.Body}, " +
+            $"item={item}, item.Weakness={item?.Weakness}"
+        );
+
         if (_data == null || item == null || item.Weakness == null)
+        {
+            Debug.LogWarning(
+                $"[NPC {name}] IsVulnerableTo -> FALSE, powód: " +
+                $"{(_data == null ? "_data==null; " : "")}" +
+                $"{(item == null ? "item==null; " : "")}" +
+                $"{(item != null && item.Weakness == null ? "item.Weakness==null; " : "")}"
+            );
             return false;
+        }
 
-        // g?owa
-        if (_data.Head != null && _data.Head.Weakness == item.Weakness)
-            return true;
+        Debug.Log(
+            $"[NPC {name}] Weakness: " +
+            $"Head={_data.Head?.Weakness}, Body={_data.Body?.Weakness}, " +
+            $"Item={item.Weakness}"
+        );
 
-        // cia?o
-        if (_data.Body != null && _data.Body.Weakness == item.Weakness)
+        bool headMatch = _data.Head != null && _data.Head.Weakness == item.Weakness;
+        bool bodyMatch = _data.Body != null && _data.Body.Weakness == item.Weakness;
+
+        Debug.Log($"[NPC {name}] headMatch={headMatch}, bodyMatch={bodyMatch}");
+
+        if (headMatch || bodyMatch)
             return true;
 
         return false;
     }
 
     /// <summary>
-    /// Zabija NPC, je?li item pasuje do jego Weakness.
-    /// Zg?asza kill do punkt?w i systemu ticket?w.
+    /// Zabija NPC, jeœli item pasuje do jego Weakness.
+    /// Zg³asza kill do punktów i systemu ticketów.
     /// </summary>
     public void Kill(MurderousItemData usedItem)
     {
@@ -72,18 +85,18 @@ public class Npc : MonoBehaviour
         // punkty za zabicie
         if (ScoreManager.Instance != null)
         {
-            int baseKillPoints = 5; // albo wyci?gni?te z usedItem / NpcData
+            int baseKillPoints = 5; // albo wyci¹gniête z usedItem / NpcData
             ScoreManager.Instance.OnNpcKilled(baseKillPoints);
         }
 
-        // ustalamy, kt?ra cz?? cia?a by?a "trafiona" ? przyda si? do ticket?w
+        // ustalamy, która czêœæ cia³a by³a "trafiona" – przyda siê do ticketów
         NpcPartData killedPart = null;
         if (_data.Head != null && _data.Head.Weakness == usedItem.Weakness)
             killedPart = _data.Head;
         else if (_data.Body != null && _data.Body.Weakness == usedItem.Weakness)
             killedPart = _data.Body;
 
-        // zg?oszenie do JiraTaskManager, ?eby liczy?y si? tickety
+        // zg³oszenie do JiraTaskManager, ¿eby liczy³y siê tickety
         var jira = FindObjectOfType<JiraTaskManager>();
         if (jira != null && killedPart != null)
         {
