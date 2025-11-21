@@ -6,16 +6,15 @@ public class NpcData : ScriptableObject
 {
     public NpcPartData Head;
     public NpcPartData Body;
-
-    // TODO: AvailablePaths — do usuniêcia lub zamiany, bo List<object> nic nie daje
     public List<object> AvailablePaths;
 
-    [Header("Wra¿liwoœci NPC")]
+    [Header("Wra¿liwoœci (typy œmierci)")]
+    [Tooltip("Lista typów ataku / przedmiotów, które mog¹ zabiæ ten typ NPC.")]
     public List<MurderousItemData> Vulnerabilities;
 
     public bool IsVulnerableTo(MurderousItemData item)
     {
-        if (Vulnerabilities == null || item == null)
+        if (item == null || Vulnerabilities == null)
             return false;
 
         return Vulnerabilities.Contains(item);

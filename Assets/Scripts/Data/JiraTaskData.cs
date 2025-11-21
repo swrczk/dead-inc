@@ -16,4 +16,8 @@ public class Task
 {
     public NpcPartData RequiredBodyPart;
     public MurderousItemData ItemToUse;
+
+    [Header("Ikony do UI (opcjonalne)")]
+    public Sprite BodyPartIcon;   // np. blond w³osy / koszula w kratê
+    public Sprite ItemIcon;       // np. piorun / kabel / p³omieñ
 }
