@@ -42,9 +42,8 @@ public class GameplayFlowEditor : Editor
 
                     // tutaj zakładam strukturę NpcData taką jak w Twoim innym edytorze:
                     // public NpcPartData Hair, Chest, Legs;
-                    AddWeakness(weaknessCount, npcSet.NpcType.Hair, npcSet.Amount);
-                    AddWeakness(weaknessCount, npcSet.NpcType.Chest, npcSet.Amount);
-                    AddWeakness(weaknessCount, npcSet.NpcType.Legs, npcSet.Amount);
+                    AddWeakness(weaknessCount, npcSet.NpcType.Head, npcSet.Amount);
+                    AddWeakness(weaknessCount, npcSet.NpcType.Body, npcSet.Amount);
                 }
             }
 

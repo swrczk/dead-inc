@@ -16,9 +16,8 @@ public class NpcDataEditor : Editor
         // Zbieramy słabości
         var parts = new (string label, NpcPartData part)[]
         {
-            ("Hair", data.Hair),
-            ("Chest", data.Chest),
-            ("Legs", data.Legs)
+            ("Head", data.Head),
+            ("Body", data.Body)
         };
 
         bool any = false;

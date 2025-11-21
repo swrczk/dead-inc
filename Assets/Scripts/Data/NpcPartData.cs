@@ -10,7 +10,6 @@ public class NpcPartData : ScriptableObject
 
 public enum BodyPart
 {
-    Hairs,
-    Chest,
-    Legs
+    Head,
+    Body,
 }
