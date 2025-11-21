@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BeaverHeadNpcPartData
   m_EditorClassIdentifier: 
   BodyPart: 0
-  Icon: {fileID: 21300000, guid: e338c451737af01498a38839fbed4cb7, type: 3}
+  Icon: {fileID: 21300000, guid: 6b210c327e92d974e845dd204230c111, type: 3}
   Weakness: {fileID: 11400000, guid: 6f501bbcfb7861b4c81f5780eac99db4, type: 2}
