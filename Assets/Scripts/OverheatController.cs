@@ -1,36 +1,40 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // dla Graphic (Image, Text itp.)
+using UnityEngine.UI; // for Graphic (Image, Text etc.)
 
 public class OverheatController : MonoBehaviour
 {
-    [Header("Konfiguracja przegrzania")]
-    [Tooltip("Maksymalna liczba u¿yæ w oknie czasu (np. 3 klikniêcia).")]
+    [Header("Overheat config")]
+    [Tooltip("Max number of uses in time window (e.g. 3 clicks).")]
     public int maxUsesInWindow = 3;
 
-    [Tooltip("D³ugoœæ okna czasu w sekundach (np. 5 sekund).")]
+    [Tooltip("Time window length in seconds (e.g. 5 seconds).")]
     public float windowDuration = 5f;
 
-    [Tooltip("Kara czasowa za przegrzanie (w sekundach).")]
+    [Tooltip("Time penalty in seconds applied on overheat.")]
     public float timePenalty = 5f;
 
-    [Tooltip("Czy po przegrzaniu tymczasowo blokowaæ obiekt.")]
+    [Tooltip("Should item be locked for some time after overheat.")]
     public bool lockOnOverheat = true;
 
-    [Tooltip("Na ile sekund zablokowaæ obiekt po przegrzaniu.")]
+    [Tooltip("Lock duration after overheat in seconds.")]
     public float lockDuration = 2f;
 
-    [Header("Wizualizacja przegrzania (kolor)")]
-    [Tooltip("Element UI, którego kolor ma siê zmieniaæ (Image, TextMeshProUGUI itp.).")]
+    [Header("Overheat visuals (color)")]
+    [Tooltip("UI element whose color will change (Image, TMP etc.).")]
     public Graphic heatGraphic;
 
-    [Tooltip("Jeœli nie ustawisz heatGraphic, spróbujê u¿yæ SpriteRenderer na tym obiekcie.")]
+    [Tooltip("If heatGraphic is not set, try to use SpriteRenderer on this object.")]
     public bool useSpriteRendererIfNoGraphic = true;
 
-    [Tooltip("Kolor, do którego 'idzie' przedmiot przy pe³nym przegrzaniu.")]
+    [Tooltip("Target color when item is fully overheated.")]
     public Color overheatedColor = Color.red;
 
-    [Header("Podgl¹d stanu (read-only)")]
+    [Header("Chat message on first overheat")]
+    public ChatMessageData overheatMessage;
+    private bool hasShownOverheatMessage = false;
+
+    [Header("State (read-only)")]
     [SerializeField] private bool isOverheated;
     [SerializeField, Range(0f, 1f)] private float currentHeatRatio;
 
@@ -40,14 +44,14 @@ public class OverheatController : MonoBehaviour
     private readonly Queue<float> _useTimestamps = new Queue<float>();
     private float _unlockTime;
 
-    // referencje do koloru bazowego
+    // base color references
     private SpriteRenderer _spriteRenderer;
     private Color _baseColor;
     private bool _hasBaseColor;
 
     private void Awake()
     {
-        // jeœli nie przypiêto grafiki, spróbuj j¹ znaleŸæ automatycznie
+        // try to auto-detect graphic if not set
         if (heatGraphic == null)
         {
             heatGraphic = GetComponent<Graphic>();
@@ -70,51 +74,51 @@ public class OverheatController : MonoBehaviour
 
         if (!_hasBaseColor)
         {
-            Debug.LogWarning($"[Overheat] {name}: brak Graphic ani SpriteRenderer – nie bêdê zmienia³ koloru.");
+            Debug.LogWarning($"[Overheat] {name}: no Graphic or SpriteRenderer found, color will not change.");
         }
     }
 
     /// <summary>
-    /// Wywo³uj to ZA KA¯DYM RAZEM, gdy obiekt zosta³ u¿yty NIEPOTRZEBNIE
-    /// (np. klikniêcie, które nie zabi³o ¿adnego prawid³owego NPC).
-    /// Zwraca true, jeœli obiekt nie jest aktualnie zablokowany.
+    /// Call this EVERY TIME the item was used unnecessarily
+    /// (click that did not kill any valid NPC).
+    /// Returns true if item is not currently locked.
     /// </summary>
     public bool RegisterUse()
     {
         float now = Time.time;
 
-        // jeœli jest jeszcze blokada po przegrzaniu – ignorujemy klik
+        // if still locked after previous overheat, ignore click
         if (isOverheated && lockOnOverheat && now < _unlockTime)
         {
-            Debug.Log($"[Overheat] {name} jest zablokowany do {_unlockTime}, klik zignorowany.");
+            Debug.Log($"[Overheat] {name} is locked until {_unlockTime}, click ignored.");
             return false;
         }
 
-        // jeœli czas blokady min¹³ – odblokuj
+        // unlock when lock time passed
         if (isOverheated && lockOnOverheat && now >= _unlockTime)
         {
             isOverheated = false;
-            Debug.Log($"[Overheat] {name} odblokowany.");
+            Debug.Log($"[Overheat] {name} unlocked.");
         }
 
-        // wyrzuæ u¿ycia starsze ni¿ windowDuration
+        // remove uses older than windowDuration
         while (_useTimestamps.Count > 0 && now - _useTimestamps.Peek() > windowDuration)
         {
             _useTimestamps.Dequeue();
         }
 
-        // dodaj bie¿¹ce u¿ycie
+        // add current use
         _useTimestamps.Enqueue(now);
 
-        // update „poziomu przegrzania” 0..1
+        // recalc heat ratio 0..1
         currentHeatRatio = Mathf.Clamp01((float)_useTimestamps.Count / maxUsesInWindow);
 
         Debug.Log($"[Overheat] {name}: usesInWindow={_useTimestamps.Count}/{maxUsesInWindow}, heat={currentHeatRatio}");
 
-        // po ka¿dym niepotrzebnym u¿yciu aktualizujemy kolor
+        // update color for each unnecessary use
         UpdateHeatColor();
 
-        // przekroczenie limitu (np. 4 klikniêcie przy max=3)
+        // exceeded limit (e.g. 4th click when max=3)
         if (_useTimestamps.Count > maxUsesInWindow)
         {
             TriggerOverheat(now);
@@ -125,7 +129,7 @@ public class OverheatController : MonoBehaviour
 
     private void TriggerOverheat(float now)
     {
-        Debug.Log($"[Overheat] {name} PRZEGRZANY! Kara: -{timePenalty}s");
+        Debug.Log($"[Overheat] {name} OVERHEATED! Penalty: -{timePenalty}s");
 
         isOverheated = true;
 
@@ -134,21 +138,27 @@ public class OverheatController : MonoBehaviour
             _unlockTime = now + lockDuration;
         }
 
-        // na³ó¿ karê na timer (zak³adamy GameTimer.Instance z metod¹ ApplyTimePenalty)
+        // apply time penalty
         if (GameTimer.Instance != null)
         {
             GameTimer.Instance.ApplyTimePenalty(timePenalty);
         }
         else
         {
-            Debug.LogWarning("[Overheat] GameTimer.Instance == null – nie mogê na³o¿yæ kary czasowej.");
+            Debug.LogWarning("[Overheat] GameTimer.Instance == null – cannot apply time penalty.");
         }
 
-        // po przegrzaniu mo¿esz zacz¹æ liczyæ od nowa
+        // send chat popup ONLY on first overheat for this item
+        if (!hasShownOverheatMessage && overheatMessage != null && ChatPopupManager.Instance != null)
+        {
+            hasShownOverheatMessage = true;
+            ChatPopupManager.Instance.ShowMessage(overheatMessage);
+        }
+
+        // reset heat
         _useTimestamps.Clear();
         currentHeatRatio = 0f;
 
-        // zresetuj kolor do bazowego
         UpdateHeatColor();
     }
 
@@ -157,9 +167,7 @@ public class OverheatController : MonoBehaviour
         if (!_hasBaseColor)
             return;
 
-        // currentHeatRatio 0..1 – im bli¿ej limitu, tym bardziej czerwony
         float t = currentHeatRatio;
-
         Color targetColor = Color.Lerp(_baseColor, overheatedColor, t);
 
         if (heatGraphic != null)
