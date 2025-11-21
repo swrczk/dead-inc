@@ -34,7 +34,7 @@ public class JiraTaskUIEntry : MonoBehaviour
     public bool IsCompleted { get; set; }
 
 
-    public void Init(JiraTaskData task)
+    public void Setup(JiraTaskData task)
     { 
         data = task;
         Task primary = null;

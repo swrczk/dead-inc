@@ -49,7 +49,7 @@ public class JiraTaskManager : MonoBehaviour
 
     private void FillTasks()
     {
-        for (var i = possibleTasks.Count - 1; i < maxActiveTasks; i++)
+        for (var i = activeTasks.Count - 1; i < maxActiveTasks; i++)
         {
             SpawnNewTask();
         }
@@ -59,7 +59,7 @@ public class JiraTaskManager : MonoBehaviour
     {
         var chosen = GetRandomTask();
         var task = Instantiate(jiraTaskPrefab, container);
-        task.Init(chosen);
+        task.Setup(chosen);
         activeTasks.Add(task); 
 
         Debug.Log($"JiraTaskManager: dodano ticket (Amount={chosen.Amount}, Points={chosen.Points})");
