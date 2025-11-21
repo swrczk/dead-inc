@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "NpcPartData", menuName = "Setup/NpcPartData")]
 public class NpcPartData : ScriptableObject
 {
     public BodyPart BodyPart;
-    public Image Icon;
+    public Sprite Icon;
     public WeaknessTraitData Weakness;
 }
 
