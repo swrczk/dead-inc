@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2194bf92854275ac977a2d2bf1b4f6, type: 3}
   m_Name: NpcData_example
   m_EditorClassIdentifier: 
-  Hair: {fileID: 11400000, guid: a7d958cc8925ccc439de767350c1d2c9, type: 2}
-  Chest: {fileID: 11400000, guid: 006d94b775245c340b32030af3df1661, type: 2}
-  Legs: {fileID: 11400000, guid: 3244390a80a1ff04c9ae42debb1c1cb4, type: 2}
+  Head: {fileID: 11400000, guid: 006d94b775245c340b32030af3df1661, type: 2}
+  Body: {fileID: 11400000, guid: a7d958cc8925ccc439de767350c1d2c9, type: 2}

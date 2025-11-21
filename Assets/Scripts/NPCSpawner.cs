@@ -73,9 +73,7 @@ public class NPCSpawner : MonoBehaviour
         npcObj = Instantiate(npcPrefab, spawnPoint.position, Quaternion.identity, parent);
 
         npcObj.Setup($"npc_id_{++npcCount}",npcData);
-
-        var controller = npcObj.GetComponent<NPCPathController>();
-        controller.Init(chosenShoppingPath, exitPath, laps);
+        npcObj.PathController.Init(chosenShoppingPath, exitPath, laps);
 
         return npcObj;
     }

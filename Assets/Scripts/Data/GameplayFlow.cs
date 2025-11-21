@@ -54,6 +54,6 @@ public class NpcSet
     [Range(1, 10)]
     public int Amount;
 
-    [Range(1, 10)]
+    [Range(1, 1000)]
     public float Speed;
 }

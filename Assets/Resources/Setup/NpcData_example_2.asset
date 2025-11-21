@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38d96e6629c744ea93169635a0ea2df7, type: 3}
-  m_Name: NpcPartData_Legs_example
+  m_Script: {fileID: 11500000, guid: 3c2194bf92854275ac977a2d2bf1b4f6, type: 3}
+  m_Name: NpcData_example_2
   m_EditorClassIdentifier: 
-  BodyPart: 2
-  Icon: {fileID: 0}
-  Weakness: {fileID: 11400000, guid: 999ec71f505974744963ad2898c7edda, type: 2}
+  Head: {fileID: 11400000, guid: e476f28977b45c3479b0c080d4041666, type: 2}
+  Body: {fileID: 11400000, guid: a7d958cc8925ccc439de767350c1d2c9, type: 2}

@@ -15,17 +15,19 @@ MonoBehaviour:
   Stages:
   - AvailableNpcs:
     - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
-      Amount: 0
-      Speed: 1
+      Amount: 1
+      Speed: 34
     - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
       Amount: 2
-      Speed: 1
+      Speed: 225
+    NpcSpawnDelay: 5
     IsInfinite: 0
   - AvailableNpcs:
-    - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
-      Amount: 0
-      Speed: 1
-    - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
+    - NpcType: {fileID: 11400000, guid: e9d6ba222f3fdc34da7ed83c42f1ac53, type: 2}
+      Amount: 1
+      Speed: 469
+    - NpcType: {fileID: 11400000, guid: e9d6ba222f3fdc34da7ed83c42f1ac53, type: 2}
       Amount: 2
-      Speed: 1
+      Speed: 360
+    NpcSpawnDelay: 2
     IsInfinite: 1

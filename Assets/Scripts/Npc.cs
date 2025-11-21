@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +9,11 @@ public class Npc : MonoBehaviour
     [SerializeField]
     private Image body;
 
+    [SerializeField]
+    private NPCPathController pathController;
+
+    public NPCPathController PathController => pathController;
+
     private NpcData _data;
 
     public string Id { get; private set; }
@@ -20,6 +24,7 @@ public class Npc : MonoBehaviour
         _data = npcData;
         head.sprite = _data.Head.Icon;
         body.sprite = _data.Body.Icon;
+        gameObject.SetActive(true);
     }
 
     private void OnDestroy()
