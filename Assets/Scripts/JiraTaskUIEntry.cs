@@ -1,98 +1,75 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class JiraTaskUIEntry : MonoBehaviour
 {
-    public Image bodyPartIcon;
-    public Image itemIcon;
-    public Text pointsText;
+    public JiraTaskData Data { get; private set; }
 
-    [Tooltip("T?o / badge punkt?w, zmienia kolor w zale?no?ci od nagrody.")]
-    public Image pointsBackground;
+    public bool IsCompleted { get; private set; }
 
-    public Color lowPointsColor = Color.green;
-    public Color mediumPointsColor = Color.yellow;
-    public Color highPointsColor = Color.red;
+    [SerializeField]
+    private TMP_Text pointsText;
 
-    [Tooltip("Punkty od kt?rych zaczyna si? ?rednia nagroda.")]
-    public int mediumPointsThreshold = 15;
+    // [Tooltip("  1/3 ")]
+    // [SerializeField]
+    // private TMP_Text progressText;
 
-    [Tooltip("Punkty od kt?rych zaczyna si? wysoka nagroda.")]
-    public int highPointsThreshold = 30;
+    [SerializeField]
+    private TMP_Text taskNumber;
 
-    [Tooltip("  x3 ")]
-    public Text repetitionsText;
+    [SerializeField]
+    private JiraRequirement requirementRow;
 
-    [Tooltip("  1/3 ")]
-    public Text progressText;
+    [SerializeField]
+    private GameObject rowsContainer;
+    
+    [Header("Duszki")]
+    [SerializeField]
+    private GameObject amountContainer;    
+    [SerializeField]
+    private JiraTicketAmountElement amountElement;
 
 
-    private JiraTaskData data;
-
-    private int CurrentCount;
-    public JiraTaskData Data => data;
-    public bool IsCompleted { get; set; }
+    
+    private int _currentCount;
 
 
     public void Setup(JiraTaskData task)
-    { 
-        data = task;
-        Task primary = null;
-        if (data.Required != null && data.Required.Count > 0) primary = data.Required[0];
+    {
+        Data = task;
 
-        if (primary != null && primary.RequiredBodyPart != null && primary.RequiredBodyPart.Icon != null)
+        foreach (var requirements in Data.Required)
         {
-            bodyPartIcon.sprite = primary.RequiredBodyPart.Icon;
-            bodyPartIcon.enabled = true;
-        }
-        else
-        {
-            bodyPartIcon.enabled = false;
+            var row = Instantiate(requirementRow, rowsContainer.transform);
+            row.Setup(requirements);
         }
 
-        if (primary != null && primary.ItemToUse != null && primary.ItemToUse.Icon != null)
-        {
-            itemIcon.sprite = primary.ItemToUse.Icon;
-            itemIcon.enabled = true;
-        }
-        else
-        {
-            itemIcon.enabled = false;
-        }
-
-        pointsText.text = $"+{data.Points}";
-        Color c = lowPointsColor;
-        if (data.Points >= highPointsThreshold)
-            c = highPointsColor;
-        else if (data.Points >= mediumPointsThreshold) c = mediumPointsColor;
-
-        pointsBackground.color = c;
-        repetitionsText.text = $"x{data.Amount}";
-
+        pointsText.text = $"+{Data.Points}";
         UpdateProgressUI();
     }
 
-    public void UpdateProgressUI()
+    private void UpdateProgressUI()
     {
-        progressText.text = $"{ CurrentCount} / {data.Amount}";
+        // progressText.text = $"{_currentCount} / {Data.Amount}";
     }
 
     public bool TryUpdateProgress(NpcData npc, MurderousItemData item)
     {
         var result = true;
-        foreach (var requirement in data.Required)
+        foreach (var requirement in Data.Required)
         {
             if (requirement.RequiredBodyPart != null && requirement.RequiredBodyPart != npc.Body &&
                 requirement.RequiredBodyPart != npc.Head)
-            { 
+            {
                 result = false;
             }
 
             if (requirement.ItemToUse != null && requirement.ItemToUse != item)
-            { 
+            {
                 result = false;
             }
         }
+
         return result;
     }
 }
