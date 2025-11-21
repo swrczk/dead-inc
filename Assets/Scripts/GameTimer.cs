@@ -142,4 +142,31 @@ public class GameTimer : MonoBehaviour
     {
         return elapsedTime;
     }
+
+    public void ApplyTimePenalty(float penaltySeconds)
+    {
+        if (penaltySeconds <= 0f)
+            return;
+
+        // jeœli gra ju¿ nie trwa, nie ma sensu nak³adaæ kary
+        if (!isRunning)
+            return;
+
+        // zwiêkszamy elapsedTime => mniej czasu zostaje
+        elapsedTime += penaltySeconds;
+
+        // upewniamy siê, ¿e nie przekroczymy koñca rundy
+        if (elapsedTime >= gameDuration)
+        {
+            elapsedTime = gameDuration;
+            UpdateTimerUI();
+            EndGame();
+            return;
+        }
+
+        // odœwie¿ UI po zmianie czasu
+        UpdateTimerUI();
+
+        Debug.Log($"[GameTimer] Kara czasowa: -{penaltySeconds}s, elapsed={elapsedTime}, remaining={GetRemainingRealTime()}");
+    }
 }
