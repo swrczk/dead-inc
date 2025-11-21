@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2194bf92854275ac977a2d2bf1b4f6, type: 3}
-  m_Name: NpcData_example
+  m_Script: {fileID: 11500000, guid: c23611a4dd4349399825e8e0209fa5d5, type: 3}
+  m_Name: MurderousItemKremowka
   m_EditorClassIdentifier: 
-  Head: {fileID: 11400000, guid: 006d94b775245c340b32030af3df1661, type: 2}
-  Body: {fileID: 11400000, guid: a7d958cc8925ccc439de767350c1d2c9, type: 2}
-  Vulnerabilities:
-  - {fileID: 0}
+  Icon: {fileID: 0}
+  Weakness: {fileID: 11400000, guid: f79e8365ae1e61643bb389d2b8085c52, type: 2}

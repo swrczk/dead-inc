@@ -1,37 +1,37 @@
 using UnityEditor;
+using UnityEngine;
 
 [CustomEditor(typeof(MurderousItemData))]
 public class MurderousItemDataEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        MurderousItemData data = (MurderousItemData) target;
+        // standardowy inspector
         DrawDefaultInspector();
 
-        EditorGUILayout.Space();
-        
-        EditorGUILayout.LabelField("AffectsOn Preview:", EditorStyles.boldLabel);
+        var data = (MurderousItemData)target;
 
-        if (data.AffectsOn == null || data.AffectsOn.Count == 0)
+        if (data.Weakness != null)
         {
-            EditorGUILayout.HelpBox("List is empty.", MessageType.Info);
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField("Weakness Preview", EditorStyles.boldLabel);
+
+            // WeaknessTraitData na pewno dziedziczy z UnityEngine.Object, wiêc ma 'name'
+            EditorGUILayout.LabelField("Name:", data.Weakness.name);
+
+            // Jeœli WeaknessTraitData ma w³asne pole Icon, mo¿esz to odkomentowaæ:
+            /*
+            if (data.Weakness.Icon != null)
+            {
+                var rect = GUILayoutUtility.GetRect(64, 64, GUILayout.ExpandWidth(false));
+                EditorGUI.DrawPreviewTexture(rect, data.Weakness.Icon.texture);
+            }
+            */
         }
         else
         {
-            for (int i = 0; i < data.AffectsOn.Count; i++)
-            {
-                var weakness = data.AffectsOn[i];
-
-                if (weakness == null)
-                {
-                    EditorGUILayout.LabelField($"[{i}] NULL");
-                    continue;
-                }
-
-                EditorGUILayout.BeginVertical(EditorStyles.helpBox);
-                EditorGUILayout.LabelField($"[{i}] {weakness.Name}");
-                EditorGUILayout.EndVertical();
-            }
+            EditorGUILayout.Space();
+            EditorGUILayout.HelpBox("Brak przypisanego WeaknessTraitData.", MessageType.Info);
         }
     }
 }

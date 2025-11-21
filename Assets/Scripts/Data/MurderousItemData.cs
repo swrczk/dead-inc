@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Setup/MurderousItemData", fileName = "MurderousItemData")]
+[CreateAssetMenu(menuName = "Setup/MurderousItemData", fileName = "MurderousItem")]
 public class MurderousItemData : ScriptableObject
 {
-    public List<WeaknessTraitData> AffectsOn;
     public Sprite Icon;
+    public WeaknessTraitData Weakness;   // ten sam typ co w NpcPartData.Weakness
 }
