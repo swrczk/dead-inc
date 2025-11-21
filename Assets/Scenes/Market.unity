@@ -1117,6 +1117,11 @@ Transform:
   - {fileID: 71464702}
   m_Father: {fileID: 779997838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &652132159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 856063860766258137, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
+  m_PrefabInstance: {fileID: 2126328571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &666269288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2702,10 +2707,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1393463369}
     m_Modifications:
+    - target: {fileID: 702475316242693306, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 84.632
+      objectReference: {fileID: 0}
+    - target: {fileID: 702475316242693306, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 29.2076
+      objectReference: {fileID: 0}
+    - target: {fileID: 702475316242693306, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.231
+      objectReference: {fileID: 0}
+    - target: {fileID: 702475316242693306, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -36.3538
+      objectReference: {fileID: 0}
     - target: {fileID: 856063860766258137, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
       propertyPath: m_Name
       value: Kremowka
       objectReference: {fileID: 0}
+    - target: {fileID: 4974935817187117579, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
+      propertyPath: overheat
+      value: 
+      objectReference: {fileID: 2126328573}
     - target: {fileID: 7892330024017338710, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2768,11 +2793,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7892330024017338710, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.3735
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 7892330024017338710, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 45.3735
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7892330024017338710, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2789,13 +2814,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 856063860766258137, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2126328573}
   m_SourcePrefab: {fileID: 100100000, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
 --- !u!224 &2126328572 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7892330024017338710, guid: 3b51f8b1d85dab54c953c5a93c07160f, type: 3}
   m_PrefabInstance: {fileID: 2126328571}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2126328573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652132159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652cc53ae0bfd7c4f85d2f0884c85214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxUsesInWindow: 3
+  windowDuration: 5
+  timePenalty: 5
+  lockOnOverheat: 1
+  lockDuration: 2
+  heatGraphic: {fileID: 0}
+  useSpriteRendererIfNoGraphic: 1
+  overheatedColor: {r: 1, g: 0, b: 0, a: 1}
+  isOverheated: 0
+  currentHeatRatio: 0
 --- !u!1001 &7058923524576120993
 PrefabInstance:
   m_ObjectHideFlags: 0
