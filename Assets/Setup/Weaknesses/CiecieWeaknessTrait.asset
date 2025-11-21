@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081169030fe74f2dba0a2253792362ea, type: 3}
   m_Name: CiecieWeaknessTrait
   m_EditorClassIdentifier: 
-  Name: Ciecie
+  Name: "Ci\u0119cie"
