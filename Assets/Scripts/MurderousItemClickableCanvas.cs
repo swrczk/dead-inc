@@ -7,10 +7,15 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
     [Header("Item data")]
     public MurderousItemData itemData;
 
-    [Header("Range visualization (Canvas)")]
-    // Assign your KillingRange object here in the inspector
+    [Header("Range visualization (assign KillingRange here)")]
     public RectTransform rangeVisual;
+
+    [Tooltip("Fallback distance check if rangeVisual is not set.")]
     public float rangeRadius = 150f;
+
+    [Header("Hit tolerance")]
+    [Tooltip("Extra slack around NPC in screen pixels when checking against KillingRange.")]
+    public float npcHitSlack = 20f;
 
     [Header("Kill settings")]
     public bool killOnlyFirst = true;
@@ -20,35 +25,45 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
     [Header("Overheat")]
     public OverheatController overheat;
 
+    // Cached renderers for the range visual
+    private Graphic _rangeGraphic;
+    private SpriteRenderer _rangeSprite;
+
+    private Canvas _canvas;
+    private Camera _uiCamera;
+
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
 
         if (rangeVisual != null)
-            rangeVisual.gameObject.SetActive(false);
+        {
+            _rangeGraphic = rangeVisual.GetComponentInChildren<Graphic>(true);
+            _rangeSprite = rangeVisual.GetComponentInChildren<SpriteRenderer>(true);
+
+            HideRange();
+        }
 
         if (overheat == null)
             overheat = GetComponent<OverheatController>();
+
+        _canvas = GetComponentInParent<Canvas>();
+        if (_canvas != null)
+        {
+            _uiCamera = _canvas.worldCamera;
+        }
 
         Debug.Log($"[MurderousItemClickableCanvas] Awake on {name}");
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Just show the pre-placed range visual
-        if (rangeVisual != null)
-        {
-            rangeVisual.gameObject.SetActive(true);
-        }
+        ShowRange();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Hide the range visual when cursor leaves the item
-        if (rangeVisual != null)
-        {
-            rangeVisual.gameObject.SetActive(false);
-        }
+        HideRange();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -67,7 +82,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             return;
         }
 
-        // Item center in canvas space
+        // Center of item in world/canvas space (used only for fallback radius logic)
         Vector3 itemWorldPos = _rectTransform.TransformPoint(_rectTransform.rect.center);
         Vector2 itemPos2D = new Vector2(itemWorldPos.x, itemWorldPos.y);
 
@@ -98,21 +113,50 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             Vector3 npcWorldPos = npcRect.TransformPoint(npcRect.rect.center);
             Vector2 npcPos2D = new Vector2(npcWorldPos.x, npcWorldPos.y);
 
-            float dist = Vector2.Distance(itemPos2D, npcPos2D);
+            bool inRange = false;
 
-            if (dist <= rangeRadius)
+            // 1) Prefer checking against KillingRange rect, with slack around NPC
+            if (rangeVisual != null)
             {
-                bool vulnerable = npc.IsVulnerableTo(itemData);
+                Vector2 npcScreenCenter = RectTransformUtility.WorldToScreenPoint(_uiCamera, npcWorldPos);
 
-                if (vulnerable)
+                // Sample a few points around the center (center + 4 directions)
+                Vector2[] testPoints = new Vector2[5];
+                testPoints[0] = npcScreenCenter;
+                testPoints[1] = npcScreenCenter + new Vector2(npcHitSlack, 0f);
+                testPoints[2] = npcScreenCenter + new Vector2(-npcHitSlack, 0f);
+                testPoints[3] = npcScreenCenter + new Vector2(0f, npcHitSlack);
+                testPoints[4] = npcScreenCenter + new Vector2(0f, -npcHitSlack);
+
+                for (int i = 0; i < testPoints.Length; i++)
                 {
-                    Debug.Log($"[MurderousItemClickableCanvas] Killing NPC {npc.name}");
-                    npc.Kill(itemData);
-                    killedSomeone = true;
-
-                    if (killOnlyFirst)
+                    if (RectTransformUtility.RectangleContainsScreenPoint(rangeVisual, testPoints[i], _uiCamera))
+                    {
+                        inRange = true;
                         break;
+                    }
                 }
+            }
+            else
+            {
+                // 2) Fallback: simple radius from item
+                float dist = Vector2.Distance(itemPos2D, npcPos2D);
+                inRange = dist <= rangeRadius;
+            }
+
+            if (!inRange)
+                continue;
+
+            bool vulnerable = npc.IsVulnerableTo(itemData);
+
+            if (vulnerable)
+            {
+                Debug.Log($"[MurderousItemClickableCanvas] Killing NPC {npc.name}");
+                npc.Kill(itemData);
+                killedSomeone = true;
+
+                if (killOnlyFirst)
+                    break;
             }
         }
 
@@ -126,6 +170,44 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
         {
             Debug.Log("[MurderousItemClickableCanvas] Correct click -> no overheat");
         }
+    }
+
+    private void ShowRange()
+    {
+        if (rangeVisual == null)
+            return;
+
+        rangeVisual.gameObject.SetActive(true);
+
+        if (_rangeGraphic != null)
+        {
+            _rangeGraphic.enabled = true;
+            var c = _rangeGraphic.color;
+            c.a = 1f;
+            _rangeGraphic.color = c;
+        }
+
+        if (_rangeSprite != null)
+        {
+            _rangeSprite.enabled = true;
+            var c = _rangeSprite.color;
+            c.a = 1f;
+            _rangeSprite.color = c;
+        }
+    }
+
+    private void HideRange()
+    {
+        if (rangeVisual == null)
+            return;
+
+        rangeVisual.gameObject.SetActive(false);
+
+        if (_rangeGraphic != null)
+            _rangeGraphic.enabled = false;
+
+        if (_rangeSprite != null)
+            _rangeSprite.enabled = false;
     }
 
 #if UNITY_EDITOR
