@@ -27,6 +27,46 @@ public class Npc : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Sprawdza, czy ten NPC jest wra¿liwy na dany typ ataku / przedmiot.
+    /// </summary>
+    public bool IsVulnerableTo(MurderousItemData item)
+    {
+        if (_data == null || _data.Vulnerabilities == null || item == null)
+            return false;
+
+        return _data.Vulnerabilities.Contains(item);
+    }
+
+    /// <summary>
+    /// Zabija NPC tym przedmiotem.
+    /// </summary>
+    public void Kill(MurderousItemData usedItem)
+    {
+        if (!gameObject.activeInHierarchy)
+            return;
+
+        // Zatrzymaj ruch
+        if (pathController != null)
+            pathController.enabled = false;
+
+        // Punkty za zabicie
+        if (ScoreManager.Instance != null)
+        {
+            int baseKillPoints = 5;
+            ScoreManager.Instance.OnNpcKilled(baseKillPoints);
+        }
+
+        // Zg³oœ zabójstwo do tasków
+        JiraTaskManager jira = FindObjectOfType<JiraTaskManager>();
+        if (jira != null && _data != null)
+        {
+            jira.ReportKill(_data.Head, usedItem);
+        }
+
+        Destroy(gameObject);
+    }
+
     private void OnDestroy()
     {
         NpcKilledSignal.Invoke(Id);
