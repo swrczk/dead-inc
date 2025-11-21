@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23611a4dd4349399825e8e0209fa5d5, type: 3}
   m_Name: MurderousItemWiadro
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: b5b057af18dc35e4ea8382a7725957f9, type: 3}
   Weakness: {fileID: 11400000, guid: b8efed8aa7a4ee44fa2b494e703b3f8a, type: 2}
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: 179c27a00694b7e469d083bb77e3e40d, type: 3}

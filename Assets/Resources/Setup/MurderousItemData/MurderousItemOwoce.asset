@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23611a4dd4349399825e8e0209fa5d5, type: 3}
   m_Name: MurderousItemOwoce
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 4e5f94925dfb80642ba78f8b1e08d5fc, type: 3}
   Weakness: {fileID: 11400000, guid: 95c2acd0643fd7a44933ed4af0fa05c8, type: 2}
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: f3a8d6e6265ecdd47b9d6fdb804d379f, type: 3}

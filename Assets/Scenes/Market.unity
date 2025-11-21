@@ -1452,6 +1452,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6347178860390744743, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e577f27fb8454d6e8d822cefa8a1512, type: 3}
     - target: {fileID: 6881998692413398991, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

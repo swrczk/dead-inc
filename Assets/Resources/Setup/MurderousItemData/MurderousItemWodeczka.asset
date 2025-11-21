@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23611a4dd4349399825e8e0209fa5d5, type: 3}
   m_Name: MurderousItemWodeczka
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 1f5c9a81e5133254c95639b53f529c63, type: 3}
   Weakness: {fileID: 11400000, guid: 40821c4dc475d384cbaced38d3569b7f, type: 2}
-  Sound: {fileID: 0}
+  Sound: {fileID: 8300000, guid: 8c12c53725497a74e8b45e4d1770b488, type: 3}

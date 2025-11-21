@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23611a4dd4349399825e8e0209fa5d5, type: 3}
   m_Name: MurderousItemKremowka
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 1cd14b87c02d01f438028223786c7193, type: 3}
   Weakness: {fileID: 11400000, guid: f79e8365ae1e61643bb389d2b8085c52, type: 2}
+  Sound: {fileID: 8300000, guid: e12d0899b8fa5604f862979bebffad41, type: 3}
