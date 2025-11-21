@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ShirtChestNpcPartData
   m_EditorClassIdentifier: 
   BodyPart: 1
-  Icon: {fileID: 21300000, guid: 4d8be02c78c0bc2459d5fb6a53f8dcce, type: 3}
+  Icon: {fileID: 21300000, guid: 5ef32ffb8b58f834daa8109c896104ed, type: 3}
   Weakness: {fileID: 11400000, guid: 95c2acd0643fd7a44933ed4af0fa05c8, type: 2}
