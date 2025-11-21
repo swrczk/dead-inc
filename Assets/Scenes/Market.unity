@@ -606,7 +606,7 @@ Material:
     m_Colors:
     - _BorderTint: {r: 0.12867041, g: 0.1254902, b: 0.21568628, a: 0.5254902}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorScans: {r: -0.048, g: 0.048, b: 1, a: 0}
+    - _ColorScans: {r: -0.069, g: 0.048, b: 0.21, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!224 &872039791 stripped
@@ -841,9 +841,9 @@ MonoBehaviour:
     innerMonitorDarkness: 0.611
     innerMonitorShine: 0
     colorScans:
-      greenChannelMultiplier: -0.048
+      greenChannelMultiplier: -0.069
       redBlueChannelMultiplier: 0.048
-      sizeMultiplier: 1
+      sizeMultiplier: 0.21
     innerMonitorShineRadius: -0.087
     innerMonitorShineCurve: 10
 --- !u!224 &2075872763 stripped
