@@ -14,12 +14,14 @@ public class GameFlowManager : MonoBehaviour
     private GameSettings _gameSettings;
     private NPCSpawner _npcSpawner;
     
-    private int _currentStage;
+    private int _currentStageIndex;
     private float _time;
     private CancellationTokenSource finishGameTokenSource = new CancellationTokenSource();
     
     private List<Npc> _currentNpcs = new List<Npc>();
     public GameplayFlow GameplayFlow => gameplayFlow;
+
+    public int currentStageIndex => _currentStageIndex;
 
     void Awake()
     {
@@ -61,11 +63,11 @@ public class GameFlowManager : MonoBehaviour
     {
         Debug.Log("[GameFlow] Run() started");
 
-        _currentStage = 0;
+        _currentStageIndex = 0;
 
         foreach (var stage in gameplayFlow.Stages)
         {
-            Debug.Log($"[GameFlow] --- Stage {_currentStage} START ---");
+            Debug.Log($"[GameFlow] --- Stage {currentStageIndex} START ---");
 
             do
             {
@@ -84,12 +86,12 @@ public class GameFlowManager : MonoBehaviour
                     return;
                 }
 
-                Debug.Log($"[GameFlow] Stage {_currentStage} wave finished. Infinite? {stage.IsInfinite}");
+                Debug.Log($"[GameFlow] Stage {currentStageIndex} wave finished. Infinite? {stage.IsInfinite}");
                 
             } while (stage.IsInfinite);
 
-            Debug.Log($"[GameFlow] --- Stage {_currentStage} COMPLETE ---");
-            _currentStage++;
+            Debug.Log($"[GameFlow] --- Stage {currentStageIndex} COMPLETE ---");
+            _currentStageIndex = currentStageIndex + 1;
         }
 
         Debug.Log("[GameFlow] GAME COMPLETE – All stages finished!");
