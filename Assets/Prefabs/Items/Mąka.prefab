@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7680889898678152539}
   - component: {fileID: 2686817981161100761}
   - component: {fileID: 4974935817187117579}
+  - component: {fileID: -978738941847327592}
   m_Layer: 5
   m_Name: "M\u0105ka"
   m_TagString: Untagged
@@ -94,7 +95,29 @@ MonoBehaviour:
   rangeRadius: 150
   npcHitSlack: 20
   killOnlyFirst: 1
-  overheat: {fileID: 0}
+  overheat: {fileID: -978738941847327592}
+--- !u!114 &-978738941847327592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856063860766258137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652cc53ae0bfd7c4f85d2f0884c85214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxUsesInWindow: 3
+  windowDuration: 5
+  timePenalty: 5
+  lockOnOverheat: 1
+  lockDuration: 2
+  heatGraphic: {fileID: 0}
+  useSpriteRendererIfNoGraphic: 1
+  overheatedColor: {r: 1, g: 0, b: 0, a: 1}
+  isOverheated: 0
+  currentHeatRatio: 0
 --- !u!1 &2097619709465342948
 GameObject:
   m_ObjectHideFlags: 0
