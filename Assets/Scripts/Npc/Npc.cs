@@ -29,8 +29,8 @@ public class Npc : MonoBehaviour
     }
 
     /// <summary>
-    /// Czy ten NPC jest wra¿liwy na dany item – na podstawie Weakness
-    /// przypiêtego do Head/Body i Weakness z MurderousItemData.
+    /// Czy ten NPC jest wra?liwy na dany item ? na podstawie Weakness
+    /// przypi?tego do Head/Body i Weakness z MurderousItemData.
     /// </summary>
     public bool IsVulnerableTo(MurderousItemData item)
     {
@@ -44,7 +44,7 @@ public class Npc : MonoBehaviour
         if (_data == null || item == null || item.Weakness == null)
         {
             Debug.LogWarning(
-                $"[NPC {name}] IsVulnerableTo -> FALSE, powód: " +
+                $"[NPC {name}] IsVulnerableTo -> FALSE, pow?d: " +
                 $"{(_data == null ? "_data==null; " : "")}" +
                 $"{(item == null ? "item==null; " : "")}" +
                 $"{(item != null && item.Weakness == null ? "item.Weakness==null; " : "")}"
@@ -70,8 +70,8 @@ public class Npc : MonoBehaviour
     }
 
     /// <summary>
-    /// Zabija NPC, jeœli item pasuje do jego Weakness.
-    /// Zg³asza kill do punktów i systemu ticketów.
+    /// Zabija NPC, je?li item pasuje do jego Weakness.
+    /// Zg?asza kill do punkt?w i systemu ticket?w.
     /// </summary>
     public void Kill(MurderousItemData usedItem)
     {
@@ -85,18 +85,18 @@ public class Npc : MonoBehaviour
         // punkty za zabicie
         if (ScoreManager.Instance != null)
         {
-            int baseKillPoints = 5; // albo wyci¹gniête z usedItem / NpcData
+            int baseKillPoints = 5; // albo wyci?gni?te z usedItem / NpcData
             ScoreManager.Instance.OnNpcKilled(baseKillPoints);
         }
 
-        // ustalamy, która czêœæ cia³a by³a "trafiona" – przyda siê do ticketów
+        // ustalamy, kt?ra cz?? cia?a by?a "trafiona" ? przyda si? do ticket?w
         NpcPartData killedPart = null;
         if (_data.Head != null && _data.Head.Weakness == usedItem.Weakness)
             killedPart = _data.Head;
         else if (_data.Body != null && _data.Body.Weakness == usedItem.Weakness)
             killedPart = _data.Body;
 
-        // zg³oszenie do JiraTaskManager, ¿eby liczy³y siê tickety
+        // zg?oszenie do JiraTaskManager, ?eby liczy?y si? tickety
         var jira = FindObjectOfType<JiraTaskManager>();
         if (jira != null && killedPart != null)
         {

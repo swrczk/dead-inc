@@ -5,17 +5,17 @@ using UnityEngine.UI;
 public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [Header("Dane przedmiotu")]
-    [Tooltip("Typ ataku / obra¿eñ, jaki zadaje ten przedmiot.")]
+    [Tooltip("Typ ataku / obra?e?, jaki zadaje ten przedmiot.")]
     public MurderousItemData itemData;
 
-    [Header("Zasiêg dzia³ania (Canvas)")]
-    [Tooltip("Wizualizacja zasiêgu (okr¹g jako child na Canvasie).")]
+    [Header("Zasi?g dzia?ania (Canvas)")]
+    [Tooltip("Wizualizacja zasi?gu (okr?g jako child na Canvasie).")]
     public RectTransform rangeVisual;
 
-    [Tooltip("Zasiêg w jednostkach Canvas (piksele w przybli¿eniu).")]
+    [Tooltip("Zasi?g w jednostkach Canvas (piksele w przybli?eniu).")]
     public float rangeRadius = 150f;
 
-    [Tooltip("Czy zabiæ tylko pierwszego trafionego NPC.")]
+    [Tooltip("Czy zabi? tylko pierwszego trafionego NPC.")]
     public bool killOnlyFirst = true;
 
     private RectTransform _rectTransform;
@@ -25,7 +25,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
         _rectTransform = GetComponent<RectTransform>();
         if (_rectTransform == null)
         {
-            Debug.LogError($"[MurderousItemClickableCanvas] {name}: Brak RectTransform! Ten skrypt dzia³a tylko na UI (Canvas).");
+            Debug.LogError($"[MurderousItemClickableCanvas] {name}: Brak RectTransform! Ten skrypt dzia?a tylko na UI (Canvas).");
         }
 
         if (rangeVisual != null)
@@ -64,11 +64,11 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
 
         if (_rectTransform == null)
         {
-            Debug.LogError($"[MurderousItemClickableCanvas] {name}: Brak RectTransform – nie mogê policzyæ zasiêgu.");
+            Debug.LogError($"[MurderousItemClickableCanvas] {name}: Brak RectTransform ? nie mog? policzy? zasi?gu.");
             return;
         }
 
-        // Œrodek przedmiotu na Canvasie (w przestrzeni œwiata Canvasu)
+        // ?rodek przedmiotu na Canvasie (w przestrzeni ?wiata Canvasu)
         Vector3 itemWorldPos = _rectTransform.TransformPoint(_rectTransform.rect.center);
         Vector2 itemPos2D = new Vector2(itemWorldPos.x, itemWorldPos.y);
 
@@ -78,7 +78,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
         Npc[] allNpcs = FindObjectsOfType<Npc>(true);
         if (allNpcs == null || allNpcs.Length == 0)
         {
-            Debug.Log("[MurderousItemClickableCanvas] Brak obiektów z komponentem Npc w scenie.");
+            Debug.Log("[MurderousItemClickableCanvas] Brak obiekt?w z komponentem Npc w scenie.");
             return;
         }
 
@@ -91,14 +91,14 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
 
             if (!npc.gameObject.activeInHierarchy)
             {
-                Debug.Log($"[MurderousItemClickableCanvas] NPC {npc.name} jest nieaktywny – pomijam.");
+                Debug.Log($"[MurderousItemClickableCanvas] NPC {npc.name} jest nieaktywny ? pomijam.");
                 continue;
             }
 
             RectTransform npcRect = npc.GetComponent<RectTransform>();
             if (npcRect == null)
             {
-                Debug.Log($"[MurderousItemClickableCanvas] NPC {npc.name} nie ma RectTransform (nie jest na Canvasie?) – pomijam.");
+                Debug.Log($"[MurderousItemClickableCanvas] NPC {npc.name} nie ma RectTransform (nie jest na Canvasie?) ? pomijam.");
                 continue;
             }
 
@@ -112,13 +112,15 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             if (dist <= rangeRadius)
             {
                 bool vulnerable = npc.IsVulnerableTo(itemData);
-                Debug.Log($"[MurderousItemClickableCanvas] NPC {npc.name} jest w zasiêgu, vulnerable={vulnerable}");
+                Debug.Log($"[MurderousItemClickableCanvas] NPC {npc.name} jest w zasi?gu, vulnerable={vulnerable}");
 
                 if (vulnerable)
                 {
-                    Debug.Log($"[MurderousItemClickableCanvas] Zabijam NPC {npc.name} przy u¿yciu {itemData.name}");
+                    Debug.Log($"[MurderousItemClickableCanvas] Zabijam NPC {npc.name} przy u?yciu {itemData.name}");
                     npc.Kill(itemData);
                     killedSomeone = true;
+
+                    SoundManager.Instance.Play(itemData.Sound);
 
                     if (killOnlyFirst)
                         break;
@@ -128,12 +130,12 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
 
         if (!killedSomeone)
         {
-            Debug.Log("[MurderousItemClickableCanvas] W zasiêgu nie by³o ¿adnego podatnego NPC.");
+            Debug.Log("[MurderousItemClickableCanvas] W zasi?gu nie by?o ?adnego podatnego NPC.");
         }
     }
 
 #if UNITY_EDITOR
-    // Dla wygody – mo¿na podgl¹dn¹æ promieñ w Scene view, ale tylko orientacyjnie.
+    // Dla wygody ? mo?na podgl?dn?? promie? w Scene view, ale tylko orientacyjnie.
     private void OnDrawGizmosSelected()
     {
         if (_rectTransform == null)
