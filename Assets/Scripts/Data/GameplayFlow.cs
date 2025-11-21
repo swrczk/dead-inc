@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class GameplayFlow
+public class GameplayFlow 
 {
     public List<SingleStage> Stages;
 }

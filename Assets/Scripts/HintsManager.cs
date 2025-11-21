@@ -1,26 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HintsManager : MonoBehaviour
 {
     [SerializeField]
-    private GameFlowManager gameFlowManager;
+    private Button hintButton;
     
     [SerializeField]
-    private Button hintButton;
+    private GameFlowManager gameFlowManager;
+
 
     [SerializeField]
-    private int hideAfterSec;
+    private float hideAfterSec;
+
+    [SerializeField]
+    private HintPanel panel;
+
     void Start()
     {
-        
+        hintButton.onClick.AddListener(ShowHintPanel); 
     }
 
-    // Update is called once per frame
-    void Update()
+    private async void ShowHintPanel()
     {
+        // hintButton.gameObject .(false);
+        panel.gameObject.SetActive(true);
+        panel.Show(gameFlowManager.GameplayFlow, gameFlowManager.currentStageIndex);
         
+        await UniTask.Delay((int) (hideAfterSec * 1000));
+        
+        panel.gameObject.SetActive(false);
+        // hintButton.SetEnabled(true);
     }
 }
