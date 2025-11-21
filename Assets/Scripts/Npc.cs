@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,10 +12,19 @@ public class Npc : MonoBehaviour
 
     private NpcData _data;
 
-    public void Setup(NpcData npcData)
+    public string Id { get; private set; }
+
+    public void Setup(string id, NpcData npcData)
     {
+        Id = id;
         _data = npcData;
         head.sprite = _data.Head.Icon;
         body.sprite = _data.Body.Icon;
+    }
+
+    private void OnDestroy()
+    {
+        NpcKilledSignal.Invoke(Id);
+        NpcTypeKilledSignal.Invoke(_data);
     }
 }

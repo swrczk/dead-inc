@@ -21,6 +21,8 @@ public class NPCSpawner : MonoBehaviour
     public int maxNpcsAlive = 20;
 
     private float spawnTimer = 0f;
+    
+    private int npcCount = 0;
 
     // private void Update()
     // {
@@ -33,65 +35,48 @@ public class NPCSpawner : MonoBehaviour
     //     }
     // }
 
-    public void TrySpawnNPC(NpcData npcData)
-    // public void TrySpawnNPC( )
+    public bool TrySpawnNPC(NpcData npcData, out Npc npcObj) 
     {
+        npcObj = null;
         if (npcPrefab == null || spawnPoint == null)
         {
             Debug.LogWarning("NPCSpawner: Brak prefab lub spawnPoint.");
-            return;
+            return false;
         }
 
         if (shoppingPaths == null || shoppingPaths.Length == 0 || exitPath == null)
         {
             Debug.LogWarning("NPCSpawner: Brak przypisanych �cie�ek.");
-            return;
+            return false;
         }
 
         // Limit NPC na scenie
         if (maxNpcsAlive > 0)
         {
-            int alive = FindObjectsOfType<NPCPathController>().Length;
-            if (alive >= maxNpcsAlive)
-                return;
+            var alive = FindObjectsOfType<NPCPathController>().Length;
+            if (alive >= maxNpcsAlive) return false;
         }
 
         // Zbierz wszystkie ISTNIEJ�CE �cie�ki (ignorujemy isBlocked,
         // bo palety maj� dzia�a� tylko na ju� chodz�cych NPC)
-        List<WaypointPath> available = new List<WaypointPath>();
+        var available = new List<WaypointPath>();
         foreach (var p in shoppingPaths)
         {
-            if (p != null)
-                available.Add(p);
+            if (p != null) available.Add(p);
         }
 
-        if (available.Count == 0)
-        {
-            Debug.LogWarning("NPCSpawner: Brak dost�pnych �cie�ek (wszystkie null).");
-            return;
-        }
+        var chosenShoppingPath = available[Random.Range(0, available.Count)];
+        var laps = Random.Range(minLaps, maxLaps + 1);
 
-        WaypointPath chosenShoppingPath = available[Random.Range(0, available.Count)];
-        int laps = Random.Range(minLaps, maxLaps + 1);
+        var parent = supermarketCanvasTransform != null ? supermarketCanvasTransform : null;
 
-        Transform parent = supermarketCanvasTransform != null ? supermarketCanvasTransform : null;
+        npcObj = Instantiate(npcPrefab, spawnPoint.position, Quaternion.identity, parent);
 
-        var npcObj = Instantiate(
-            npcPrefab, 
-            spawnPoint.position,
-            Quaternion.identity,
-            parent    // NPC jako child canvasa (je�li ustawiony)
-        );
-        
-        npcObj.Setup(npcData);
+        npcObj.Setup($"npc_id_{++npcCount}",npcData);
 
         var controller = npcObj.GetComponent<NPCPathController>();
-        if (controller == null)
-        {
-            Debug.LogError("NPCSpawner: Prefab NPC nie ma NPCPathController.");
-            return;
-        }
-
         controller.Init(chosenShoppingPath, exitPath, laps);
+
+        return npcObj;
     }
 }
