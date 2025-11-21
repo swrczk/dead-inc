@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BlackHeadNpcPartData
   m_EditorClassIdentifier: 
   BodyPart: 0
-  Icon: {fileID: 21300000, guid: 4dd875837080a4042abeda5775594f98, type: 3}
-  Weakness: {fileID: 11400000, guid: 27f003139168d994ca270bbf0415f1dd, type: 2}
+  Icon: {fileID: 21300000, guid: 07c47d07404244d1b9fe2689239272d5, type: 3}
+  Weakness: {fileID: 11400000, guid: f4a13c86dc30a4d4f8c9fa26e2938f70, type: 2}

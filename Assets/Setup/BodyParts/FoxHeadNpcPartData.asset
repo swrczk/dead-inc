@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FoxHeadNpcPartData
   m_EditorClassIdentifier: 
   BodyPart: 0
-  Icon: {fileID: 21300000, guid: 4dd875837080a4042abeda5775594f98, type: 3}
-  Weakness: {fileID: 11400000, guid: 27f003139168d994ca270bbf0415f1dd, type: 2}
+  Icon: {fileID: 21300000, guid: bd47a2a952b4248cfb2d3f48e58d38fa, type: 3}
+  Weakness: {fileID: 11400000, guid: 6bcd7f787e2862a43aa79b7bcceb440a, type: 2}

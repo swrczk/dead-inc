@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CardiganChestNpcPartData
   m_EditorClassIdentifier: 
   BodyPart: 1
-  Icon: {fileID: 21300000, guid: 4dd875837080a4042abeda5775594f98, type: 3}
-  Weakness: {fileID: 11400000, guid: 27f003139168d994ca270bbf0415f1dd, type: 2}
+  Icon: {fileID: 21300000, guid: ced2f2a314504834ebc2c5f0e1dfbf07, type: 3}
+  Weakness: {fileID: 11400000, guid: 40821c4dc475d384cbaced38d3569b7f, type: 2}

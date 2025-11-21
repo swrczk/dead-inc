@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ZebraHeadNpcPartData
   m_EditorClassIdentifier: 
   BodyPart: 0
-  Icon: {fileID: 21300000, guid: 4dd875837080a4042abeda5775594f98, type: 3}
-  Weakness: {fileID: 11400000, guid: 27f003139168d994ca270bbf0415f1dd, type: 2}
+  Icon: {fileID: 21300000, guid: 47820e718128d463e8cb84c1a71de288, type: 3}
+  Weakness: {fileID: 11400000, guid: 836ee0dd9d4d6434ea23b1e1e4671cb3, type: 2}
