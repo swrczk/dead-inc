@@ -8,7 +8,7 @@ public class JiraTaskData : ScriptableObject
     public int Amount;
     public int Points;
     public List<Task> Required;
-    public List<Task> Forbidden;
+    // public List<Task> Forbidden;
 }
 
 [Serializable]
@@ -16,8 +16,5 @@ public class Task
 {
     public NpcPartData RequiredBodyPart;
     public MurderousItemData ItemToUse;
-
-    [Header("Ikony do UI (opcjonalne)")]
-    public Sprite BodyPartIcon;   // np. blond w?osy / koszula w krat?
-    public Sprite ItemIcon;       // np. piorun / kabel / p?omie?
+    
 }
