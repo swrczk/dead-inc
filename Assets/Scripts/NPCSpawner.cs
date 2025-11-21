@@ -4,13 +4,13 @@ using System.Collections.Generic;
 public class NPCSpawner : MonoBehaviour
 {
     [Header("NPC")]
-    public GameObject npcPrefab;
+    public Npc npcPrefab;
     public Transform spawnPoint;
 
     [Header("Canvas")]
     public Transform supermarketCanvasTransform;
 
-    [Header("Œcie¿ki")]
+    [Header("Paths")]
     public WaypointPath[] shoppingPaths;
     public WaypointPath exitPath;
 
@@ -22,18 +22,19 @@ public class NPCSpawner : MonoBehaviour
 
     private float spawnTimer = 0f;
 
-    private void Update()
-    {
-        spawnTimer -= Time.deltaTime;
+    // private void Update()
+    // {
+    //     spawnTimer -= Time.deltaTime;
+    //
+    //     if (spawnTimer <= 0f)
+    //     {
+    //         TrySpawnNPC();
+    //         spawnTimer = spawnInterval;
+    //     }
+    // }
 
-        if (spawnTimer <= 0f)
-        {
-            TrySpawnNPC();
-            spawnTimer = spawnInterval;
-        }
-    }
-
-    private void TrySpawnNPC()
+    public void TrySpawnNPC(NpcData npcData)
+    // public void TrySpawnNPC( )
     {
         if (npcPrefab == null || spawnPoint == null)
         {
@@ -43,7 +44,7 @@ public class NPCSpawner : MonoBehaviour
 
         if (shoppingPaths == null || shoppingPaths.Length == 0 || exitPath == null)
         {
-            Debug.LogWarning("NPCSpawner: Brak przypisanych œcie¿ek.");
+            Debug.LogWarning("NPCSpawner: Brak przypisanych ï¿½cieï¿½ek.");
             return;
         }
 
@@ -55,8 +56,8 @@ public class NPCSpawner : MonoBehaviour
                 return;
         }
 
-        // Zbierz wszystkie ISTNIEJ¥CE œcie¿ki (ignorujemy isBlocked,
-        // bo palety maj¹ dzia³aæ tylko na ju¿ chodz¹cych NPC)
+        // Zbierz wszystkie ISTNIEJï¿½CE ï¿½cieï¿½ki (ignorujemy isBlocked,
+        // bo palety majï¿½ dziaï¿½aï¿½ tylko na juï¿½ chodzï¿½cych NPC)
         List<WaypointPath> available = new List<WaypointPath>();
         foreach (var p in shoppingPaths)
         {
@@ -66,7 +67,7 @@ public class NPCSpawner : MonoBehaviour
 
         if (available.Count == 0)
         {
-            Debug.LogWarning("NPCSpawner: Brak dostêpnych œcie¿ek (wszystkie null).");
+            Debug.LogWarning("NPCSpawner: Brak dostï¿½pnych ï¿½cieï¿½ek (wszystkie null).");
             return;
         }
 
@@ -75,12 +76,14 @@ public class NPCSpawner : MonoBehaviour
 
         Transform parent = supermarketCanvasTransform != null ? supermarketCanvasTransform : null;
 
-        GameObject npcObj = Instantiate(
-            npcPrefab,
+        var npcObj = Instantiate(
+            npcPrefab, 
             spawnPoint.position,
             Quaternion.identity,
-            parent    // NPC jako child canvasa (jeœli ustawiony)
+            parent    // NPC jako child canvasa (jeï¿½li ustawiony)
         );
+        
+        npcObj.Setup(npcData);
 
         var controller = npcObj.GetComponent<NPCPathController>();
         if (controller == null)
