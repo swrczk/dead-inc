@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Weaknes_example 0
   m_EditorClassIdentifier: 
   Name: "Zm\u0119czenie"
+  Icon: {fileID: 21300000, guid: 04e51a0282d865d4b98f8450b1440164, type: 3}
+  Sound: {fileID: 0}

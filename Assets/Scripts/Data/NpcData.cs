@@ -8,8 +8,8 @@ public class NpcData : ScriptableObject
     public NpcPartData Body;
     public List<object> AvailablePaths;
 
-    [Header("Wra¿liwoœci (typy œmierci)")]
-    [Tooltip("Lista typów ataku / przedmiotów, które mog¹ zabiæ ten typ NPC.")]
+    [Header("WraÅ¼liwoÅ›ci (typy Å›mierci)")]
+    [Tooltip("Lista typÃ³w ataku / przedmiotÃ³w, ktÃ³re mogÄ… zabiÄ‡ ten typ NPC.")]
     public List<MurderousItemData> Vulnerabilities;
 
     public bool IsVulnerableTo(MurderousItemData item)
