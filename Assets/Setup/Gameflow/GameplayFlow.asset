@@ -12,4 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f264ea23f89474aa3ec95c8529b885f, type: 3}
   m_Name: GameplayFlow
   m_EditorClassIdentifier: 
-  Stages: []
+  Stages:
+  - AvailableNpcs:
+    - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
+      Amount: 0
+      Speed: 1
+    - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
+      Amount: 2
+      Speed: 1
+    IsInfinite: 0
+  - AvailableNpcs:
+    - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
+      Amount: 0
+      Speed: 1
+    - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
+      Amount: 2
+      Speed: 1
+    IsInfinite: 1
