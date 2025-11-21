@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class WaypointPath : MonoBehaviour
 {
-    [Tooltip("Kolejne punkty, po których maj¹ chodziæ NPC.")]
+    [Tooltip("Kolejne punkty, po ktÃ³rych majÄ… chodziÄ‡ NPC.")]
     public Transform[] waypoints;
 
-    [Header("Blokowanie œcie¿ki")]
+    [Header("Blokowanie Å›cieÅ¼ki")]
     public bool isBlocked = false;
 
     public void SetBlocked(bool blocked)

@@ -265,6 +265,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24234072}
   m_CullTransparentMesh: 1
+--- !u!114 &34547435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4305950970786545767, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+  m_PrefabInstance: {fileID: 7058923524576120993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &338177920
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +384,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2673141931784303478, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
   m_PrefabInstance: {fileID: 7058923524576120993}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &547462596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8542835794695666996, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+  m_PrefabInstance: {fileID: 7058923524576120993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &561345887
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +439,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca037d1f7ae421a8485b8ebaec3031e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameplayFlow: {fileID: 11400000, guid: be5ee6eb2c2274f4795bb72e836331c6, type: 2}
+  gameplayFlow:
+    Stages:
+    - AvailableNpcs:
+      - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
+        Amount: 1
+        Speed: 113
+        shoppingPath: {fileID: 34547435}
+        exitPath: {fileID: 1184481708}
+        lapsToDo: 1
+      - NpcType: {fileID: 11400000, guid: a622bebea8411104fa2a55ccd490b541, type: 2}
+        Amount: 2
+        Speed: 420
+        shoppingPath: {fileID: 547462596}
+        exitPath: {fileID: 1184481708}
+        lapsToDo: 2
+      NpcSpawnDelay: 1
+      IsInfinite: 0
+    - AvailableNpcs:
+      - NpcType: {fileID: 11400000, guid: e9d6ba222f3fdc34da7ed83c42f1ac53, type: 2}
+        Amount: 3
+        Speed: 113
+        shoppingPath: {fileID: 547462596}
+        exitPath: {fileID: 1184481708}
+        lapsToDo: 3
+      - NpcType: {fileID: 11400000, guid: e9d6ba222f3fdc34da7ed83c42f1ac53, type: 2}
+        Amount: 1
+        Speed: 610
+        shoppingPath: {fileID: 34547435}
+        exitPath: {fileID: 1184481708}
+        lapsToDo: 2
+      NpcSpawnDelay: 1
+      IsInfinite: 1
+  _gameSettings: {fileID: 11400000, guid: 82a21558fbec811498cef4f8f2c7eb7e, type: 2}
 --- !u!1 &624807523
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,14 +496,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624807523}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -374.74002, y: -247.763, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 561345888}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 779997838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &779997838 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 294852538612850532, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+  m_PrefabInstance: {fileID: 7058923524576120993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1184481708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5659213516565307999, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+  m_PrefabInstance: {fileID: 7058923524576120993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1544129653
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +749,7 @@ PrefabInstance:
     - target: {fileID: 1862977297460455338, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: supermarketCanvasTransform
       value: 
-      objectReference: {fileID: 338177924}
+      objectReference: {fileID: 342107565}
     - target: {fileID: 2673141931784303478, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -798,7 +868,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 294852538612850532, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 624807524}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -808,5 +881,4 @@ SceneRoots:
   - {fileID: 2068688451}
   - {fileID: 1544129655}
   - {fileID: 20094271}
-  - {fileID: 624807524}
   - {fileID: 338177924}

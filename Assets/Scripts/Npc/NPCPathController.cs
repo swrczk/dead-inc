@@ -1,4 +1,4 @@
-using UnityEngine;
+using UnityEngine; 
 
 public class NPCPathController : MonoBehaviour
 {
@@ -32,7 +32,7 @@ public class NPCPathController : MonoBehaviour
         exitPath = exit;
         lapsToDo = Mathf.Max(1, laps);
 
-        // podpinamy siê pod eventy z movera
+        // podpinamy siï¿½ pod eventy z movera
         mover.LoopCompleted += OnLoopCompleted;
         mover.PathFinished += OnPathFinished;
 
@@ -44,7 +44,7 @@ public class NPCPathController : MonoBehaviour
     {
         if (!initialized)
         {
-            Debug.LogWarning($"{name}: NPCPathController nie zosta³ zainicjalizowany przez spawner.");
+            Debug.LogWarning($"{name}: NPCPathController nie zostaï¿½ zainicjalizowany przez spawner.");
         }
     }
 
@@ -74,7 +74,7 @@ public class NPCPathController : MonoBehaviour
 
         state = NPCState.Exiting;
 
-        // Œcie¿ka do wyjœcia – jednorazowa, bez loopa
+        // ï¿½cieï¿½ka do wyjï¿½cia ï¿½ jednorazowa, bez loopa
         mover.loop = false;
         mover.pingPong = false;
         mover.SwitchToPath(exitPath, snapToClosestPoint: false);
@@ -97,7 +97,7 @@ public class NPCPathController : MonoBehaviour
     {
         if (state == NPCState.Exiting)
         {
-            // dotar³ do wyjœcia – usuwamy NPC
+            // dotarï¿½ do wyjï¿½cia ï¿½ usuwamy NPC
             Destroy(gameObject);
         }
     }

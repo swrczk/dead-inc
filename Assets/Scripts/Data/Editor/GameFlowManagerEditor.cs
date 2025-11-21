@@ -1,26 +1,26 @@
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(GameplayFlow))]
-public class GameplayFlowEditor : Editor
+[CustomEditor(typeof(GameFlowManager))]
+public class GameFlowManagerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        // Standardowy inspector (lista Stage’y itd.)
+        // Rysujemy normalny inspector GameFlowManagera
         DrawDefaultInspector();
 
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Weakness Summary per Stage", EditorStyles.boldLabel);
 
-        var flow = (GameplayFlow)target;
-        if (flow.Stages == null || flow.Stages.Count == 0)
+        var manager = (GameFlowManager)target;
+        var flow = manager.GameplayFlow;
+
+        if (flow == null || flow.Stages == null || flow.Stages.Count == 0)
         {
             EditorGUILayout.HelpBox("Brak zdefiniowanych Stage'y.", MessageType.Info);
             return;
         }
 
-        // Dla każdego Stage robimy podsumowanie
         for (int i = 0; i < flow.Stages.Count; i++)
         {
             var stage = flow.Stages[i];
@@ -30,18 +30,16 @@ public class GameplayFlowEditor : Editor
             EditorGUILayout.BeginVertical(EditorStyles.helpBox);
             EditorGUILayout.LabelField($"Stage {i}", EditorStyles.boldLabel);
 
-            // słownik: nazwa weakness -> suma
             Dictionary<string, int> weaknessCount = new Dictionary<string, int>();
 
-            if (stage.AvailableNpcs != null)
+            var npcSets = stage.AvailableNpcs;
+            if (npcSets != null)
             {
-                foreach (var npcSet in stage.AvailableNpcs)
+                foreach (var npcSet in npcSets)
                 {
                     if (npcSet == null || npcSet.NpcType == null)
                         continue;
 
-                    // tutaj zakładam strukturę NpcData taką jak w Twoim innym edytorze:
-                    // public NpcPartData Hair, Chest, Legs;
                     AddWeakness(weaknessCount, npcSet.NpcType.Head, npcSet.Amount);
                     AddWeakness(weaknessCount, npcSet.NpcType.Body, npcSet.Amount);
                 }
@@ -76,7 +74,6 @@ public class GameplayFlowEditor : Editor
         if (!dict.ContainsKey(key))
             dict[key] = 0;
 
-        // mnożymy przez Amount, żeby uwzględnić liczbę NPC tego typu w Stage’u
         dict[key] += amount;
     }
 }

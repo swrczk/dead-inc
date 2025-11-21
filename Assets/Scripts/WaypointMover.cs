@@ -10,22 +10,22 @@ public class WaypointMover : MonoBehaviour
     public float waitTimeAtWaypoint = 0.5f;
 
     [Header("Tryb poruszania")]
-    public bool loop = true;      // jeúli true ñ po ostatnim waypointcie wracamy na poczπtek
-    public bool pingPong = false; // jeúli true ñ chodzimy tam i z powrotem
+    public bool loop = true;      // je≈õli true ‚Äì po ostatnim waypointcie wracamy na poczƒÖtek
+    public bool pingPong = false; // je≈õli true ‚Äì chodzimy tam i z powrotem
 
-    // Eventy (uøywane przez NPCPathController ñ moøesz zostawiÊ nawet jeúli jeszcze go nie uøywasz)
-    public event Action LoopCompleted;   // wywo≥ywany przy powrocie z koÒca úcieøki na poczπtek (loop)
-    public event Action PathFinished;    // wywo≥ywany, gdy úcieøka jednorazowa siÍ koÒczy
+    // Eventy (u≈ºywane przez NPCPathController ‚Äì mo≈ºesz zostawiƒá nawet je≈õli jeszcze go nie u≈ºywasz)
+    public event Action LoopCompleted;   // wywo≈Çywany przy powrocie z ko≈Ñca ≈õcie≈ºki na poczƒÖtek (loop)
+    public event Action PathFinished;    // wywo≈Çywany, gdy ≈õcie≈ºka jednorazowa siƒô ko≈Ñczy
 
     [HideInInspector] public int currentIndex = 0;
-    private int direction = 1;   // 1 ñ przÛd, -1 ñ ty≥ (dla ping-ponga)
+    private int direction = 1;   // 1 ‚Äì prz√≥d, -1 ‚Äì ty≈Ç (dla ping-ponga)
     protected float waitTimer = 0f;
 
     private void Start()
     {
         if (path == null || path.waypoints == null || path.waypoints.Length == 0)
         {
-            Debug.LogWarning($"{name}: Brak przypisanej úcieøki lub waypointÛw.");
+            Debug.LogWarning($"{name}: Brak przypisanej ≈õcie≈ºki lub waypoint√≥w.");
             enabled = false;
             return;
         }
@@ -81,20 +81,20 @@ public class WaypointMover : MonoBehaviour
         }
         else
         {
-            // Zwyk≥y przebieg od 0 do end
+            // Zwyk≈Çy przebieg od 0 do end
             currentIndex++;
 
             if (currentIndex >= path.waypoints.Length)
             {
                 if (loop)
                 {
-                    // Wracamy na poczπtek úcieøki
+                    // Wracamy na poczƒÖtek ≈õcie≈ºki
                     currentIndex = 0;
                     LoopCompleted?.Invoke();
                 }
                 else
                 {
-                    // Koniec úcieøki jednorazowej
+                    // Koniec ≈õcie≈ºki jednorazowej
                     currentIndex = path.waypoints.Length - 1;
                     PathFinished?.Invoke();
                     enabled = false;
@@ -104,13 +104,13 @@ public class WaypointMover : MonoBehaviour
     }
 
     /// <summary>
-    /// Zmienia úcieøkÍ w locie. Uøywane m.in. przez PathRedirectZone.
+    /// Zmienia ≈õcie≈ºkƒô w locie. U≈ºywane m.in. przez PathRedirectZone.
     /// </summary>
     public void SwitchToPath(WaypointPath newPath, bool snapToClosestPoint = true)
     {
         if (newPath == null || newPath.waypoints == null || newPath.waypoints.Length == 0)
         {
-            Debug.LogWarning($"{name}: SwitchToPath ñ newPath jest niepoprawna.");
+            Debug.LogWarning($"{name}: SwitchToPath ‚Äì newPath jest niepoprawna.");
             return;
         }
 
@@ -118,17 +118,17 @@ public class WaypointMover : MonoBehaviour
 
         if (snapToClosestPoint)
         {
-            // Znajdü najbliøszy waypoint nowej úcieøki
+            // Znajd≈∫ najbli≈ºszy waypoint nowej ≈õcie≈ºki
             currentIndex = path.GetClosestWaypointIndex(transform.position);
         }
         else
         {
-            // Zaczynamy od pierwszego waypointa nowej úcieøki
+            // Zaczynamy od pierwszego waypointa nowej ≈õcie≈ºki
             currentIndex = 0;
             transform.position = path.waypoints[currentIndex].position;
         }
 
-        // Reset wewnÍtrznego stanu
+        // Reset wewnƒôtrznego stanu
         waitTimer = 0f;
         direction = 1;
         enabled = true;

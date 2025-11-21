@@ -10,6 +10,7 @@ public class GameFlowManager : MonoBehaviour
     [SerializeField]
     private GameplayFlow gameplayFlow;
 
+    [SerializeField]
     private GameSettings _gameSettings;
     private NPCSpawner _npcSpawner;
     
@@ -18,10 +19,10 @@ public class GameFlowManager : MonoBehaviour
     private CancellationTokenSource finishGameTokenSource = new CancellationTokenSource();
     
     private List<Npc> _currentNpcs = new List<Npc>();
+    public GameplayFlow GameplayFlow => gameplayFlow;
 
     void Awake()
     {
-        _gameSettings = Resources.LoadAll<GameSettings>("").First();
         _npcSpawner = FindObjectOfType<NPCSpawner>();
 
         Debug.Log("[GameFlow] Awake → Settings + Spawner loaded");

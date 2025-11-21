@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GameplayFlow", menuName = "GameplayFlow")]
-public class GameplayFlow : ScriptableObject
+[Serializable]
+public class GameplayFlow
 {
     public List<SingleStage> Stages;
 }
@@ -11,16 +11,14 @@ public class GameplayFlow : ScriptableObject
 [Serializable]
 public class SingleStage
 {
-    [SerializeField]
     public List<NpcSet> AvailableNpcs;
-
-    public float NpcSpawnDelay;
+    public float NpcSpawnDelay = 1;
     public bool IsInfinite;
 
     public List<NpcData> GetNpcQueue()
     {
         var result = new List<NpcData>();
-        
+
         foreach (var npcSet in AvailableNpcs)
         {
             if (npcSet == null || npcSet.NpcType == null) continue;
@@ -30,7 +28,7 @@ public class SingleStage
                 result.Add(npcSet.NpcType);
             }
         }
-        
+
         Shuffle(result);
 
         return result;
@@ -52,8 +50,12 @@ public class NpcSet
     public NpcData NpcType;
 
     [Range(1, 10)]
-    public int Amount;
+    public int Amount = 1;
 
     [Range(1, 1000)]
-    public float Speed;
+    public float Speed = 1;
+
+    public WaypointPath shoppingPath;
+    public WaypointPath exitPath;
+    public int lapsToDo = 1;
 }
