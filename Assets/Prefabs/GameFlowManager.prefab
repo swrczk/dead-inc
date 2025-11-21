@@ -47,33 +47,27 @@ MonoBehaviour:
   gameplayFlow:
     Stages:
     - AvailableNpcs:
-      - NpcType: {fileID: 11400000, guid: 09efa5cb2c72c1f41a845f3b196f7602, type: 2}
+      - NpcType: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
         Amount: 1
-        Speed: 113
-        shoppingPath: {fileID: 0}
-        exitPath: {fileID: 0}
-        lapsToDo: 1
-      - NpcType: {fileID: 11400000, guid: 5f802a40093130e4e9d856fbb6da7a28, type: 2}
-        Amount: 2
-        Speed: 420
+        Speed: 50
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       NpcSpawnDelay: 1
       IsInfinite: 0
     - AvailableNpcs:
-      - NpcType: {fileID: 11400000, guid: e9d6ba222f3fdc34da7ed83c42f1ac53, type: 2}
-        Amount: 3
-        Speed: 113
+      - NpcType: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
+        Amount: 2
+        Speed: 50
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
-        lapsToDo: 3
-      - NpcType: {fileID: 11400000, guid: e9d6ba222f3fdc34da7ed83c42f1ac53, type: 2}
+        lapsToDo: 2
+      - NpcType: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
         Amount: 1
-        Speed: 610
+        Speed: 50
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       NpcSpawnDelay: 1
-      IsInfinite: 1
+      IsInfinite: 0
   _gameSettings: {fileID: 11400000, guid: 82a21558fbec811498cef4f8f2c7eb7e, type: 2}
