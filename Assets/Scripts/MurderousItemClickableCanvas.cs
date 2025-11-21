@@ -109,6 +109,8 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
                     Debug.Log($"[MurderousItemClickableCanvas] Killing NPC {npc.name}");
                     npc.Kill(itemData);
                     killedSomeone = true;
+                    
+                    SoundManager.Instance.Play(itemData.Sound);
 
                     if (killOnlyFirst)
                         break;
