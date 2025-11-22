@@ -28,6 +28,9 @@ public class GameTimer : MonoBehaviour
     [Header("Ustawienia")]
     [Tooltip("Czy timer ma wystartowa? automatycznie w Start().")]
     public bool autoStart = true;
+    
+    public TMP_Text Points;
+    public GameObject Result;
 
     [Tooltip("Je?li true, po ko?cu gry ustawiamy Time.timeScale = 0.")]
     public bool stopTimeOnEnd = true;
@@ -55,6 +58,7 @@ public class GameTimer : MonoBehaviour
 
     private void Start()
     {
+        Result.SetActive(false);
         elapsedTime = 0f;
         halftimeMessageSent = false;
         UpdateTimerUI();  // na start np. 08:00 i pe?ne k?ko
@@ -111,8 +115,11 @@ public class GameTimer : MonoBehaviour
 
         if (stopTimeOnEnd)
             Time.timeScale = 0f;
+        
+        Result.SetActive(false);
+        Points.text = $"{ScoreManager.Instance.CurrentScore} pkt";
 
-        GameEnded?.Invoke();
+        // GameEnded?.Invoke();
     }
 
     private void UpdateTimerUI()
