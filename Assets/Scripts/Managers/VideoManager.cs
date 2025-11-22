@@ -17,17 +17,19 @@ public class VideoManager : MonoBehaviour
             return _instance;
         }
     }
-     
+
 
     private static VideoManager _instance;
+
     [SerializeField]
-    private CutscenePanel _cutscenePanel; 
+    private CutscenePanel _cutscenePanel;
 
     public async UniTask Play(VideoClip clip)
     {
-        
         _cutscenePanel.gameObject.SetActive(true);
+        Time.timeScale = 0f;
         await _cutscenePanel.Play(clip);
+        Time.timeScale = 1f;
         _cutscenePanel.gameObject.SetActive(false);
     }
 }
