@@ -49,155 +49,155 @@ MonoBehaviour:
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
         Amount: 1
-        Speed: 10
+        Speed: 15
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
         Amount: 2
-        Speed: 10
+        Speed: 15
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
         Amount: 1
-        Speed: 10
+        Speed: 15
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
         Amount: 1
-        Speed: 10
+        Speed: 15
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 77013cbb95be88348bdf90360b996cc4, type: 2}
         Amount: 1
-        Speed: 10
+        Speed: 15
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: e58f60b01edd3f14fba3e4fd3307bf0a, type: 2}
         Amount: 1
-        Speed: 10
+        Speed: 15
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 77013cbb95be88348bdf90360b996cc4, type: 2}
         Amount: 1
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 09efa5cb2c72c1f41a845f3b196f7602, type: 2}
         Amount: 2
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 77013cbb95be88348bdf90360b996cc4, type: 2}
         Amount: 2
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
         Amount: 1
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 5a3b7454663928746ab75a72b1ac69ce, type: 2}
         Amount: 2
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
         Amount: 2
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 83ac3c10b958fae4d8c5c436ae4d83b9, type: 2}
         Amount: 2
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 7fd5cc56c18a0f043b4ff6495a3f38b3, type: 2}
         Amount: 1
-        Speed: 100
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
         Amount: 1
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: e58f60b01edd3f14fba3e4fd3307bf0a, type: 2}
         Amount: 1
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
         Amount: 2
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: b9318aab3684e4d47af1a56978e4fb7e, type: 2}
         Amount: 1
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
         Amount: 2
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
         Amount: 1
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
         Amount: 2
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 5f802a40093130e4e9d856fbb6da7a28, type: 2}
         Amount: 1
-        Speed: 15
+        Speed: 20
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 03e538e044b30b9438f11796c88010ec, type: 2}
@@ -236,7 +236,7 @@ MonoBehaviour:
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 5a3b7454663928746ab75a72b1ac69ce, type: 2}
@@ -281,324 +281,324 @@ MonoBehaviour:
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
         Amount: 1
-        Speed: 22
+        Speed: 25
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
         Amount: 2
-        Speed: 22
+        Speed: 25
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
         Amount: 1
-        Speed: 22
+        Speed: 25
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
         Amount: 1
-        Speed: 22
+        Speed: 25
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 09efa5cb2c72c1f41a845f3b196f7602, type: 2}
         Amount: 1
-        Speed: 22
+        Speed: 25
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 5f802a40093130e4e9d856fbb6da7a28, type: 2}
         Amount: 1
-        Speed: 22
+        Speed: 25
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 77013cbb95be88348bdf90360b996cc4, type: 2}
         Amount: 1
-        Speed: 22
+        Speed: 25
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
         Amount: 1
-        Speed: 22
+        Speed: 25
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 5f802a40093130e4e9d856fbb6da7a28, type: 2}
         Amount: 1
-        Speed: 24
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
         Amount: 1
-        Speed: 24
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
         Amount: 1
-        Speed: 24
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
         Amount: 1
-        Speed: 24
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
         Amount: 1
-        Speed: 24
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
         Amount: 1
-        Speed: 24
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: e58f60b01edd3f14fba3e4fd3307bf0a, type: 2}
         Amount: 1
-        Speed: 24
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
         Amount: 2
-        Speed: 24
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
         Amount: 1
-        Speed: 26
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
         Amount: 1
-        Speed: 26
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
         Amount: 1
-        Speed: 26
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
         Amount: 1
-        Speed: 26
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 03e538e044b30b9438f11796c88010ec, type: 2}
         Amount: 1
-        Speed: 26
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
         Amount: 1
-        Speed: 26
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
         Amount: 1
-        Speed: 26
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
         Amount: 1
-        Speed: 26
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
         Amount: 1
-        Speed: 26
+        Speed: 30
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 77013cbb95be88348bdf90360b996cc4, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
         Amount: 2
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 09efa5cb2c72c1f41a845f3b196f7602, type: 2}
         Amount: 2
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
         Amount: 2
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 03e538e044b30b9438f11796c88010ec, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: e58f60b01edd3f14fba3e4fd3307bf0a, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 83ac3c10b958fae4d8c5c436ae4d83b9, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 7fd5cc56c18a0f043b4ff6495a3f38b3, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
         Amount: 1
-        Speed: 28
+        Speed: 35
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 0
     - AvailableNpcs:
       - NpcType: {fileID: 11400000, guid: 09efa5cb2c72c1f41a845f3b196f7602, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 83ac3c10b958fae4d8c5c436ae4d83b9, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: e58f60b01edd3f14fba3e4fd3307bf0a, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
       - NpcType: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
         Amount: 1
-        Speed: 30
+        Speed: 40
         shoppingPath: {fileID: 0}
         exitPath: {fileID: 0}
         lapsToDo: 2
-      NpcSpawnDelay: 1
+      NpcSpawnDelay: 2
       IsInfinite: 1
   _gameSettings: {fileID: 11400000, guid: 82a21558fbec811498cef4f8f2c7eb7e, type: 2}
