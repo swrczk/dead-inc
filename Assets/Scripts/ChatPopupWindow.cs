@@ -1,13 +1,14 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ChatPopupWindow : MonoBehaviour
 {
     [Header("UI References")]
     public Image avatarImage;
-    public Text senderNameLabel;
-    public Text bodyLabel;
+    public TextMeshProUGUI senderNameLabel;
+    public TextMeshProUGUI bodyLabel;
     public Button closeButton;
 
     private Action onClosed;
