@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbd332c2c2245459bf1435f2b57666e, type: 3}
   m_Name: JiraTask5
   m_EditorClassIdentifier: 
-  Amount: 0
-  Points: 0
-  Required: []
+  Amount: 2
+  Points: 150
+  Required:
+  - RequiredBodyPart: {fileID: 0}
+    ItemToUse: {fileID: 0}
+    WeaknessToUse: {fileID: 11400000, guid: 40821c4dc475d384cbaced38d3569b7f, type: 2}
