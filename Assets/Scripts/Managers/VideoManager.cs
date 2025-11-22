@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -26,7 +27,7 @@ public class VideoManager : MonoBehaviour
         _cutscenePanel.gameObject.SetActive(false);
     }
 
-    public async void Play(VideoClip clip)
+    public async UniTask Play(VideoClip clip)
     {
         
         _cutscenePanel.gameObject.SetActive(true);
