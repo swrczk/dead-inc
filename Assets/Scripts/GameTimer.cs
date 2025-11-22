@@ -32,8 +32,13 @@ public class GameTimer : MonoBehaviour
     [Tooltip("Je?li true, po ko?cu gry ustawiamy Time.timeScale = 0.")]
     public bool stopTimeOnEnd = true;
 
+    [Header("Chat messages")]
+    [Tooltip("Message shown once when half of the time has passed.")]
+    public ChatMessageData halftimeMessage;
+
     private float elapsedTime = 0f;   // ile realnych sekund min?o w tej rundzie
     private bool isRunning = false;
+    private bool halftimeMessageSent = false;
 
     public event Action GameEnded;
 
@@ -51,6 +56,7 @@ public class GameTimer : MonoBehaviour
     private void Start()
     {
         elapsedTime = 0f;
+        halftimeMessageSent = false;
         UpdateTimerUI();  // na start np. 08:00 i pe?ne k?ko
 
         if (autoStart)
@@ -73,6 +79,17 @@ public class GameTimer : MonoBehaviour
             return;
 
         elapsedTime += Time.deltaTime;
+
+        // half-time notification
+        if (!halftimeMessageSent && gameDuration > 0f && elapsedTime >= gameDuration * 0.5f)
+        {
+            halftimeMessageSent = true;
+
+            if (halftimeMessage != null && ChatPopupManager.Instance != null)
+            {
+                ChatPopupManager.Instance.ShowMessage(halftimeMessage);
+            }
+        }
 
         if (elapsedTime >= gameDuration)
         {

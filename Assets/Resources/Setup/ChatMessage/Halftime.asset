@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: FirstTicket
+  m_Name: Halftime
   m_EditorClassIdentifier: Assembly-CSharp::ChatMessageData
-  text: "Pierwszy ticket w\u0142a\u015Bnie wpad\u0142. Pokaz, \u017Ce potrafisz pracowa\u0107
-    pod presj\u0105\u2026 i w og\xF3le pracowa\u0107."
+  text: "Half-time. Idealny moment, \u017Ceby wreszcie zacz\u0105\u0107 panikowa\u0107."
   senderAvatar: {fileID: 0}
   senderName: Manager
   autoHideAfterSeconds: 4

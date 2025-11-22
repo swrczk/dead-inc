@@ -294,6 +294,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7058923524576120996}
     - target: {fileID: 4832691614481985544, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: halftimeMessage
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fa5b7b198fc1164db947462b682ea34, type: 2}
+    - target: {fileID: 4832691614481985544, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: timeCircleImage
       value: 
       objectReference: {fileID: 0}
@@ -562,23 +566,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BorderInnerDarkerAmount: 0.389
+    - _BorderInnerDarkerAmount: 0.40399998
     - _BorderInnerSharpness: 0.996
     - _BorderInnerSizeX: 0
     - _BorderInnerSizeY: 0
     - _BorderOutterRound: 0.2
     - _BorderOutterSharpness: 1
-    - _BorderOutterSizeX: 0.34
-    - _BorderOutterSizeY: 0.24
-    - _BorderZoom: 1.11
+    - _BorderOutterSizeX: 0.096
+    - _BorderOutterSizeY: 0.1
+    - _BorderZoom: 1.31
     - _BottomStaticOpt: 0
     - _BumpScale: 1
-    - _CrtGlowAmount: 0
+    - _CrtGlowAmount: 0.25
     - _CrtReflectionCurve: 10
     - _CrtReflectionFalloff: 0.24
     - _CrtReflectionRadius: -0.087
-    - _Curvature: 2.6
-    - _Curvature2: 0.014
+    - _Curvature: 4.7
+    - _Curvature2: 0
     - _Cutoff: 0.5
     - _Desaturation: 0
     - _DetailNormalMapScale: 1
@@ -610,7 +614,7 @@ Material:
     m_Colors:
     - _BorderTint: {r: 0.12867041, g: 0.1254902, b: 0.21568628, a: 0.5254902}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorScans: {r: -0.069, g: 0.048, b: 0.21, a: 0}
+    - _ColorScans: {r: -0.048, g: 0.048, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!224 &872039791 stripped

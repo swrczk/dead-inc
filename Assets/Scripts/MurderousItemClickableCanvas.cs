@@ -24,6 +24,13 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
     [Header("Overheat")]
     public OverheatController overheat;
 
+    [Header("Guide feedback")]
+    public ChatMessageData guideMessage;
+    public Animator guideIconAnimator;
+    public string guideIconHighlightTrigger = "Highlight";
+
+    private bool guideMessageShown = false;
+
     private Graphic _rangeGraphic;
     private SpriteRenderer _rangeSprite;
 
@@ -79,6 +86,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             return;
 
         bool killedSomeone = false;
+        bool wrongItemUsedOnNpc = false;
 
         foreach (var npc in allNpcs)
         {
@@ -119,8 +127,10 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             else
             {
                 // fallback to simple radius
-                float dist = Vector2.Distance(itemPos2D,
-                    new Vector2(npcWorldPos.x, npcWorldPos.y));
+                float dist = Vector2.Distance(
+                    itemPos2D,
+                    new Vector2(npcWorldPos.x, npcWorldPos.y)
+                );
                 inRange = dist <= rangeRadius;
             }
 
@@ -138,9 +148,31 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
                 if (killOnlyFirst)
                     break;
             }
+            else
+            {
+                // NPC is in range but not vulnerable to this item
+                wrongItemUsedOnNpc = true;
+            }
         }
 
-        // Overheat rule
+        // Show guide message and highlight cheat sheet icon only once,
+        // when player tried to use wrong item on an NPC in range.
+        if (wrongItemUsedOnNpc && !guideMessageShown)
+        {
+            guideMessageShown = true;
+
+            if (guideMessage != null && ChatPopupManager.Instance != null)
+            {
+                ChatPopupManager.Instance.ShowMessage(guideMessage);
+            }
+
+            if (guideIconAnimator != null && !string.IsNullOrEmpty(guideIconHighlightTrigger))
+            {
+                guideIconAnimator.SetTrigger(guideIconHighlightTrigger);
+            }
+        }
+
+        // Overheat rule: only when click did nothing useful
         if (!killedSomeone && overheat != null)
         {
             overheat.RegisterUse();

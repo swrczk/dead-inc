@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Guide
   m_EditorClassIdentifier: Assembly-CSharp::ChatMessageData
-  text: "Do paska przypi\u0105\u0142em Ci \u015Bci\u0105gawke"
+  text: "Tip od managera: \u015Bci\u0105gawka istnieje. Korzystanie z niej nie jest
+    oznak\u0105 s\u0142abo\u015Bci, tylko braku pora\u017Cki."
   senderAvatar: {fileID: 0}
   senderName: Manager
   autoHideAfterSeconds: 4
