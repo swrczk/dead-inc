@@ -667,15 +667,15 @@ Material:
     - _BorderOutterSharpness: 1
     - _BorderOutterSizeX: 0.096
     - _BorderOutterSizeY: 0.1
-    - _BorderZoom: 1.31
+    - _BorderZoom: 1.06
     - _BottomStaticOpt: 0
     - _BumpScale: 1
     - _CrtGlowAmount: 0.25
     - _CrtReflectionCurve: 10
     - _CrtReflectionFalloff: 0.24
     - _CrtReflectionRadius: -0.087
-    - _Curvature: 4.7
-    - _Curvature2: 0
+    - _Curvature: 2.2
+    - _Curvature2: 0.024
     - _Cutoff: 0.5
     - _Desaturation: 0
     - _DetailNormalMapScale: 1
@@ -702,12 +702,12 @@ Material:
     - _UVSec: 0
     - _VertJerkOpt: 1
     - _VertMovementOpt: 1
-    - _VigSize: 0.106
+    - _VigSize: 0.076
     - _ZWrite: 1
     m_Colors:
     - _BorderTint: {r: 0.12867041, g: 0.1254902, b: 0.21568628, a: 0.5254902}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorScans: {r: -0.048, g: 0.048, b: 1, a: 0}
+    - _ColorScans: {r: -0.048, g: 0.048, b: 0.28, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!224 &872039791 stripped
@@ -1156,16 +1156,16 @@ MonoBehaviour:
       greyScale: 0
     dithering4: 0
     dithering8: 0
-    vignette: 0.106
-    innerCurve: 4.7
-    monitorCurve: 0
+    vignette: 0.076
+    innerCurve: 2.2
+    monitorCurve: 0.024
     monitorInnerSize:
       width: 0
       height: 0
     monitorOutterSize:
       width: 0.096
       height: 0.1
-    zoom: 1.31
+    zoom: 1.06
     monitorRoundness: 0.2
     monitorTexture: {fileID: 2800000, guid: a5e897f9f29eb488ba4791cd52d004b5, type: 3}
     monitorColor: {r: 0.12867041, g: 0.1254902, b: 0.21568628, a: 0.5254902}
@@ -1174,7 +1174,7 @@ MonoBehaviour:
     colorScans:
       greenChannelMultiplier: -0.048
       redBlueChannelMultiplier: 0.048
-      sizeMultiplier: 1
+      sizeMultiplier: 0.28
     innerMonitorShineRadius: -0.087
     innerMonitorShineCurve: 10
 --- !u!224 &2075872763 stripped
