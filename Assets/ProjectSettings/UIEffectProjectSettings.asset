@@ -34,5 +34,11 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: 96246b1ead49a4c5a996fd477bc5a117, type: 3}
     second:
       variants:
+      - keywords: EDGE_PLAIN GRADATION_COLOR2 SAMPLING_BLUR_MEDIUM TRANSITION_SHINY
+        passType: 0
+      - keywords: GRADATION_COLOR2 SAMPLING_BLUR_MEDIUM TRANSITION_SHINY
+        passType: 0
       - keywords: GRADATION_COLOR2 TONE_POSTERIZE
+        passType: 0
+      - keywords: TRANSITION_SHINY
         passType: 0
