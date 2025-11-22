@@ -3,7 +3,7 @@ using UnityEngine;
 public class WaypointPath : MonoBehaviour
 {
     [Tooltip("Kolejne punkty, po których mają chodzić NPC.")]
-    public Transform[] waypoints;
+    public RectTransform[] waypoints;
 
     [Header("Blokowanie ścieżki")]
     public bool isBlocked = false;
