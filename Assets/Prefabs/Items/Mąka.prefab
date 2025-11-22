@@ -91,11 +91,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 5a9fd31b13563984a972ae66b3e6ba45, type: 2}
+  itemImage: {fileID: 2686817981161100761}
   rangeVisual: {fileID: 702475316242693306}
   rangeRadius: 150
   npcHitSlack: 20
   killOnlyFirst: 1
   overheat: {fileID: -978738941847327592}
+  guideMessage: {fileID: 0}
+  guideIconAnimator: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!114 &-978738941847327592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +120,7 @@ MonoBehaviour:
   heatGraphic: {fileID: 0}
   useSpriteRendererIfNoGraphic: 1
   overheatedColor: {r: 1, g: 0, b: 0, a: 1}
+  overheatMessage: {fileID: 0}
   isOverheated: 0
   currentHeatRatio: 0
 --- !u!1 &2097619709465342948

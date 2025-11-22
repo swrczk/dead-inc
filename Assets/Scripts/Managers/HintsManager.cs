@@ -25,7 +25,6 @@ public class HintsManager : MonoBehaviour
 
     private async UniTask ShowHintPanel()
     {
-        Debug.LogError("Showing hint panel");
         panel.gameObject.SetActive(true);
         panel.Show(gameFlowManager.GameplayFlow, gameFlowManager.currentStageIndex);
 
