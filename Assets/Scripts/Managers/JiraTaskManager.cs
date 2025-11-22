@@ -75,6 +75,7 @@ public class JiraTaskManager : MonoBehaviour
 
     private JiraTaskData GetRandomTask()
     {
-        return possibleTasks[Random.Range(0, possibleTasks.Count)];
+        var index = Mathf.Min(possibleTasks.Count -1, _tasksTotalCounter);
+        return possibleTasks[index];
     }
 }

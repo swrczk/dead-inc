@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
- 
+
 
 public class JiraTaskUIEntry : MonoBehaviour
 {
@@ -67,7 +67,7 @@ public class JiraTaskUIEntry : MonoBehaviour
 
     public bool TryUpdateProgress(NpcData npc, MurderousItemData item)
     {
-        if (IsCompleted) return false;
+        if (IsCompleted) return false; // już ukończony, ignorujemy
 
         bool anyRequirementMatched = false;
         bool wasCompletedBefore = IsCompleted;
@@ -79,18 +79,15 @@ public class JiraTaskUIEntry : MonoBehaviour
             {
                 anyRequirementMatched = true;
             }
-
-            if (requirement.WeaknessToUse != null && requirement.WeaknessToUse != item)
-            {
-                result = false;
-            }
         }
 
         if (!anyRequirementMatched) return false;
+
         _currentCount++;
         UpdateProgressUI();
 
         IsCompleted = _requirements.All(r => r.IsCompleted);
+
         return !wasCompletedBefore && IsCompleted;
     }
 }
