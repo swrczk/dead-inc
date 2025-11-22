@@ -22,11 +22,11 @@ public class UIPathRedirectBlocker : MonoBehaviour, IPointerClickHandler
     [Tooltip("If true, blockWaypointIndex will be found automatically as the closest waypoint to this object.")]
     public bool autoFindBlockWaypoint = true;
 
-    [Tooltip("Index of waypoint before which NPCs will be redirected. If autoFindBlockWaypoint = true and this is < 0, it will be set automatically.")]
+    [Tooltip("Index of waypoint before which NPCs will be redirected. (Not strictly needed in the new logic, but kept for compatibility.)")]
     public int blockWaypointIndex = -1;
 
     [Header("Live redirect while blocked")]
-    [Tooltip("If true, NPCs reaching the blocked point will be redirected continuously while the pallet is blocked.")]
+    [Tooltip("If true, NPCs on the source path will be continuously redirected to detour while blocked.")]
     public bool liveRedirectWhileBlocked = true;
 
     [Tooltip("How often (in seconds) to check for NPCs that should be redirected while blocked.")]
@@ -42,6 +42,7 @@ public class UIPathRedirectBlocker : MonoBehaviour, IPointerClickHandler
             blockWaypointIndex = sourcePath.GetClosestWaypointIndex(transform.position);
         }
 
+        // initial state, but do not touch NPCs yet
         SetBlocked(startBlocked, applyToNpcs: false);
     }
 
@@ -52,11 +53,13 @@ public class UIPathRedirectBlocker : MonoBehaviour, IPointerClickHandler
 
     public void ToggleBlocked()
     {
+        // when user clicks, we want to affect NPCs
         SetBlocked(!isBlocked, applyToNpcs: true);
     }
 
     private void Update()
     {
+        // while blocked, continuously ensure no NPCs stay on sourcePath
         if (!isBlocked || !liveRedirectWhileBlocked)
             return;
 
@@ -67,7 +70,7 @@ public class UIPathRedirectBlocker : MonoBehaviour, IPointerClickHandler
         if (liveCheckTimer >= liveCheckInterval)
         {
             liveCheckTimer = 0f;
-            EnforceLiveRedirectForAllNpcs();
+            RedirectAllNpcsOnPath(sourcePath, detourPath);
         }
     }
 
@@ -80,75 +83,56 @@ public class UIPathRedirectBlocker : MonoBehaviour, IPointerClickHandler
             visualBlock.SetActive(isBlocked);
         }
 
-        if (isBlocked && detourPath == null)
-        {
-            Debug.LogWarning($"[UIPathRedirectBlocker] {name}: detourPath is null while trying to block.");
-        }
+        // reset timer for live redirect
+        liveCheckTimer = 0f;
 
-        if (applyToNpcs && isBlocked && detourPath != null)
-        {
-            RedirectExistingNpcsBeforeBlockPoint();
-        }
-    }
-
-    /// <summary>
-    /// Called once when pallet is toggled to blocked, to immediately reroute NPCs
-    /// that are still before the block waypoint on the source path.
-    /// </summary>
-    private void RedirectExistingNpcsBeforeBlockPoint()
-    {
-        if (sourcePath == null || detourPath == null)
+        if (!applyToNpcs)
             return;
 
-        WaypointMover[] movers = FindObjectsOfType<WaypointMover>();
-
-        foreach (var mover in movers)
+        if (isBlocked)
         {
-            if (mover == null || mover.Path == null)
-                continue;
-
-            // Only NPCs currently on the controlled path
-            if (mover.Path != sourcePath)
-                continue;
-
-            // If NPC is already past the block waypoint, do not touch it
-            if (blockWaypointIndex >= 0 && mover.currentIndex > blockWaypointIndex)
-                continue;
-
-            // Redirect this NPC to detour path
-            mover.SwitchToPath(detourPath, snapToClosestPoint: true);
-        }
-    }
-
-    /// <summary>
-    /// Called periodically while pallet is blocked, to ensure NPCs that reach
-    /// or pass the block waypoint on the source path are redirected to detour.
-    /// This fixes the issue where NPC would pass through on the second loop.
-    /// </summary>
-    private void EnforceLiveRedirectForAllNpcs()
-    {
-        if (sourcePath == null || detourPath == null)
-            return;
-
-        WaypointMover[] movers = FindObjectsOfType<WaypointMover>();
-
-        foreach (var mover in movers)
-        {
-            if (mover == null || mover.Path == null)
-                continue;
-
-            // Only NPCs currently on the controlled path
-            if (mover.Path != sourcePath)
-                continue;
-
-            // If we have a valid block waypoint index, redirect NPCs that reached or passed it
-            if (blockWaypointIndex >= 0)
+            // closing the alley: push NPCs from source to detour
+            if (sourcePath == null || detourPath == null)
             {
-                if (mover.currentIndex < blockWaypointIndex)
-                    continue;
+                Debug.LogWarning($"[UIPathRedirectBlocker] {name}: Cannot block, missing sourcePath or detourPath.");
+                return;
             }
 
-            mover.SwitchToPath(detourPath, snapToClosestPoint: true);
+            RedirectAllNpcsOnPath(sourcePath, detourPath);
+        }
+        else
+        {
+            // opening the alley: bring NPCs back from detour to source
+            if (sourcePath == null || detourPath == null)
+            {
+                Debug.LogWarning($"[UIPathRedirectBlocker] {name}: Cannot unblock fully, missing sourcePath or detourPath.");
+                return;
+            }
+
+            RedirectAllNpcsOnPath(detourPath, sourcePath);
+        }
+    }
+
+    /// <summary>
+    /// Redirects all NPCs currently on 'fromPath' to 'toPath'.
+    /// Uses snapToClosestPoint = true so they join the new path smoothly near their current position.
+    /// </summary>
+    private void RedirectAllNpcsOnPath(WaypointPath fromPath, WaypointPath toPath)
+    {
+        if (fromPath == null || toPath == null)
+            return;
+
+        WaypointMover[] movers = FindObjectsOfType<WaypointMover>();
+
+        foreach (var mover in movers)
+        {
+            if (mover == null || mover.Path == null)
+                continue;
+
+            if (mover.Path != fromPath)
+                continue;
+
+            mover.SwitchToPath(toPath, snapToClosestPoint: true);
         }
     }
 }
