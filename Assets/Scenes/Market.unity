@@ -356,7 +356,7 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[1].AvailableNpcs.Array.data[0].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[1].AvailableNpcs.Array.data[1].shoppingPath
       value: 
@@ -368,11 +368,11 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[2].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[2].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[3].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -380,7 +380,7 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[3].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -388,11 +388,11 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -400,19 +400,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[4].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -420,19 +420,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[4].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[5].shoppingPath
       value: 
@@ -444,19 +444,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[4].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[5].shoppingPath
       value: 
@@ -468,19 +468,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[4].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[5].shoppingPath
       value: 
@@ -488,7 +488,7 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[6].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -496,19 +496,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[4].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[5].shoppingPath
       value: 
@@ -516,11 +516,11 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[6].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[7].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -528,15 +528,15 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[4].shoppingPath
       value: 
@@ -544,15 +544,15 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[5].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[6].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[7].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -560,19 +560,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[4].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[5].shoppingPath
       value: 
@@ -580,15 +580,15 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[6].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[7].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[8].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -596,19 +596,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[5].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[6].shoppingPath
       value: 
@@ -616,7 +616,7 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[7].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -624,19 +624,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[4].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[5].shoppingPath
       value: 
@@ -644,7 +644,7 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[6].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[0].shoppingPath
       value: 
@@ -652,19 +652,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[3].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[4].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[5].shoppingPath
       value: 
@@ -672,19 +672,19 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[6].shoppingPath
       value: 
-      objectReference: {fileID: 191562269}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[7].shoppingPath
       value: 
-      objectReference: {fileID: 128330872}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[8].shoppingPath
       value: 
-      objectReference: {fileID: 1897662435}
+      objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[9].shoppingPath
       value: 
-      objectReference: {fileID: 784358289}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -695,28 +695,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
   m_PrefabInstance: {fileID: 119131967}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &128330872 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7021009514511316661, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
-  m_PrefabInstance: {fileID: 7058923524576120993}
+--- !u!1 &154676272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &191562269 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5170224688037323091, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
-  m_PrefabInstance: {fileID: 7058923524576120993}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154676275}
+  - component: {fileID: 154676274}
+  - component: {fileID: 154676273}
+  m_Layer: 5
+  m_Name: VideoPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &154676273
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 154676272}
+  m_CullTransparentMesh: 1
+--- !u!328 &154676274
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154676272}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_VideoClip: {fileID: 32900000, guid: fc8555e46e23f48fa8ad1382b3ff6153, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 547e25b759b8b8e4cb2e3aba2ea46777, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 3
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!224 &154676275
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154676272}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.21383, y: 0.21383, z: 0.21383}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -1.9744234}
+  m_SizeDelta: {x: 601.63696, y: 362.768}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &338177920
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +872,7 @@ RectTransform:
   - {fileID: 119131968}
   - {fileID: 342107565}
   - {fileID: 872039791}
+  - {fileID: 665270880}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -943,17 +1001,11 @@ Material:
     - _ColorScans: {r: -0.048, g: 0.048, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &784358289 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3612910790408182741, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
-  m_PrefabInstance: {fileID: 7058923524576120993}
+--- !u!224 &665270880 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+  m_PrefabInstance: {fileID: 6622352790670744805}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &872039791 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8794163840895231573, guid: a58e1d7cbe8ef884ca81df0ce33f1202, type: 3}
@@ -1058,17 +1110,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &1897662435 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2002278770720569551, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
-  m_PrefabInstance: {fileID: 7058923524576120993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2068688448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1253,107 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8241461700214923926, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
   m_PrefabInstance: {fileID: 7058923524576120993}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6622352790670744805
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 338177924}
+    m_Modifications:
+    - target: {fileID: 475894991456644305, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_Name
+      value: CutscenePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 475894991456644305, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600572418177945494, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 57c81743b5692894bba94db0eeef4fcb, type: 3}
 --- !u!1001 &7058923524576120993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1230,6 +1372,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1205807855283348014, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265495836434874693, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265495836434874693, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265495836434874693, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2673141931784303478, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
@@ -1778,6 +1932,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2068688451}
+  - {fileID: 154676275}
   - {fileID: 1544129655}
   - {fileID: 20094271}
   - {fileID: 338177924}
