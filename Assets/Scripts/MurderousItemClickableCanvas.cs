@@ -44,6 +44,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
 
     private void Awake()
     {
+        itemData.WasPlayed = false;
         _rectTransform = GetComponent<RectTransform>();
 
         if (rangeVisual != null)
