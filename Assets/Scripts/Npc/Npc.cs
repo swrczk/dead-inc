@@ -61,6 +61,13 @@ public class Npc : MonoBehaviour
     public void Kill(MurderousItemData usedItem)
     {
         if (!IsVulnerableTo(usedItem)) return;
+        if (!usedItem.WasPlayed)
+        {
+            usedItem.WasPlayed = true;
+            SoundManager.Instance.Play(usedItem.Sound);
+            if (usedItem.Clip != null) VideoManager.Instance.Play(usedItem.Clip);
+        }
+
         NpcTypeKilledSignal.Invoke(_data, usedItem);
         Destroy(gameObject);
     }
