@@ -5,8 +5,12 @@ using BrunoMikoski.AnimationSequencer;
 
 public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    public Sprite Icon => itemImage.sprite;
     [Header("Item data")]
     public MurderousItemData itemData;
+    
+    [SerializeField]
+    private Image itemImage;
 
     [Header("Range visualization (assign KillingRange here)")]
     public RectTransform rangeVisual;
