@@ -68,6 +68,11 @@ public class JiraTaskUIEntry : MonoBehaviour
             {
                 result = false;
             }
+
+            if (requirement.WeaknessToUse != null && requirement.WeaknessToUse != item)
+            {
+                result = false;
+            }
         }
 
         return result;
