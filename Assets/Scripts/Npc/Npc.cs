@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using BrunoMikoski.AnimationSequencer;
 
 public class Npc : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Npc : MonoBehaviour
     private NPCPathController pathController;
 
     public NPCPathController PathController => pathController;
+
+    public AnimationSequencerController controller;
 
     private NpcData _data;
 
@@ -64,11 +67,14 @@ public class Npc : MonoBehaviour
         if (!usedItem.WasPlayed)
         {
             usedItem.WasPlayed = true;
-            SoundManager.Instance.Play(usedItem.Sound);
+           
             if (usedItem.Clip != null) VideoManager.Instance.Play(usedItem.Clip);
         }
-
+        SoundManager.Instance.Play(usedItem.Sound);
+        controller.Play();
+        
         NpcTypeKilledSignal.Invoke(_data, usedItem);
+        
         Destroy(gameObject);
     }
 
