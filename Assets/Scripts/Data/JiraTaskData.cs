@@ -16,5 +16,6 @@ public class Task
 {
     public NpcPartData RequiredBodyPart;
     public MurderousItemData ItemToUse;
-    
+    public WeaknessTraitData WeaknessToUse;
+
 }
