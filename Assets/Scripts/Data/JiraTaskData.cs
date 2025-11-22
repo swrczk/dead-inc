@@ -5,17 +5,16 @@ using System;
 [CreateAssetMenu(menuName = "Setup/JiraTaskData", fileName = "JiraTaskData")]
 public class JiraTaskData : ScriptableObject
 {
-    public int Amount;
     public int Points;
-    public List<Task> Required;
-    // public List<Task> Forbidden;
+    public List<TaskRequirement> Required;
 }
 
 [Serializable]
-public class Task
+public class TaskRequirement
 {
     public NpcPartData RequiredBodyPart;
     public MurderousItemData ItemToUse;
     public WeaknessTraitData WeaknessToUse;
+    public int Amount;
 
 }
