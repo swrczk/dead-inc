@@ -15,3 +15,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 3fa17e64311b15347980505f7b05e52d, type: 3}
   Weakness: {fileID: 11400000, guid: e224e192e407d774c9767cde6e5b036a, type: 2}
   Sound: {fileID: 8300000, guid: 04d7a73e09a5ad04eadc3d6783dd0b3d, type: 3}
+  Clip: {fileID: 32900000, guid: 5aae2d09a29a24d9c89467064c4d4b60, type: 3}
+  WasPlayed: 0
