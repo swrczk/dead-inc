@@ -1413,6 +1413,10 @@ PrefabInstance:
       propertyPath: m_Size
       value: 0.28807464
       objectReference: {fileID: 0}
+    - target: {fileID: 5659213516565307999, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6141221050414854884, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
       propertyPath: m_LocalPosition.x
       value: -379
