@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using BrunoMikoski.AnimationSequencer;
+using Cysharp.Threading.Tasks;
 
 public class Npc : MonoBehaviour
 {
@@ -61,20 +62,23 @@ public class Npc : MonoBehaviour
         return false;
     }
 
-    public void Kill(MurderousItemData usedItem)
+    public async void Kill(MurderousItemData usedItem)
     {
         if (!IsVulnerableTo(usedItem)) return;
+        
         if (!usedItem.WasPlayed)
         {
             usedItem.WasPlayed = true;
-           
-            if (usedItem.Clip != null) VideoManager.Instance.Play(usedItem.Clip);
+
+            if (usedItem.Clip != null) await VideoManager.Instance.Play(usedItem.Clip);
         }
+
         SoundManager.Instance.Play(usedItem.Sound);
         controller.Play();
-        
+        await UniTask.WaitUntil(() => controller.IsPlaying);
+        await UniTask.WaitUntil(() => !controller.IsPlaying);
+
         NpcTypeKilledSignal.Invoke(_data, usedItem);
-        
         Destroy(gameObject);
     }
 
