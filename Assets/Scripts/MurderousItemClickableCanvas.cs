@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using BrunoMikoski.AnimationSequencer;
 
 public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
@@ -27,7 +28,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
     [Header("Guide feedback")]
     public ChatMessageData guideMessage;
     public Animator guideIconAnimator;
-    public string guideIconHighlightTrigger = "Highlight";
+    public AnimationSequencerController controller;
 
     private bool guideMessageShown = false;
 
@@ -164,12 +165,9 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             if (guideMessage != null && ChatPopupManager.Instance != null)
             {
                 ChatPopupManager.Instance.ShowMessage(guideMessage);
+                controller.Play();
             }
 
-            if (guideIconAnimator != null && !string.IsNullOrEmpty(guideIconHighlightTrigger))
-            {
-                guideIconAnimator.SetTrigger(guideIconHighlightTrigger);
-            }
         }
 
         // Overheat rule: only when click did nothing useful
