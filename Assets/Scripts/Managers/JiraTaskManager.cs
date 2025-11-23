@@ -27,11 +27,11 @@ public class JiraTaskManager : MonoBehaviour
         FillTasks();
     }
 
-    private void OnNpcKilled(NpcData npc, MurderousItemData item)
+    private async void OnNpcKilled(NpcData npc, MurderousItemData item)
     {
         foreach (var ticket in activeTasks)
         {
-            if (ticket.TryUpdateProgress(npc, item))
+            if (await ticket.TryUpdateProgress(npc, item))
             {
                 JiraTicketCompleted.Invoke(ticket.Data.Points);
             }
@@ -41,7 +41,6 @@ public class JiraTaskManager : MonoBehaviour
         {
             if (activeTasks[index].IsCompleted)
             {
-                Destroy(activeTasks[index].gameObject);
                 activeTasks.RemoveAt(index);
                 index--;
             }

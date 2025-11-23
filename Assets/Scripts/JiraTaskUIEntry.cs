@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using BrunoMikoski.AnimationSequencer;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
@@ -20,12 +23,10 @@ public class JiraTaskUIEntry : MonoBehaviour
 
     [SerializeField]
     private GameObject rowsContainer;
-
-    [Header("Duszki")]
     [SerializeField]
-    private GameObject amountContainer;
-
-
+    private AnimationSequencerController completeAnimation;
+    [SerializeField]
+    private TMP_Text pointsAnimationText; 
     private readonly List<JiraRequirement> _requirements = new List<JiraRequirement>();
     private int _totalRequiredKills;
 
@@ -43,6 +44,7 @@ public class JiraTaskUIEntry : MonoBehaviour
 
         taskNumber.text = $"#{taskIndex}";
         pointsText.text = $"+{Data.Points}";
+        pointsAnimationText.text = $"+{Data.Points}";
     }
 
     private void ClearChildren(GameObject parent)
@@ -50,7 +52,7 @@ public class JiraTaskUIEntry : MonoBehaviour
         foreach (Transform child in parent.transform) Destroy(child.gameObject);
     }
 
-    public bool TryUpdateProgress(NpcData npc, MurderousItemData item)
+    public async UniTask<bool> TryUpdateProgress(NpcData npc, MurderousItemData item)
     {
         if (IsCompleted) return false;
 
@@ -68,6 +70,19 @@ public class JiraTaskUIEntry : MonoBehaviour
 
         IsCompleted = _requirements.All(r => r.IsCompleted);
 
+        if (IsCompleted)
+        {
+            
+            await  PlayAnimation();
+            Destroy( gameObject);
+        }
         return IsCompleted;
+    }
+
+    private async UniTask PlayAnimation()
+    {
+        completeAnimation.Play();
+        await UniTask.WaitUntil(() => completeAnimation.IsPlaying);
+        await UniTask.WaitUntil(() => !completeAnimation.IsPlaying);
     }
 }
