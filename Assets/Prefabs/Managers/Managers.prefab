@@ -130,7 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
-  pointsSuffix: ' pkt'
   baseKillPoints: 10
 --- !u!1 &6266172166284307713
 GameObject:
@@ -274,7 +273,6 @@ MonoBehaviour:
   workStartHour: 8
   workEndHour: 16
   timerText: {fileID: 0}
-  timeCircleImage: {fileID: 0}
   gameOverUI: {fileID: 0}
   endShiftSound: {fileID: 8300000, guid: e815aecc466e38a4897766023c97d464, type: 3}
   endShiftAnimation: {fileID: 1643946181773535446}
@@ -290,14 +288,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10d422b52559da41aa9676770a8fc65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationSteps: []
+  animationSteps:
+  - rid: 8234442131008126977
   updateType: 0
   timeScaleIndependent: 0
-  autoplayMode: 0
+  autoplayMode: 2
   startPaused: 0
   playbackSpeed: 1
   playType: 0
-  loops: 0
+  loops: 3
   loopType: 0
   autoKill: 1
   onStartEvent:
@@ -312,7 +311,34 @@ MonoBehaviour:
   progress: -1
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 8234442131008126977
+      type: {class: DOTweenAnimationStep, ns: BrunoMikoski.AnimationSequencer, asm: BrunoMikoski.AnimationSequencer}
+      data:
+        delay: 0.5
+        flowType: 0
+        target: {fileID: 0}
+        duration: 0.5
+        loopCount: 0
+        loopType: 0
+        actions:
+        - rid: 8234442131008126978
+    - rid: 8234442131008126978
+      type: {class: PunchScaleDOTweenAction, ns: BrunoMikoski.AnimationSequencer, asm: BrunoMikoski.AnimationSequencer}
+      data:
+        direction: 0
+        ease:
+          ease: 7
+          curve:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+        isRelative: 0
+        punch: {x: 0.5, y: 0.5, z: 0.5}
+        vibrato: 1
+        elasticity: 1
 --- !u!1 &7519998981862405611
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,14 +428,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6945284023544792279, guid: e0ebef710db714a38941166a4601f471, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[0].AvailableNpcs.Array.data[1].exitPath
-      value: 
-      objectReference: {fileID: 8591279600488383461, guid: 16f0eb2ef8bc07f4f93cd731b0bd26c1, type: 3}
-    - target: {fileID: 6945284023544792279, guid: e0ebef710db714a38941166a4601f471, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[0].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 5709988278549011598, guid: 16f0eb2ef8bc07f4f93cd731b0bd26c1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

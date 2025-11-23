@@ -196,116 +196,132 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 338177924}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: loops
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: autoplayMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: animationSteps.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: animationSteps.Array.data[0]
-      value: 8234442131008126977
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126977]
-      value: BrunoMikoski.AnimationSequencer BrunoMikoski.AnimationSequencer.DOTweenAnimationStep
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978]
-      value: BrunoMikoski.AnimationSequencer BrunoMikoski.AnimationSequencer.PunchScaleDOTweenAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126977].delay
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: managedReferences[8234442131008126977].target
       value: 
       objectReference: {fileID: 1513825196}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].punch.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].punch.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].punch.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].vibrato
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126977].duration
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126977].flowType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126977].loopType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126977].loopCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].direction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].ease.ease
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].elasticity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].isRelative
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126977].actions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126977].actions.Array.data[0]
-      value: 8234442131008126978
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].ease.curve.m_PreInfinity
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].ease.curve.m_PostInfinity
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].ease.curve.m_RotationOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643946181773535446, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: managedReferences[8234442131008126978].ease.curve.m_Curve.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: container
       value: 
       objectReference: {fileID: 2075872763}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.size
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: b9ab99dcbb9304f4b92c0a81d599acb7, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 785f7c8fd7b5c384db7addae31809e5a, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f9d2f6a709ffa540995c00481e6bf29, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ff145ae579e20949a28d5357ff27a98, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: c3d12d6cbf0b7cd49818f4d340c83fc1, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: cd00bfe8bb57a3a449f8229fb59b79f6, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 42dc76ea15f6ada429fdb14d11373345, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: 547a25aa505fc444e8ed57bfa090e5c5, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: 22ccb7bf2778db74fa918e7c637aa54e, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 29fe640803c7eda4494bd8a68ab80820, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: e21107c3cddaa3742b5789e01996f8f8, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: 10162ba962a57da49869b7e3ffbf2759, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[19]
+      value: 
+      objectReference: {fileID: 11400000, guid: d9ede41e94aca1c4ca93c63a8fdb2e47, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[20]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1fec0d32e1c5fb3468b7f3bb58047860, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[21]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2caa4ba7c93c38f418068a6687c2485f, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[22]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1883f6a5116a74a49828cd7ee3ec9b94, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[23]
+      value: 
+      objectReference: {fileID: 11400000, guid: 371e856e1b4285d49a549ddc418a6104, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[24]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8aa42ab36ac13e94393e28c0149bd4ba, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[25]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b65874a85b6a9c4dafa5e7724417fac, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[26]
+      value: 
+      objectReference: {fileID: 11400000, guid: 651d542dfdd0c39498a2ddf3d956ee29, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[27]
+      value: 
+      objectReference: {fileID: 11400000, guid: a8f7ca4359a6bb04293ec40d488387c4, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[28]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c1c3d5c5d8e42641a6e99526d222d90, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[29]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c1c3d5c5d8e42641a6e99526d222d90, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[30]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c1c3d5c5d8e42641a6e99526d222d90, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[31]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c1c3d5c5d8e42641a6e99526d222d90, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[32]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c1c3d5c5d8e42641a6e99526d222d90, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[33]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c1c3d5c5d8e42641a6e99526d222d90, type: 2}
+    - target: {fileID: 2961418260404512247, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: possibleTasks.Array.data[34]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c1c3d5c5d8e42641a6e99526d222d90, type: 2}
     - target: {fileID: 4376552308670724432, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: _cutscenePanel
       value: 
@@ -322,10 +338,6 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 1115076645}
-    - target: {fileID: 4832691614481985544, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameDuration
-      value: 240
-      objectReference: {fileID: 0}
     - target: {fileID: 6745987525921208814, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: panel
       value: 
@@ -335,16 +347,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7058923524576120994}
     - target: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.21388732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.21388732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.21388732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -379,6 +403,570 @@ PrefabInstance:
       value: Managers
       objectReference: {fileID: 0}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].IsInfinite
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].NpcSpawnDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[3].AvailableNpcs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[0].Speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[1].Speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[0].Speed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[1].Speed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[2].Speed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[3].Speed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[4].Speed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[0].Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[1].Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[2].Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[3].Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[4].Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[5].Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[6].Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[7].Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[8].Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[0].Speed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[1].Speed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[2].Speed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[3].Speed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[4].Speed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[5].Speed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[6].Speed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[7].Speed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[0].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[1].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[2].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[3].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[4].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[5].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[6].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[7].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[8].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[9].Speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[1].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[2].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[1].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[2].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[4].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[1].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[2].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[3].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[4].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[0].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[1].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[2].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[1].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[2].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[3].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[4].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[5].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[1].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[6].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[7].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[7].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[8].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[6].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[7].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[0].Amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[1].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[0].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[1].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[7].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[8].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[9].Amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[0].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fd5cc56c18a0f043b4ff6495a3f38b3, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[2].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: e58f60b01edd3f14fba3e4fd3307bf0a, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[0].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: b9318aab3684e4d47af1a56978e4fb7e, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[2].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[3].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[4].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[0].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 03e538e044b30b9438f11796c88010ec, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[3].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[4].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[0].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[2].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[3].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[0].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[2].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[3].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 77013cbb95be88348bdf90360b996cc4, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[4].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[5].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[0].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[2].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[3].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[4].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[5].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: e58f60b01edd3f14fba3e4fd3307bf0a, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[6].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[7].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[0].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[3].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[4].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 03e538e044b30b9438f11796c88010ec, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[5].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[6].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[7].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[8].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[2].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 77013cbb95be88348bdf90360b996cc4, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[3].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 5772c0c2a9f13124ea192816f51d49fc, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[4].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[5].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[6].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[7].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[0].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 03e538e044b30b9438f11796c88010ec, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[2].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: e58f60b01edd3f14fba3e4fd3307bf0a, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[3].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fd5cc56c18a0f043b4ff6495a3f38b3, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[4].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[5].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[6].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[0].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 880b0264472388f48963e2bdcd263d93, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[1].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: d9f214af93671f54d9c2a27199683e86, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[2].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 504d2a8f5f7736149836addf32fc24a6, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[3].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: e58f60b01edd3f14fba3e4fd3307bf0a, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[4].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 0440f406de12b4e42a6da18dc5a57e90, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[5].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: a8d7fb93091117346b61638b10148d0e, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[6].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 18ce3d8cda6ee084db1ada7f60bd46b9, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[7].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[8].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[9].NpcType
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e54ad918cd8b7842bdb1da660993ffc, type: 2}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[0].AvailableNpcs.Array.data[0].shoppingPath
       value: 
       objectReference: {fileID: 325209290}
@@ -410,16 +998,319 @@ PrefabInstance:
       propertyPath: gameplayFlow.Stages.Array.data[3].AvailableNpcs.Array.data[1].shoppingPath
       value: 
       objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[5].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[6].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[7].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[5].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[6].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[7].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[8].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[5].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[6].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[7].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[8].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[5].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[6].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[7].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[5].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[6].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[7].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[8].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[9].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[0].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[1].shoppingPath
+      value: 
+      objectReference: {fileID: 325209290}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[2].shoppingPath
+      value: 
+      objectReference: {fileID: 1227624479}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[3].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[4].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[5].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[6].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[7].shoppingPath
+      value: 
+      objectReference: {fileID: 1020606144}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[8].shoppingPath
+      value: 
+      objectReference: {fileID: 776521055}
+    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
+      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[9].shoppingPath
+      value: 
+      objectReference: {fileID: 1565858615}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
---- !u!4 &119131968 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-  m_PrefabInstance: {fileID: 119131967}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &325209290 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4305950970786545767, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
@@ -525,7 +1416,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 119131968}
   - {fileID: 342107565}
   - {fileID: 872039791}
   - {fileID: 1733188285}
@@ -1605,4 +2495,5 @@ SceneRoots:
   - {fileID: 1544129655}
   - {fileID: 1903032386}
   - {fileID: 20094271}
+  - {fileID: 119131967}
   - {fileID: 338177924}

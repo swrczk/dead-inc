@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class WaypointPath : MonoBehaviour
 {
@@ -7,6 +6,7 @@ public class WaypointPath : MonoBehaviour
 
     [SerializeField]
     private Color color = Color.white;
+
     [SerializeField]
     private Vector3 offset;
 
@@ -19,7 +19,7 @@ public class WaypointPath : MonoBehaviour
         {
             Gizmos.color = color;
             Gizmos.DrawSphere(waypoints[i].position, 0.1f);
-            Gizmos.DrawLine(waypoints[i].position+offset, waypoints[i + 1].position+offset);
+            Gizmos.DrawLine(waypoints[i].position + offset, waypoints[i + 1].position + offset);
         }
 
         Gizmos.DrawSphere(waypoints[waypoints.Length - 1].position, 0.1f);

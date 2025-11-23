@@ -5,7 +5,7 @@ namespace Common.Editor
 {
     public static class RemoveMissingScriptsFromPrefabs
     {
-        [MenuItem("Tools/Cleanup/Remove Missing Scripts From Prefabs")]
+        [MenuItem("Tools/swrczk/Remove Missing Scripts From Prefabs")]
         public static void RemoveMissingScripts()
         {
             // Znajdź wszystkie prefaby w projekcie
