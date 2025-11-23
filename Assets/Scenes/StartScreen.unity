@@ -648,6 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1069204343}
   videoPlayer: {fileID: 330742404}
+  videoToPlay: {fileID: 32900000, guid: e57e99cb70b4e40d4ad4fdf1704ce3a7, type: 3}
   screenToHide: {fileID: 1208049904}
 --- !u!114 &1161904712
 MonoBehaviour:

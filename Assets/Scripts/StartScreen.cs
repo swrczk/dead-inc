@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.IO;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,13 +6,19 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class StartScreen : MonoBehaviour
-{ 
+{
     [SerializeField]
-    private Button button; 
+    private Button button;
+
     [SerializeField]
     private VideoPlayer videoPlayer;
+
+    [SerializeField]
+    private VideoClip videoToPlay;
+
     [SerializeField]
     private GameObject screenToHide;
+
     private void Start()
     {
         button.onClick.AddListener(() => StartGame());
@@ -22,8 +27,14 @@ public class StartScreen : MonoBehaviour
 
     private async void PlayAndHide()
     {
-        await UniTask.WaitUntil(()=>videoPlayer.isPlaying);
-        await UniTask.WaitUntil(()=>!videoPlayer.isPlaying);
+        videoPlayer.source = VideoSource.Url;
+        string path = Path.Combine(Application.streamingAssetsPath, videoToPlay.name + ".mp4");
+        path = path.Replace("\\", "/");
+        videoPlayer.url = path;
+
+        await UniTask.WaitUntil(() => videoPlayer.isPlaying);
+        await UniTask.WaitUntil(() => !videoPlayer.isPlaying);
+
         screenToHide.SetActive(false);
     }
 
