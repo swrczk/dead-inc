@@ -32,8 +32,7 @@ public class OverheatController : MonoBehaviour
 
     [Header("Chat message on first overheat")]
     public ChatMessageData overheatMessage;
-
-    private bool hasShownOverheatMessage = false;
+ 
 
     [Header("State (read-only)")]
     [SerializeField]

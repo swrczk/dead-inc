@@ -3,12 +3,14 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using BrunoMikoski.AnimationSequencer;
 
-public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
+    IPointerClickHandler
 {
     public Sprite Icon => itemImage.sprite;
+
     [Header("Item data")]
     public MurderousItemData itemData;
-    
+
     [SerializeField]
     private Image itemImage;
 
@@ -31,10 +33,10 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
 
     [Header("Guide feedback")]
     public ChatMessageData guideMessage;
+
     public Animator guideIconAnimator;
     public AnimationSequencerController controller;
 
-    private bool guideMessageShown = false;
 
     private Graphic _rangeGraphic;
     private SpriteRenderer _rangeSprite;
@@ -76,38 +78,21 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log($"[MurderousItemClickableCanvas] OnPointerClick on {name}");
-
-        if (itemData == null)
-            return;
-
-        if (_rectTransform == null)
-            return;
-
         var itemWorldPos = _rectTransform.TransformPoint(_rectTransform.rect.center);
         var itemPos2D = new Vector2(itemWorldPos.x, itemWorldPos.y);
 
-        var allNpcs = FindObjectsOfType<Npc>(true);
+        var allNpcs = FindObjectsOfType<Npc>();
         if (allNpcs == null || allNpcs.Length == 0)
             return;
 
         var killedSomeone = false;
-        var wrongItemUsedOnNpc = false;
 
         foreach (var npc in allNpcs)
         {
-            if (npc == null || !npc.gameObject.activeInHierarchy)
-                continue;
-
             var npcRect = npc.GetComponent<RectTransform>();
-            if (npcRect == null)
-                continue;
-
             var npcWorldPos = npcRect.TransformPoint(npcRect.rect.center);
 
             var inRange = false;
-
-            // Range check using KillingRange + slack
             if (rangeVisual != null)
             {
                 var screenCenter = RectTransformUtility.WorldToScreenPoint(_uiCamera, npcWorldPos);
@@ -132,7 +117,6 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             }
             else
             {
-                // fallback to simple radius
                 var dist = Vector2.Distance(
                     itemPos2D,
                     new Vector2(npcWorldPos.x, npcWorldPos.y)
@@ -143,24 +127,16 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             if (!inRange)
                 continue;
 
-            // Vulnerability check
             if (npc.IsVulnerableTo(itemData))
             {
                 npc.Kill(itemData);
-                SoundManager.Instance.Play(itemData.Sound);
-
                 killedSomeone = true;
 
                 if (killOnlyFirst)
                     break;
             }
-            else
-            {
-                // NPC is in range but not vulnerable to this item
-                wrongItemUsedOnNpc = true;
-            }
         }
-        // Overheat rule: only when click did nothing useful
+
         if (!killedSomeone && overheat != null)
         {
             overheat.RegisterUse();

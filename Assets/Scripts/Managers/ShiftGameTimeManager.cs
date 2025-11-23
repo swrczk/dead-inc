@@ -21,25 +21,18 @@ public class ShiftGameTimeManager : MonoBehaviour
 
     [SerializeField]
     private Image timeCircleImage;
-
-    [SerializeField]
-    private bool autoStart = true;
+ 
 
     [SerializeField]
     private GameOverUI gameOverUI;
-
-    [SerializeField]
-    private bool stopTimeOnEnd = true;
+ 
 
     [SerializeField]
     private ChatMessageData halftimeMessage;
 
-    private float elapsedTime = 0f; // ile realnych sekund min?o w tej rundzie
-    private bool isRunning = false;
-    private bool halftimeMessageSent = false;
-
-    public event Action GameEnded;
-
+    private float _elapsedTime = 0f; // ile realnych sekund min?o w tej rundzie
+    private bool _isRunning = false; 
+ 
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -54,33 +47,21 @@ public class ShiftGameTimeManager : MonoBehaviour
     private void Start()
     {
         gameOverUI.gameObject.SetActive(false);
-        elapsedTime = 0f;
-        halftimeMessageSent = false;
-        UpdateTimerUI(); // na start np. 08:00 i pe?ne k?ko
-
-        if (autoStart)
-            StartTimer();
-    }
-
-    public void StartTimer()
-    {
-        isRunning = true;
-    }
-
-    public void StopTimer()
-    {
-        isRunning = false;
-    }
+        _elapsedTime = 0f; 
+        _isRunning = true;
+        UpdateTimerUI(); 
+ 
+    } 
 
     private void Update()
     {
-        if (!isRunning)
+        if (!_isRunning)
             return;
 
-        elapsedTime += Time.deltaTime;
-        if (elapsedTime >= gameDuration)
+        _elapsedTime += Time.deltaTime;
+        if (_elapsedTime >= gameDuration)
         {
-            elapsedTime = gameDuration;
+            _elapsedTime = gameDuration;
             UpdateTimerUI();
             EndGame();
             return;
@@ -91,11 +72,11 @@ public class ShiftGameTimeManager : MonoBehaviour
 
     private void EndGame()
     {
-        if (!isRunning)
+        if (!_isRunning)
             return;
 
         gameOverUI.gameObject.SetActive(true);
-        isRunning = false;
+        _isRunning = false;
 
         ShiftEndedSignal.Invoke();
     }
@@ -113,7 +94,7 @@ public class ShiftGameTimeManager : MonoBehaviour
             }
             else
             {
-                var t = Mathf.Clamp01(elapsedTime / gameDuration);
+                var t = Mathf.Clamp01(_elapsedTime / gameDuration);
                 var passedMinutesFloat = t * totalWorkMinutes;
                 var passedMinutes = Mathf.FloorToInt(passedMinutesFloat);
 
@@ -128,7 +109,7 @@ public class ShiftGameTimeManager : MonoBehaviour
         // --- aktualizacja okr?gu czasu ---
         if (timeCircleImage != null && gameDuration > 0f)
         {
-            var t = Mathf.Clamp01(elapsedTime / gameDuration); // 0..1 (ile min?o)
+            var t = Mathf.Clamp01(_elapsedTime / gameDuration); // 0..1 (ile min?o)
             var remaining01 = 1f - t; // 1..0 (ile zosta?o)
 
             timeCircleImage.fillAmount = remaining01;
@@ -137,7 +118,7 @@ public class ShiftGameTimeManager : MonoBehaviour
 
     public float GetRemainingRealTime()
     {
-        return Mathf.Max(0f, gameDuration - elapsedTime);
+        return Mathf.Max(0f, gameDuration - _elapsedTime);
     }
 
     public void ApplyTimePenalty(float penaltySeconds)
@@ -146,16 +127,16 @@ public class ShiftGameTimeManager : MonoBehaviour
             return;
 
         // je?li gra ju? nie trwa, nie ma sensu nak?ada? kary
-        if (!isRunning)
+        if (!_isRunning)
             return;
 
         // zwi?kszamy elapsedTime => mniej czasu zostaje
-        elapsedTime += penaltySeconds;
+        _elapsedTime += penaltySeconds;
 
         // upewniamy si?, ?e nie przekroczymy ko?ca rundy
-        if (elapsedTime >= gameDuration)
+        if (_elapsedTime >= gameDuration)
         {
-            elapsedTime = gameDuration;
+            _elapsedTime = gameDuration;
             UpdateTimerUI();
             EndGame();
             return;
@@ -165,6 +146,6 @@ public class ShiftGameTimeManager : MonoBehaviour
         UpdateTimerUI();
 
         Debug.Log(
-            $"[GameTimer] Kara czasowa: -{penaltySeconds}s, elapsed={elapsedTime}, remaining={GetRemainingRealTime()}");
+            $"[GameTimer] Kara czasowa: -{penaltySeconds}s, elapsed={_elapsedTime}, remaining={GetRemainingRealTime()}");
     }
 }

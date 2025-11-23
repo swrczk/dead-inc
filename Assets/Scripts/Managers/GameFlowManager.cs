@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -29,6 +30,7 @@ public class GameFlowManager : MonoBehaviour
 
     private void Start()
     {
+        NpcDissappearedSignal.AddListener(RemoveNpc);
         Run();
     }
 
@@ -72,6 +74,22 @@ public class GameFlowManager : MonoBehaviour
         }
 
         Debug.Log("[GameFlow] GAME COMPLETE – All stages finished!");
+    }
+
+    private void RemoveNpc(string npcId)
+    {
+        Debug.Log($"[GameFlow] NPC killed → Removing NPC id={npcId}");
+
+        var toRemove = _currentNpcs.FirstOrDefault(n => n.Id == npcId);
+        if (toRemove != null)
+        {
+            _currentNpcs.Remove(toRemove);
+            Debug.Log($"[GameFlow] Removed NPC {npcId}. Remaining: {_currentNpcs.Count}");
+        }
+        else
+        {
+            Debug.LogWarning($"[GameFlow] Tried to remove NPC {npcId}, but it's not tracked!");
+        }
     }
 
     private async UniTask HandleSingleStage(SingleStage stage)

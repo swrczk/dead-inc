@@ -12,17 +12,18 @@ public class WaypointMover : MonoBehaviour
     public bool loop = true; // jeśli true – po ostatnim waypointcie wracamy na początek
 
     public bool pingPong = false; // jeśli true – chodzimy tam i z powrotem
-
-    // Eventy (używane przez NPCPathController – możesz zostawić nawet jeśli jeszcze go nie używasz)
-    public event Action LoopCompleted; // wywoływany przy powrocie z końca ścieżki na początek (loop)
-    public event Action PathFinished; // wywoływany, gdy ścieżka jednorazowa się kończy
+ 
+    public event Action LoopCompleted; 
+    public event Action PathFinished; 
 
     [HideInInspector]
     public int currentIndex = 0;
 
-    private int _direction = 1; // 1 – przód, -1 – tył (dla ping-ponga)
-    protected float WaitTimer = 0f;
+    private int _direction = 1;  
+    private float _waitTimer = 0f;
     private float _moveSpeed = 2f;
+    private bool _forceStopNpc;
+    private bool _isSetup;
 
     public WaypointPath Path { get; private set; }
 
@@ -31,16 +32,23 @@ public class WaypointMover : MonoBehaviour
         _moveSpeed = npcData.Speed;
         Path = npcData.shoppingPath;
         transform.position = Path.waypoints[currentIndex].position;
+        _forceStopNpc = false;
+        _isSetup = true;
+    }
+
+    public void Stop()
+    {
+        _forceStopNpc = true;
     }
 
 
     private void Update()
     {
-        if (Path == null || Path.waypoints == null || Path.waypoints.Length == 0) return;
+        if (!_isSetup || _forceStopNpc) return;
 
-        if (WaitTimer > 0f)
+        if (_waitTimer > 0f)
         {
-            WaitTimer -= Time.deltaTime;
+            _waitTimer -= Time.deltaTime;
             return;
         }
 
@@ -57,7 +65,7 @@ public class WaypointMover : MonoBehaviour
 
     private void OnReachWaypoint()
     {
-        if (waitTimeAtWaypoint > 0f) WaitTimer = waitTimeAtWaypoint;
+        if (waitTimeAtWaypoint > 0f) _waitTimer = waitTimeAtWaypoint;
 
 
         if (pingPong && Path.waypoints.Length > 1)
@@ -96,26 +104,5 @@ public class WaypointMover : MonoBehaviour
             }
         }
     }
-
-    /// <summary>
-    /// Zmienia ścieżkę w locie. Używane m.in. przez PathRedirectZone.
-    /// </summary>
-    public void SwitchToPath(WaypointPath newPath, bool snapToClosestPoint = true)
-    {
-        Path = newPath;
-
-        if (snapToClosestPoint)
-        {
-            currentIndex = Path.GetClosestWaypointIndex(transform.position);
-        }
-        else
-        {
-            currentIndex = 0;
-            transform.position = Path.waypoints[currentIndex].position;
-        }
-
-        WaitTimer = 0f;
-        _direction = 1;
-        enabled = true;
-    }
+  
 }
