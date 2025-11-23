@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
+public class MurderousItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     IPointerClickHandler
 {
     public Sprite Icon => itemImage.sprite;

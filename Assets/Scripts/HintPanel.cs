@@ -14,12 +14,12 @@ public class HintPanel : MonoBehaviour
     [SerializeField]
     private GameObject rightPanel;
 
-    private List<MurderousItemClickableCanvas> _itemsList;
+    private List<MurderousItem> _itemsList;
 
 
     public void Show(GameplayFlow flow, int stageIndex)
     {
-        _itemsList ??= FindObjectsOfType<MurderousItemClickableCanvas>().ToList();
+        _itemsList ??= FindObjectsOfType<MurderousItem>().ToList();
         var uniqueNpcs = new HashSet<NpcPartData>();
 
         for (var i = 0; i <= stageIndex; i++)
