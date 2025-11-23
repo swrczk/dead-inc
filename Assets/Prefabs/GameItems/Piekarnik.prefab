@@ -61,10 +61,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8094093104782053286}
     - target: {fileID: 4974935817187117579, guid: 114c716b002e3804bbddd7c5a000be47, type: 3}
-      propertyPath: rangeVisual
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4974935817187117579, guid: 114c716b002e3804bbddd7c5a000be47, type: 3}
       propertyPath: guideMessage
       value: 
       objectReference: {fileID: 11400000, guid: 6cac1cf95773f4348b44520d7979ccaf, type: 2}

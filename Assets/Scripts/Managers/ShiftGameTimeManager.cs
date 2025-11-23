@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using BrunoMikoski.AnimationSequencer;
+using Cysharp.Threading.Tasks;
 using TMPro;
 
 public class ShiftGameTimeManager : MonoBehaviour
@@ -21,18 +23,21 @@ public class ShiftGameTimeManager : MonoBehaviour
 
     [SerializeField]
     private Image timeCircleImage;
- 
+
 
     [SerializeField]
     private GameOverUI gameOverUI;
- 
 
     [SerializeField]
-    private ChatMessageData halftimeMessage;
+    private AudioClip endShiftSound;
+
+    [SerializeField]
+    private AnimationSequencerController endShiftAnimation;
+
 
     private float _elapsedTime = 0f; // ile realnych sekund min?o w tej rundzie
-    private bool _isRunning = false; 
- 
+    private bool _isRunning = false;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -47,11 +52,10 @@ public class ShiftGameTimeManager : MonoBehaviour
     private void Start()
     {
         gameOverUI.gameObject.SetActive(false);
-        _elapsedTime = 0f; 
+        _elapsedTime = 0f;
         _isRunning = true;
-        UpdateTimerUI(); 
- 
-    } 
+        UpdateTimerUI();
+    }
 
     private void Update()
     {
@@ -70,11 +74,15 @@ public class ShiftGameTimeManager : MonoBehaviour
         UpdateTimerUI();
     }
 
-    private void EndGame()
+    private async void EndGame()
     {
         if (!_isRunning)
             return;
-
+        endShiftAnimation.Play();
+        await UniTask.WhenAll(
+            UniTask.WaitUntil(() => !endShiftAnimation.IsPlaying),
+            SoundManager.Instance.Play(endShiftSound)
+            );
         gameOverUI.gameObject.SetActive(true);
         _isRunning = false;
 

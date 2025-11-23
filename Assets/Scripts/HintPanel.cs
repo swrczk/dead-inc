@@ -47,13 +47,13 @@ public class HintPanel : MonoBehaviour
             uniqueNpcsWeakness.Add(npcPartData.Weakness);
         }
 
-        var itemsToShow = _itemsList.Where(i => uniqueNpcsWeakness.Contains(i.itemData.Weakness)).ToList();
+        var itemsToShow = _itemsList.Where(i => uniqueNpcsWeakness.Contains(i.ItemData.Weakness)).ToList();
 
         ClearChildren(rightPanel);
         foreach (var item in itemsToShow)
         {
             var row = Instantiate(hintPanelRow, rightPanel.transform);
-            row.Setup(item.Icon, item.itemData.Weakness.Icon);
+            row.Setup(item.Icon, item.ItemData.Weakness.Icon);
         }
     }
 

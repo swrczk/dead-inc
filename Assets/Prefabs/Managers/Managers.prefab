@@ -235,6 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5871406729420243304}
   - component: {fileID: 4832691614481985544}
+  - component: {fileID: 1643946181773535446}
   m_Layer: 0
   m_Name: GameTimeManager
   m_TagString: Untagged
@@ -275,7 +276,43 @@ MonoBehaviour:
   timerText: {fileID: 0}
   timeCircleImage: {fileID: 0}
   gameOverUI: {fileID: 0}
-  halftimeMessage: {fileID: 11400000, guid: 7fa5b7b198fc1164db947462b682ea34, type: 2}
+  endShiftSound: {fileID: 8300000, guid: e815aecc466e38a4897766023c97d464, type: 3}
+  endShiftAnimation: {fileID: 1643946181773535446}
+--- !u!114 &1643946181773535446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277599196129784313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10d422b52559da41aa9676770a8fc65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSteps: []
+  updateType: 0
+  timeScaleIndependent: 0
+  autoplayMode: 0
+  startPaused: 0
+  playbackSpeed: 1
+  playType: 0
+  loops: 0
+  loopType: 0
+  autoKill: 1
+  onStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onProgressEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  progress: -1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &7519998981862405611
 GameObject:
   m_ObjectHideFlags: 0

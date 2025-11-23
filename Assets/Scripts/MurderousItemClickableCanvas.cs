@@ -8,28 +8,30 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
 {
     public Sprite Icon => itemImage.sprite;
 
-    [Header("Item data")]
-    public MurderousItemData itemData;
+    public MurderousItemData ItemData => itemData;
+
+    [SerializeField]
+    private MurderousItemData itemData;
 
     [SerializeField]
     private Image itemImage;
 
-    [Header("Range visualization (assign KillingRange here)")]
-    public RectTransform rangeVisual;
+    [SerializeField]
+    private RectTransform rangeVisual;
 
-    [Tooltip("Fallback distance check if rangeVisual is not set.")]
-    public float rangeRadius = 150f;
+    [SerializeField]
+    private float rangeRadius = 150f;
 
-    [Header("Hit tolerance")]
-    public float npcHitSlack = 20f;
+    [SerializeField]
+    private float npcHitSlack = 20f;
 
-    [Header("Kill settings")]
-    public bool killOnlyFirst = true;
+    [SerializeField]
+    private bool killOnlyFirst = true;
+
+    [SerializeField]
+    private AudioClip wrongItemUsedClip;
 
     private RectTransform _rectTransform;
-  
-    
-    public AnimationSequencerController controller;
 
 
     private Graphic _rangeGraphic;
@@ -49,7 +51,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             _rangeSprite = rangeVisual.GetComponentInChildren<SpriteRenderer>(true);
             HideRange();
         }
- 
+
         _canvas = GetComponentInParent<Canvas>();
         if (_canvas != null)
             _uiCamera = _canvas.worldCamera;
@@ -126,7 +128,12 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
                 if (killOnlyFirst)
                     break;
             }
-        } 
+        }
+
+        if (!killedSomeone)
+        {
+            SoundManager.Instance.Play(wrongItemUsedClip);
+        }
     }
 
     private void ShowRange()
