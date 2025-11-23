@@ -5,8 +5,7 @@ using UnityEditor;
 public class GameFlowManagerEditor : Editor
 {
     public override void OnInspectorGUI()
-    {
-        // Rysujemy normalny inspector GameFlowManagera
+    { 
         DrawDefaultInspector();
 
         EditorGUILayout.Space();

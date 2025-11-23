@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class GameFlowManager : MonoBehaviour
 {
+    public GameplayFlow GameplayFlow => gameplayFlow;
+
+    public int CurrentStageIndex => _currentStageIndex;
+
     [SerializeField]
     private GameplayFlow gameplayFlow;
 
@@ -15,13 +19,9 @@ public class GameFlowManager : MonoBehaviour
     private NPCSpawner _npcSpawner;
 
     private int _currentStageIndex;
-    private float _time;
-    private CancellationTokenSource finishGameTokenSource = new CancellationTokenSource();
+    private CancellationTokenSource _finishGameTokenSource = new();
 
-    private List<Npc> _currentNpcs = new List<Npc>();
-    public GameplayFlow GameplayFlow => gameplayFlow;
-
-    public int CurrentStageIndex => _currentStageIndex;
+    private List<Npc> _currentNpcs = new();
 
     void Awake()
     {
@@ -32,11 +32,6 @@ public class GameFlowManager : MonoBehaviour
     {
         NpcDissappearedSignal.AddListener(RemoveNpc);
         Run();
-    }
-
-    private void Update()
-    {
-        _time += Time.deltaTime;
     }
 
     private async void Run()
@@ -57,10 +52,10 @@ public class GameFlowManager : MonoBehaviour
 
                 await UniTask.WaitUntil(
                     () => _currentNpcs.Count == 0,
-                    cancellationToken: finishGameTokenSource.Token
+                    cancellationToken: _finishGameTokenSource.Token
                 );
 
-                if (finishGameTokenSource.IsCancellationRequested)
+                if (_finishGameTokenSource.IsCancellationRequested)
                 {
                     Debug.LogWarning("[GameFlow] Game cancelled – stopping Run()");
                     return;

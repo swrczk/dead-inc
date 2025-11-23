@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class JiraRequirement : MonoBehaviour
 {
+    public bool IsCompleted => _currentCount >= _requirement.Amount;
+
     [SerializeField]
     private Image bodyPartIcon;
 
@@ -19,15 +21,14 @@ public class JiraRequirement : MonoBehaviour
     [SerializeField]
     private GameObject completedMark;
 
-    public TaskRequirement Requirement { get; private set; }
+    private TaskRequirement _requirement;
 
-    public int CurrentCount { get; private set; }
-    public bool IsCompleted =>   CurrentCount >= Requirement.Amount;
+    private int _currentCount;
 
     public void Setup(TaskRequirement taskRequirementData)
     {
-        Requirement = taskRequirementData;
-        CurrentCount = 0;
+        _requirement = taskRequirementData;
+        _currentCount = 0;
         var hasItem = taskRequirementData.ItemToUse != null;
         var hasBody = taskRequirementData.RequiredBodyPart != null;
         var hasWeakness = taskRequirementData.WeaknessToUse != null;
@@ -56,34 +57,30 @@ public class JiraRequirement : MonoBehaviour
     }
 
     private void UpdateUI()
-    { 
-            repetitionsText.text = $"x{Requirement.Amount - CurrentCount}"; 
-            completedMark.SetActive(IsCompleted); 
-    } 
+    {
+        repetitionsText.text = $"x{_requirement.Amount - _currentCount}";
+        completedMark.SetActive(IsCompleted);
+    }
 
     public bool TryToUpdate(NpcData npc, MurderousItemData item)
     {
-        // BODY PART
-        if (Requirement.RequiredBodyPart != null && Requirement.RequiredBodyPart != npc.Body &&
-            Requirement.RequiredBodyPart != npc.Head)
+        if (_requirement.RequiredBodyPart != null && _requirement.RequiredBodyPart != npc.Body &&
+            _requirement.RequiredBodyPart != npc.Head)
         {
             return false;
         }
 
-        // KONKRETNY ITEM
-        if (Requirement.ItemToUse != null && Requirement.ItemToUse != item)
+        if (_requirement.ItemToUse != null && _requirement.ItemToUse != item)
         {
             return false;
         }
 
-        // KONKRETNA SŁABOŚĆ (jeśli używacie WeaknessTraitData)
-        if (Requirement.WeaknessToUse != null)
+        if (_requirement.WeaknessToUse != null)
         {
-            // przykładowa logika, zależy jak to u Ciebie działa:
-            if (item == null || item.Weakness != Requirement.WeaknessToUse) return false;
+            if (item == null || item.Weakness != _requirement.WeaknessToUse) return false;
         }
 
-        CurrentCount++;
+        _currentCount++;
         UpdateUI();
         return true;
     }

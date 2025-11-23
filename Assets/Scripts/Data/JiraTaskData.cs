@@ -16,5 +16,4 @@ public class TaskRequirement
     public MurderousItemData ItemToUse;
     public WeaknessTraitData WeaknessToUse;
     public int Amount;
-
 }

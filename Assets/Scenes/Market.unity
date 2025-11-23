@@ -335,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 1115076645}
     - target: {fileID: 4832691614481985544, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameDuration
-      value: 30
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 6745987525921208814, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: panel

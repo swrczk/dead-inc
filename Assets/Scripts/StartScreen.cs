@@ -12,6 +12,7 @@ public class StartScreen : MonoBehaviour
     [FormerlySerializedAs("button")]
     [SerializeField]
     private Button playButton;
+
     [SerializeField]
     private Button skipButton;
 
@@ -24,7 +25,7 @@ public class StartScreen : MonoBehaviour
     [SerializeField]
     private GameObject screenToHide;
 
-    private CancellationTokenSource cts = new();
+    private CancellationTokenSource _cts = new();
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class StartScreen : MonoBehaviour
 
     private void SkipAnimation()
     {
-        cts.Cancel();
+        _cts.Cancel();
         videoPlayer.Stop();
         screenToHide.SetActive(false);
         skipButton.gameObject.SetActive(false);
@@ -48,8 +49,8 @@ public class StartScreen : MonoBehaviour
         path = path.Replace("\\", "/");
         videoPlayer.url = path;
 
-        await UniTask.WaitUntil(() => videoPlayer.isPlaying, cancellationToken:cts.Token);
-        await UniTask.WaitUntil(() => !videoPlayer.isPlaying, cancellationToken:cts.Token);
+        await UniTask.WaitUntil(() => videoPlayer.isPlaying, cancellationToken: _cts.Token);
+        await UniTask.WaitUntil(() => !videoPlayer.isPlaying, cancellationToken: _cts.Token);
 
         screenToHide.SetActive(false);
     }

@@ -25,9 +25,6 @@ public class JiraTaskUIEntry : MonoBehaviour
     [SerializeField]
     private GameObject amountContainer;
 
-    [SerializeField]
-    private JiraTicketAmountElement amountElement;
-
 
     private readonly List<JiraRequirement> _requirements = new List<JiraRequirement>();
     private int _totalRequiredKills;
@@ -46,17 +43,11 @@ public class JiraTaskUIEntry : MonoBehaviour
 
         taskNumber.text = $"#{taskIndex}";
         pointsText.text = $"+{Data.Points}";
-        UpdateProgressUI();
     }
 
     private void ClearChildren(GameObject parent)
     {
         foreach (Transform child in parent.transform) Destroy(child.gameObject);
-    }
-
-    private void UpdateProgressUI()
-    {
-        // progressText.text = $"{_currentCount} / {Data.Amount}";
     }
 
     public bool TryUpdateProgress(NpcData npc, MurderousItemData item)
@@ -67,15 +58,13 @@ public class JiraTaskUIEntry : MonoBehaviour
 
         foreach (var requirement in _requirements)
         {
-            if (requirement.TryToUpdate(npc,   item))
+            if (requirement.TryToUpdate(npc, item))
             {
                 anyRequirementMatched = true;
             }
         }
 
         if (!anyRequirementMatched) return false;
-
-        UpdateProgressUI();
 
         IsCompleted = _requirements.All(r => r.IsCompleted);
 

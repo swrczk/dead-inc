@@ -43,7 +43,7 @@ public class JiraTaskManager : MonoBehaviour
             {
                 Destroy(activeTasks[index].gameObject);
                 activeTasks.RemoveAt(index);
-                index--; // żeby nie przeskoczyć elementu po RemoveAt
+                index--;
             }
         }
 
@@ -75,7 +75,7 @@ public class JiraTaskManager : MonoBehaviour
 
     private JiraTaskData GetRandomTask()
     {
-        var index = Mathf.Min(possibleTasks.Count -1, _tasksTotalCounter);
+        var index = Mathf.Min(possibleTasks.Count - 1, _tasksTotalCounter);
         return possibleTasks[index];
     }
 }

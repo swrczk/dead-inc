@@ -9,17 +9,15 @@ public class WaypointMover : MonoBehaviour
     public float waitTimeAtWaypoint = 0.5f;
 
     [Header("Tryb poruszania")]
-    public bool loop = true; // jeśli true – po ostatnim waypointcie wracamy na początek
+    public bool loop = true;
 
-    public bool pingPong = false; // jeśli true – chodzimy tam i z powrotem
- 
-    public event Action LoopCompleted; 
-    public event Action PathFinished; 
+    public bool pingPong = false;
+
 
     [HideInInspector]
     public int currentIndex = 0;
 
-    private int _direction = 1;  
+    private int _direction = 1;
     private float _waitTimer = 0f;
     private float _moveSpeed = 2f;
     private bool _forceStopNpc;
@@ -90,19 +88,14 @@ public class WaypointMover : MonoBehaviour
             {
                 if (loop)
                 {
-                    // Wracamy na początek ścieżki
                     currentIndex = 0;
-                    LoopCompleted?.Invoke();
                 }
                 else
                 {
-                    // Koniec ścieżki jednorazowej
                     currentIndex = Path.waypoints.Length - 1;
-                    PathFinished?.Invoke();
                     enabled = false;
                 }
             }
         }
     }
-  
 }

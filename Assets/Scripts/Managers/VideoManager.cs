@@ -4,6 +4,11 @@ using UnityEngine.Video;
 
 public class VideoManager : MonoBehaviour
 {
+    [SerializeField]
+    private CutscenePanel _cutscenePanel;
+
+    private static VideoManager _instance;
+
     public static VideoManager Instance
     {
         get
@@ -18,11 +23,6 @@ public class VideoManager : MonoBehaviour
         }
     }
 
-
-    private static VideoManager _instance;
-
-    [SerializeField]
-    private CutscenePanel _cutscenePanel;
 
     public async UniTask Play(VideoClip clip)
     {
