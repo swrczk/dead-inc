@@ -122,17 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &10785667 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7077333760091597026, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
-  m_PrefabInstance: {fileID: 7058923524576120993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &20094268
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,343 +381,35 @@ PrefabInstance:
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[0].AvailableNpcs.Array.data[0].shoppingPath
       value: 
-      objectReference: {fileID: 7058923524576121000}
+      objectReference: {fileID: 325209290}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[1].AvailableNpcs.Array.data[0].shoppingPath
       value: 
-      objectReference: {fileID: 1026290458}
+      objectReference: {fileID: 776521055}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[1].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 7058923524576121000}
+      objectReference: {fileID: 325209290}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[2].AvailableNpcs.Array.data[0].shoppingPath
       value: 
-      objectReference: {fileID: 7058923524576121000}
+      objectReference: {fileID: 1020606144}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[2].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 1026290458}
+      objectReference: {fileID: 1227624479}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[2].AvailableNpcs.Array.data[2].shoppingPath
       value: 
-      objectReference: {fileID: 696965784}
+      objectReference: {fileID: 1565858615}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[3].AvailableNpcs.Array.data[0].shoppingPath
       value: 
-      objectReference: {fileID: 7058923524576121000}
+      objectReference: {fileID: 1565858615}
     - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
       propertyPath: gameplayFlow.Stages.Array.data[3].AvailableNpcs.Array.data[1].shoppingPath
       value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[4].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[5].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[6].AvailableNpcs.Array.data[5].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[7].AvailableNpcs.Array.data[5].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[5].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[8].AvailableNpcs.Array.data[6].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[5].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[6].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[9].AvailableNpcs.Array.data[7].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[5].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[6].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[10].AvailableNpcs.Array.data[7].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[5].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[6].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[7].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[11].AvailableNpcs.Array.data[8].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[5].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[6].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[12].AvailableNpcs.Array.data[7].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[5].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[13].AvailableNpcs.Array.data[6].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[0].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[1].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[2].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[3].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[4].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[5].shoppingPath
-      value: 
-      objectReference: {fileID: 7058923524576121000}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[6].shoppingPath
-      value: 
-      objectReference: {fileID: 1026290458}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[7].shoppingPath
-      value: 
-      objectReference: {fileID: 696965784}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[8].shoppingPath
-      value: 
-      objectReference: {fileID: 958749452}
-    - target: {fileID: 9035567010787229587, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
-      propertyPath: gameplayFlow.Stages.Array.data[14].AvailableNpcs.Array.data[9].shoppingPath
-      value: 
-      objectReference: {fileID: 10785667}
+      objectReference: {fileID: 776521055}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -739,6 +420,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7450810974760213976, guid: 750f88bead4b2a442a127457c3687cdd, type: 3}
   m_PrefabInstance: {fileID: 119131967}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &325209290 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4305950970786545767, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+  m_PrefabInstance: {fileID: 7058923524576120993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &338177920
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,9 +658,9 @@ Material:
     - _ColorScans: {r: -0.048, g: 0.048, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &696965784 stripped
+--- !u!114 &776521055 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1397354789501422218, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3426047057886735553, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
   m_PrefabInstance: {fileID: 7058923524576120993}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -982,20 +674,9 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8794163840895231573, guid: a58e1d7cbe8ef884ca81df0ce33f1202, type: 3}
   m_PrefabInstance: {fileID: 8959661923698459086}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &958749452 stripped
+--- !u!114 &1020606144 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2334645923017247594, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
-  m_PrefabInstance: {fileID: 7058923524576120993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1026290458 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3426047057886735553, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1397354789501422218, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
   m_PrefabInstance: {fileID: 7058923524576120993}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1013,6 +694,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1516fd6ff3980d1458a41005b521bf71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1227624479 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2334645923017247594, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+  m_PrefabInstance: {fileID: 7058923524576120993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1513825196 stripped
@@ -1114,6 +806,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1565858615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7077333760091597026, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
+  m_PrefabInstance: {fileID: 7058923524576120993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1733188284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1784,17 +1487,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7058923524576121000 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4305950970786545767, guid: dcaa274be0a01434b8caab874b04a998, type: 3}
-  m_PrefabInstance: {fileID: 7058923524576120993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9814134bbd8b0ac44ab35507e78590fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8959661923698459086

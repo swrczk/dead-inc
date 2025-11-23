@@ -3,21 +3,14 @@ using System;
 
 public class WaypointMover : MonoBehaviour
 {
+    public event Action PathEnded;
+
     [Header("Ustawienia ruchu")]
     public float reachDistance = 0.05f;
 
     public float waitTimeAtWaypoint = 0.5f;
 
-    [Header("Tryb poruszania")]
-    public bool loop = true;
-
-    public bool pingPong = false;
-
-
-    [HideInInspector]
-    public int currentIndex = 0;
-
-    private int _direction = 1;
+    private int _currentIndex = 0;
     private float _waitTimer = 0f;
     private float _moveSpeed = 2f;
     private bool _forceStopNpc;
@@ -29,7 +22,7 @@ public class WaypointMover : MonoBehaviour
     {
         _moveSpeed = npcData.Speed;
         Path = npcData.shoppingPath;
-        transform.position = Path.waypoints[currentIndex].position;
+        transform.position = Path.waypoints[_currentIndex].position;
         _forceStopNpc = false;
         _isSetup = true;
     }
@@ -50,7 +43,7 @@ public class WaypointMover : MonoBehaviour
             return;
         }
 
-        Transform target = Path.waypoints[currentIndex];
+        Transform target = Path.waypoints[_currentIndex];
 
         transform.position = Vector3.MoveTowards(transform.position, target.position, _moveSpeed * Time.deltaTime);
 
@@ -64,38 +57,11 @@ public class WaypointMover : MonoBehaviour
     private void OnReachWaypoint()
     {
         if (waitTimeAtWaypoint > 0f) _waitTimer = waitTimeAtWaypoint;
-
-
-        if (pingPong && Path.waypoints.Length > 1)
+        
+        _currentIndex++; 
+        if (_currentIndex >= Path.waypoints.Length)
         {
-            if (currentIndex == Path.waypoints.Length - 1)
-            {
-                _direction = -1;
-            }
-            else if (currentIndex == 0)
-            {
-                _direction = 1;
-            }
-
-            currentIndex += _direction;
-        }
-        else
-        {
-            // Zwykły przebieg od 0 do end
-            currentIndex++;
-
-            if (currentIndex >= Path.waypoints.Length)
-            {
-                if (loop)
-                {
-                    currentIndex = 0;
-                }
-                else
-                {
-                    currentIndex = Path.waypoints.Length - 1;
-                    enabled = false;
-                }
-            }
+            PathEnded.Invoke();
         }
     }
 }

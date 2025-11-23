@@ -31,6 +31,7 @@ public class Npc : MonoBehaviour
 
         gameObject.SetActive(true);
         mover.Setup(npcData);
+        mover.PathEnded += ()=> Destroy(gameObject);
     }
 
     public bool IsVulnerableTo(MurderousItemData item)

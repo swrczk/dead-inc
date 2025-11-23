@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class GameplayFlow
+public class GameplayFlow 
 {
     public List<SingleStage> Stages;
 }
@@ -56,4 +56,4 @@ public class NpcSet
     public float Speed = 1;
 
     public WaypointPath shoppingPath;
-}
+} 
