@@ -5,6 +5,8 @@ using Cysharp.Threading.Tasks;
 
 public class Npc : MonoBehaviour
 {
+    public string Id { get; private set; }
+
     [SerializeField]
     private Image head;
 
@@ -18,8 +20,7 @@ public class Npc : MonoBehaviour
     private AnimationSequencerController controller;
 
     private NpcData _data;
-
-    public string Id { get; private set; }
+    private bool _isKilled = false;
 
 
     public void Setup(string id, NpcSet npcData)
@@ -31,7 +32,7 @@ public class Npc : MonoBehaviour
 
         gameObject.SetActive(true);
         mover.Setup(npcData);
-        mover.PathEnded += ()=> Destroy(gameObject);
+        mover.PathEnded += () => Destroy(gameObject);
     }
 
     public bool IsVulnerableTo(MurderousItemData item)
@@ -47,6 +48,13 @@ public class Npc : MonoBehaviour
 
     public async void Kill(MurderousItemData usedItem)
     {
+        if (_isKilled)
+        {
+            return;
+        }
+
+        _isKilled = true;
+
         mover.Stop();
         SoundManager.Instance.Play(usedItem.Sound);
         controller.Play();
