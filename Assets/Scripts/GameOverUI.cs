@@ -22,14 +22,14 @@ public class GameOverUI : MonoBehaviour
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
 
-        if (GameTimer.Instance != null)
-            GameTimer.Instance.GameEnded += OnGameEnded;
+        if (ShiftGameTimeManager.Instance != null)
+            ShiftGameTimeManager.Instance.GameEnded += OnGameEnded;
     }
 
     private void OnDestroy()
     {
-        if (GameTimer.Instance != null)
-            GameTimer.Instance.GameEnded -= OnGameEnded;
+        if (ShiftGameTimeManager.Instance != null)
+            ShiftGameTimeManager.Instance.GameEnded -= OnGameEnded;
     }
 
     private void OnGameEnded()

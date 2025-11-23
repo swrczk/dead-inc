@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // for Graphic (Image, Text etc.)
+using UnityEngine.UI; 
 
 public class OverheatController : MonoBehaviour
 {
@@ -32,11 +32,15 @@ public class OverheatController : MonoBehaviour
 
     [Header("Chat message on first overheat")]
     public ChatMessageData overheatMessage;
+
     private bool hasShownOverheatMessage = false;
 
     [Header("State (read-only)")]
-    [SerializeField] private bool isOverheated;
-    [SerializeField, Range(0f, 1f)] private float currentHeatRatio;
+    [SerializeField]
+    private bool isOverheated;
+
+    [SerializeField, Range(0f, 1f)]
+    private float currentHeatRatio;
 
     public bool IsOverheated => isOverheated;
     public float CurrentHeatRatio => currentHeatRatio;
@@ -138,24 +142,8 @@ public class OverheatController : MonoBehaviour
             _unlockTime = now + lockDuration;
         }
 
-        // apply time penalty
-        if (GameTimer.Instance != null)
-        {
-            GameTimer.Instance.ApplyTimePenalty(timePenalty);
-        }
-        else
-        {
-            Debug.LogWarning("[Overheat] GameTimer.Instance == null – cannot apply time penalty.");
-        }
+        ShiftGameTimeManager.Instance.ApplyTimePenalty(timePenalty);
 
-        // send chat popup ONLY on first overheat for this item
-        if (!hasShownOverheatMessage && overheatMessage != null && ChatPopupManager.Instance != null)
-        {
-            hasShownOverheatMessage = true;
-            ChatPopupManager.Instance.ShowMessage(overheatMessage);
-        }
-
-        // reset heat
         _useTimestamps.Clear();
         currentHeatRatio = 0f;
 

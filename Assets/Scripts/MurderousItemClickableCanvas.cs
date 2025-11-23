@@ -160,21 +160,6 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
                 wrongItemUsedOnNpc = true;
             }
         }
-
-        // Show guide message and highlight cheat sheet icon only once,
-        // when player tried to use wrong item on an NPC in range.
-        if (wrongItemUsedOnNpc && !guideMessageShown)
-        {
-            guideMessageShown = true;
-
-            if (guideMessage != null && ChatPopupManager.Instance != null)
-            {
-                ChatPopupManager.Instance.ShowMessage(guideMessage);
-                controller.Play();
-            }
-
-        }
-
         // Overheat rule: only when click did nothing useful
         if (!killedSomeone && overheat != null)
         {

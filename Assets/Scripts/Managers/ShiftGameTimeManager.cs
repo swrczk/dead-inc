@@ -3,43 +3,41 @@ using UnityEngine.UI;
 using System;
 using TMPro;
 
-public class GameTimer : MonoBehaviour
+public class ShiftGameTimeManager : MonoBehaviour
 {
-    public static GameTimer Instance { get; private set; }
+    public static ShiftGameTimeManager Instance { get; private set; }
 
-    [Header("Czas trwania rundy (realny)")]
-    [Tooltip("Czas trwania rundy w sekundach (realny czas).")]
-    public float gameDuration = 120f;
+    [SerializeField]
+    private float gameDuration = 120f;
 
-    [Header("Zakres czasu pracy (wirtualny zegar)")]
-    [Tooltip("Godzina rozpocz?cia pracy (0-23).")]
-    public int workStartHour = 8;
+    [SerializeField]
+    private int workStartHour = 8;
 
-    [Tooltip("Godzina zako?czenia pracy (0-23).")]
-    public int workEndHour = 16;
+    [SerializeField]
+    private int workEndHour = 16;
 
-    [Header("UI")]
-    [Tooltip("Tekst w topbarze pokazuj?cy czas, np. 08:00, 12:37, 15:59.")]
-    public TextMeshProUGUI timerText;
+    [SerializeField]
+    private TextMeshProUGUI timerText;
 
-    [Tooltip("Obrazek okr?gu pokazuj?cy pozosta?y czas (Image typu Filled, Radial).")]
-    public Image timeCircleImage;
+    [SerializeField]
+    private Image timeCircleImage;
 
-    [Header("Ustawienia")]
-    [Tooltip("Czy timer ma wystartowa? automatycznie w Start().")]
-    public bool autoStart = true;
-    
-    public TMP_Text Points;
-    public GameObject Result;
+    [SerializeField]
+    private bool autoStart = true;
 
-    [Tooltip("Je?li true, po ko?cu gry ustawiamy Time.timeScale = 0.")]
-    public bool stopTimeOnEnd = true;
+    [SerializeField]
+    private TMP_Text Points;
 
-    [Header("Chat messages")]
-    [Tooltip("Message shown once when half of the time has passed.")]
-    public ChatMessageData halftimeMessage;
+    [SerializeField]
+    private GameObject Result;
 
-    private float elapsedTime = 0f;   // ile realnych sekund min?o w tej rundzie
+    [SerializeField]
+    private bool stopTimeOnEnd = true;
+
+    [SerializeField]
+    private ChatMessageData halftimeMessage;
+
+    private float elapsedTime = 0f; // ile realnych sekund min?o w tej rundzie
     private bool isRunning = false;
     private bool halftimeMessageSent = false;
 
@@ -61,7 +59,7 @@ public class GameTimer : MonoBehaviour
         Result.SetActive(false);
         elapsedTime = 0f;
         halftimeMessageSent = false;
-        UpdateTimerUI();  // na start np. 08:00 i pe?ne k?ko
+        UpdateTimerUI(); // na start np. 08:00 i pe?ne k?ko
 
         if (autoStart)
             StartTimer();
@@ -83,18 +81,6 @@ public class GameTimer : MonoBehaviour
             return;
 
         elapsedTime += Time.deltaTime;
-
-        // half-time notification
-        if (!halftimeMessageSent && gameDuration > 0f && elapsedTime >= gameDuration * 0.5f)
-        {
-            halftimeMessageSent = true;
-
-            if (halftimeMessage != null && ChatPopupManager.Instance != null)
-            {
-                ChatPopupManager.Instance.ShowMessage(halftimeMessage);
-            }
-        }
-
         if (elapsedTime >= gameDuration)
         {
             elapsedTime = gameDuration;
@@ -108,18 +94,14 @@ public class GameTimer : MonoBehaviour
 
     private void EndGame()
     {
+        Result.SetActive(false);
+        Points.text = $"{ScoreManager.Instance.CurrentScore} pkt";
         if (!isRunning)
             return;
 
         isRunning = false;
 
-        if (stopTimeOnEnd)
-            Time.timeScale = 0f;
-        
-        Result.SetActive(false);
-        Points.text = $"{ScoreManager.Instance.CurrentScore} pkt";
-
-        // GameEnded?.Invoke();
+        ShiftEndedSignal.Invoke();
     }
 
     private void UpdateTimerUI()
@@ -151,7 +133,7 @@ public class GameTimer : MonoBehaviour
         if (timeCircleImage != null && gameDuration > 0f)
         {
             float t = Mathf.Clamp01(elapsedTime / gameDuration); // 0..1 (ile min?o)
-            float remaining01 = 1f - t;                          // 1..0 (ile zosta?o)
+            float remaining01 = 1f - t; // 1..0 (ile zosta?o)
 
             timeCircleImage.fillAmount = remaining01;
         }
@@ -160,11 +142,6 @@ public class GameTimer : MonoBehaviour
     public float GetRemainingRealTime()
     {
         return Mathf.Max(0f, gameDuration - elapsedTime);
-    }
-
-    public float GetElapsedRealTime()
-    {
-        return elapsedTime;
     }
 
     public void ApplyTimePenalty(float penaltySeconds)
@@ -191,6 +168,7 @@ public class GameTimer : MonoBehaviour
         // od?wie? UI po zmianie czasu
         UpdateTimerUI();
 
-        Debug.Log($"[GameTimer] Kara czasowa: -{penaltySeconds}s, elapsed={elapsedTime}, remaining={GetRemainingRealTime()}");
+        Debug.Log(
+            $"[GameTimer] Kara czasowa: -{penaltySeconds}s, elapsed={elapsedTime}, remaining={GetRemainingRealTime()}");
     }
 }
