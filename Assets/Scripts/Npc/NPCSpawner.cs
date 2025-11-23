@@ -15,8 +15,7 @@ public class NPCSpawner : MonoBehaviour
 
         npcObj = Instantiate(npcPrefab, spawnPoint.position, Quaternion.identity, transform);
 
-        npcObj.Setup($"npc_id_{++npcCount}", npcData.NpcType);
-        npcObj.PathController.Init(npcData);
+        npcObj.Setup($"npc_id_{++npcCount}", npcData );
         npcObj.transform.localScale = gameSettingsNpcScale;
 
         return npcObj;

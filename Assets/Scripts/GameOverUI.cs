@@ -9,7 +9,10 @@ public class GameOverUI : MonoBehaviour
     private TMP_Text finalScoreText;
 
     [SerializeField]
-    private string pointsSuffix = " pkt";
+    private TMP_Text bodyCountText;
+
+    [SerializeField]
+    private TMP_Text taskCountText;
 
     [SerializeField]
     private Button restartButton;
@@ -25,7 +28,9 @@ public class GameOverUI : MonoBehaviour
 
     private void OnEnable()
     {
-        finalScoreText.text = ScoreManager.Instance.CurrentScore + pointsSuffix;
+        finalScoreText.text = ScoreManager.Instance.CurrentScore.ToString();
+        bodyCountText.text = ScoreManager.Instance.BodyCount.ToString();
+        taskCountText.text = ScoreManager.Instance.JiraTicketsDoneCount.ToString();
     }
 
     private void OnRestartButton()

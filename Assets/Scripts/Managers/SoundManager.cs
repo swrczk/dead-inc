@@ -1,4 +1,3 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -26,9 +25,8 @@ public class SoundManager : MonoBehaviour
         _audioSource ??= gameObject.AddComponent<AudioSource>();
     }
 
-    public async UniTask Play(AudioClip clip)
+    public void Play(AudioClip clip)
     {
         _audioSource.PlayOneShot(clip);
-        await UniTask.WaitUntil(() => !_audioSource.isPlaying);
     }
 }

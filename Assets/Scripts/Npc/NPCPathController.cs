@@ -1,10 +1,8 @@
 using UnityEngine;
 
 public class NPCPathController : MonoBehaviour
-{ 
-
+{
     private WaypointMover mover;
-    private int lapsDone = 0;
 
     private enum NPCState
     {
@@ -24,7 +22,8 @@ public class NPCPathController : MonoBehaviour
         {
             Debug.LogError($"{name}: Brak komponentu WaypointMover.");
             return;
-        }  
+        }
+
         mover.PathFinished += OnPathFinished;
 
         StartShopping();
@@ -37,14 +36,11 @@ public class NPCPathController : MonoBehaviour
 
     private void StartShopping()
     {
-
-        state = NPCState.Shopping;
-        lapsDone = 0;
-
+        state = NPCState.Shopping; 
         mover.loop = true;
-        mover.pingPong = false; 
+        mover.pingPong = false;
     }
- 
+
 
     private void OnPathFinished()
     {
@@ -57,7 +53,7 @@ public class NPCPathController : MonoBehaviour
     private void OnDestroy()
     {
         if (mover != null)
-        { 
+        {
             mover.PathFinished -= OnPathFinished;
         }
     }

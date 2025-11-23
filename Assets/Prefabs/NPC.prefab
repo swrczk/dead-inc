@@ -10,10 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4016294784591210667}
   - component: {fileID: 5856184634161018460}
-  - component: {fileID: 7989102022733917958}
   - component: {fileID: 7366278703322584874}
-  - component: {fileID: 470944320616252503}
-  - component: {fileID: 3743758235596768042}
   m_Layer: 5
   m_Name: NPC
   m_TagString: Untagged
@@ -57,20 +54,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 1848303057693748910}
   body: {fileID: 5289792409934295577}
-  pathController: {fileID: 7989102022733917958}
   controller: {fileID: 785041629201655752}
---- !u!114 &7989102022733917958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959673923296124187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64704f6de83a0704d9e260fb860a356a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  mover: {fileID: 7366278703322584874}
 --- !u!114 &7366278703322584874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,49 +73,6 @@ MonoBehaviour:
   loop: 1
   pingPong: 0
   currentIndex: 0
---- !u!58 &470944320616252503
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959673923296124187}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!222 &3743758235596768042
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959673923296124187}
-  m_CullTransparentMesh: 1
 --- !u!1 &4034450465964833027
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,12 +9,11 @@ public class ScoreManager : MonoBehaviour
     private TextMeshProUGUI scoreText;
 
     [SerializeField]
-    private string pointsSuffix = " pkt";
-
-    [SerializeField]
     private int baseKillPoints;
 
     public int CurrentScore { get; private set; }
+    public int BodyCount { get; private set; }
+    public int JiraTicketsDoneCount { get; private set; }
 
     private void Awake()
     {
@@ -36,15 +35,17 @@ public class ScoreManager : MonoBehaviour
 
     private void OnJiraTicketCompleted(int points)
     {
+        JiraTicketsDoneCount++;
         AddPoints(points);
     }
 
     private void OnNpcKilled(NpcData npcData, MurderousItemData murderousItemData)
     {
+        BodyCount++;
         AddPoints(baseKillPoints);
     }
 
-    public void AddPoints(int amount)
+    private void AddPoints(int amount)
     {
         CurrentScore += amount;
         UpdateScoreUI();
@@ -52,9 +53,6 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateScoreUI()
     {
-        if (scoreText != null)
-        {
-            scoreText.text = CurrentScore + pointsSuffix;
-        }
+        scoreText.text = CurrentScore.ToString();
     }
 }

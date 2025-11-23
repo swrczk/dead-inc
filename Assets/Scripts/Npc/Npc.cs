@@ -12,23 +12,25 @@ public class Npc : MonoBehaviour
     private Image body;
 
     [SerializeField]
-    private NPCPathController pathController;
+    private WaypointMover mover;
 
-    public NPCPathController PathController => pathController;
-
-    public AnimationSequencerController controller;
+    [SerializeField]
+    private AnimationSequencerController controller;
 
     private NpcData _data;
 
     public string Id { get; private set; }
 
-    public void Setup(string id, NpcData npcData)
+
+    public void Setup(string id, NpcSet npcData)
     {
         Id = id;
-        _data = npcData;
+        _data = npcData.NpcType;
         head.sprite = _data.Head.Icon;
         body.sprite = _data.Body.Icon;
+
         gameObject.SetActive(true);
+        mover.Setup(npcData);
     }
 
     public bool IsVulnerableTo(MurderousItemData item)
@@ -44,7 +46,7 @@ public class Npc : MonoBehaviour
 
     public async void Kill(MurderousItemData usedItem)
     {
-        pathController.StopMoving();
+        mover.Stop();
         SoundManager.Instance.Play(usedItem.Sound);
         controller.Play();
         await UniTask.WaitUntil(() => controller.IsPlaying);
