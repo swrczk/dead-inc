@@ -1,72 +1,41 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
 {
-    [Header("UI")]
-    [Tooltip("Panel z podsumowaniem (root GameObject, kt?ry w??czamy na ko?cu gry).")]
-    public GameObject gameOverPanel;
+    [SerializeField]
+    private TMP_Text finalScoreText;
 
-    [Tooltip("Tekst z wynikiem gracza.")]
-    public Text finalScoreText;
+    [SerializeField]
+    private string pointsSuffix = " pkt";
 
-    [Tooltip("Tekst z najlepszym wynikiem (opcjonalnie).")]
-    public Text bestScoreText;
+    [SerializeField]
+    private Button restartButton;
 
-    [Tooltip("Sufiks, np. ' pkt'.")]
-    public string pointsSuffix = " pkt";
+    [SerializeField]
+    private Button menuButton;
 
     private void Start()
     {
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(false);
-
-        if (ShiftGameTimeManager.Instance != null)
-            ShiftGameTimeManager.Instance.GameEnded += OnGameEnded;
+        restartButton.onClick.AddListener(OnRestartButton);
+        menuButton.onClick.AddListener(OnQuitButton);
     }
 
-    private void OnDestroy()
+    private void OnEnable()
     {
-        if (ShiftGameTimeManager.Instance != null)
-            ShiftGameTimeManager.Instance.GameEnded -= OnGameEnded;
+        finalScoreText.text = ScoreManager.Instance.CurrentScore + pointsSuffix;
     }
 
-    private void OnGameEnded()
-    {
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(true);
-
-        int score = 0;
-        if (ScoreManager.Instance != null)
-            score = ScoreManager.Instance.CurrentScore;
-
-        if (finalScoreText != null)
-            finalScoreText.text = "Wynik: " + score + pointsSuffix;
-
-        if (bestScoreText != null)
-        {
-            int best = PlayerPrefs.GetInt("BestScore", 0);
-            if (score > best)
-            {
-                best = score;
-                PlayerPrefs.SetInt("BestScore", best);
-            }
-
-            bestScoreText.text = "Najlepszy: " + best + pointsSuffix;
-        }
-    }
-
-    // Podpi?? pod przycisk "Zagraj jeszcze raz"
-    public void OnRestartButton()
+    private void OnRestartButton()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // Podpi?? pod przycisk "Wyj?cie" (opcjonalnie)
-    public void OnQuitButton()
+    private void OnQuitButton()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }

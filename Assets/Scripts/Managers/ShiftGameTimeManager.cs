@@ -26,10 +26,7 @@ public class ShiftGameTimeManager : MonoBehaviour
     private bool autoStart = true;
 
     [SerializeField]
-    private TMP_Text Points;
-
-    [SerializeField]
-    private GameObject Result;
+    private GameOverUI gameOverUI;
 
     [SerializeField]
     private bool stopTimeOnEnd = true;
@@ -56,7 +53,7 @@ public class ShiftGameTimeManager : MonoBehaviour
 
     private void Start()
     {
-        Result.SetActive(false);
+        gameOverUI.gameObject.SetActive(false);
         elapsedTime = 0f;
         halftimeMessageSent = false;
         UpdateTimerUI(); // na start np. 08:00 i pe?ne k?ko
@@ -94,11 +91,10 @@ public class ShiftGameTimeManager : MonoBehaviour
 
     private void EndGame()
     {
-        Result.SetActive(false);
-        Points.text = $"{ScoreManager.Instance.CurrentScore} pkt";
         if (!isRunning)
             return;
 
+        gameOverUI.gameObject.SetActive(true);
         isRunning = false;
 
         ShiftEndedSignal.Invoke();
