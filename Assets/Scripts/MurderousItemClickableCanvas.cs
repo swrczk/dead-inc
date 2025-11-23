@@ -27,14 +27,8 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
     public bool killOnlyFirst = true;
 
     private RectTransform _rectTransform;
-
-    [Header("Overheat")]
-    public OverheatController overheat;
-
-    [Header("Guide feedback")]
-    public ChatMessageData guideMessage;
-
-    public Animator guideIconAnimator;
+  
+    
     public AnimationSequencerController controller;
 
 
@@ -55,10 +49,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             _rangeSprite = rangeVisual.GetComponentInChildren<SpriteRenderer>(true);
             HideRange();
         }
-
-        if (overheat == null)
-            overheat = GetComponent<OverheatController>();
-
+ 
         _canvas = GetComponentInParent<Canvas>();
         if (_canvas != null)
             _uiCamera = _canvas.worldCamera;
@@ -135,12 +126,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
                 if (killOnlyFirst)
                     break;
             }
-        }
-
-        if (!killedSomeone && overheat != null)
-        {
-            overheat.RegisterUse();
-        }
+        } 
     }
 
     private void ShowRange()
