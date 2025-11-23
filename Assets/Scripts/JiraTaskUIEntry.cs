@@ -3,7 +3,6 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-
 public class JiraTaskUIEntry : MonoBehaviour
 {
     public JiraTaskData Data { get; private set; }
@@ -30,14 +29,8 @@ public class JiraTaskUIEntry : MonoBehaviour
     private JiraTicketAmountElement amountElement;
 
 
-    private int _currentCount;
-    private int _totalRequiredKills; // suma Amount ze wszystkich requirements
-
     private readonly List<JiraRequirement> _requirements = new List<JiraRequirement>();
-
-    public IReadOnlyList<JiraRequirement> Requirements => _requirements;
-
-    public int CurrentKillCount => _currentCount;
+    private int _totalRequiredKills;
 
 
     public void Setup(JiraTaskData task, int taskIndex)
@@ -48,6 +41,7 @@ public class JiraTaskUIEntry : MonoBehaviour
         {
             var row = Instantiate(requirementRow, rowsContainer.transform);
             row.Setup(requirements);
+            _requirements.Add(row);
         }
 
         taskNumber.text = $"#{taskIndex}";
@@ -67,15 +61,13 @@ public class JiraTaskUIEntry : MonoBehaviour
 
     public bool TryUpdateProgress(NpcData npc, MurderousItemData item)
     {
-        if (IsCompleted) return false; // już ukończony, ignorujemy
+        if (IsCompleted) return false;
 
-        bool anyRequirementMatched = false;
-        bool wasCompletedBefore = IsCompleted;
+        var anyRequirementMatched = false;
 
         foreach (var requirement in _requirements)
         {
-            bool requirementCompletedNow = requirement.TryRegisterKill(npc, item);
-            if (requirementCompletedNow || requirement.CurrentCount > 0 && requirement.Matches(npc, item: item))
+            if (requirement.TryToUpdate(npc,   item))
             {
                 anyRequirementMatched = true;
             }
@@ -83,11 +75,10 @@ public class JiraTaskUIEntry : MonoBehaviour
 
         if (!anyRequirementMatched) return false;
 
-        _currentCount++;
         UpdateProgressUI();
 
         IsCompleted = _requirements.All(r => r.IsCompleted);
 
-        return !wasCompletedBefore && IsCompleted;
+        return IsCompleted;
     }
 }

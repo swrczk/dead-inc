@@ -26,7 +26,7 @@ public class HintsManager : MonoBehaviour
     private async UniTask ShowHintPanel()
     {
         panel.gameObject.SetActive(true);
-        panel.Show(gameFlowManager.GameplayFlow, gameFlowManager.currentStageIndex);
+        panel.Show(gameFlowManager.GameplayFlow, gameFlowManager.CurrentStageIndex);
 
         await UniTask.Delay((int) (hideAfterSec * 1000));
 

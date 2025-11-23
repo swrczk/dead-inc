@@ -377,7 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bodyPartIcon: {fileID: 7935708355172359464}
   itemIcon: {fileID: 775668894892965184}
-  weaknessIcon: {fileID: 775668894892965184}
+  weaknessIcon: {fileID: 719254628969314201}
   repetitionsText: {fileID: 646164967241228069}
   completedMark: {fileID: 2640423924660566969}
 --- !u!114 &7179224965580147261

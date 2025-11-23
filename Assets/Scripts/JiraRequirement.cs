@@ -56,31 +56,12 @@ public class JiraRequirement : MonoBehaviour
     }
 
     private void UpdateUI()
-    {
-        if (Requirement != null)
-        {
-            repetitionsText.text = $"x{Requirement.Amount - CurrentCount}";
-        }
+    { 
+            repetitionsText.text = $"x{Requirement.Amount - CurrentCount}"; 
+            completedMark.SetActive(IsCompleted); 
+    } 
 
-        if (completedMark != null)
-        {
-            completedMark.SetActive(IsCompleted);
-        }
-    }
-
-    public bool TryRegisterKill(NpcData npc, MurderousItemData item)
-    {
-        if (IsCompleted) return false;
-
-        if (!Matches(npc, item)) return false;
-
-        CurrentCount++;
-        UpdateUI();
-
-        return IsCompleted;
-    }
-
-    public bool Matches(NpcData npc, MurderousItemData item)
+    public bool TryToUpdate(NpcData npc, MurderousItemData item)
     {
         // BODY PART
         if (Requirement.RequiredBodyPart != null && Requirement.RequiredBodyPart != npc.Body &&
@@ -102,6 +83,8 @@ public class JiraRequirement : MonoBehaviour
             if (item == null || item.Weakness != Requirement.WeaknessToUse) return false;
         }
 
+        CurrentCount++;
+        UpdateUI();
         return true;
     }
 }

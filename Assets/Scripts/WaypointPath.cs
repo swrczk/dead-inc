@@ -18,14 +18,14 @@ public class WaypointPath : MonoBehaviour
         if (waypoints == null || waypoints.Length == 0)
             return 0;
 
-        int bestIndex = 0;
-        float bestDistSq = float.MaxValue;
+        var bestIndex = 0;
+        var bestDistSq = float.MaxValue;
 
-        for (int i = 0; i < waypoints.Length; i++)
+        for (var i = 0; i < waypoints.Length; i++)
         {
             if (waypoints[i] == null) continue;
 
-            float distSq = (waypoints[i].position - position).sqrMagnitude;
+            var distSq = (waypoints[i].position - position).sqrMagnitude;
             if (distSq < bestDistSq)
             {
                 bestDistSq = distSq;
@@ -43,7 +43,7 @@ public class WaypointPath : MonoBehaviour
 
         Gizmos.color = isBlocked ? Color.red : Color.yellow;
 
-        for (int i = 0; i < waypoints.Length - 1; i++)
+        for (var i = 0; i < waypoints.Length - 1; i++)
         {
             if (waypoints[i] == null || waypoints[i + 1] == null)
                 continue;

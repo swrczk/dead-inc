@@ -89,7 +89,7 @@ public class OverheatController : MonoBehaviour
     /// </summary>
     public bool RegisterUse()
     {
-        float now = Time.time;
+        var now = Time.time;
 
         // if still locked after previous overheat, ignore click
         if (isOverheated && lockOnOverheat && now < _unlockTime)
@@ -155,8 +155,8 @@ public class OverheatController : MonoBehaviour
         if (!_hasBaseColor)
             return;
 
-        float t = currentHeatRatio;
-        Color targetColor = Color.Lerp(_baseColor, overheatedColor, t);
+        var t = currentHeatRatio;
+        var targetColor = Color.Lerp(_baseColor, overheatedColor, t);
 
         if (heatGraphic != null)
         {

@@ -105,7 +105,7 @@ public class ShiftGameTimeManager : MonoBehaviour
         // --- aktualizacja zegara tekstowego ---
         if (timerText != null)
         {
-            int totalWorkMinutes = Mathf.Max(0, (workEndHour - workStartHour) * 60);
+            var totalWorkMinutes = Mathf.Max(0, (workEndHour - workStartHour) * 60);
 
             if (totalWorkMinutes == 0 || gameDuration <= 0f)
             {
@@ -113,13 +113,13 @@ public class ShiftGameTimeManager : MonoBehaviour
             }
             else
             {
-                float t = Mathf.Clamp01(elapsedTime / gameDuration);
-                float passedMinutesFloat = t * totalWorkMinutes;
-                int passedMinutes = Mathf.FloorToInt(passedMinutesFloat);
+                var t = Mathf.Clamp01(elapsedTime / gameDuration);
+                var passedMinutesFloat = t * totalWorkMinutes;
+                var passedMinutes = Mathf.FloorToInt(passedMinutesFloat);
 
-                int currentTotalMinutes = workStartHour * 60 + passedMinutes;
-                int currentHour = currentTotalMinutes / 60;
-                int currentMinute = currentTotalMinutes % 60;
+                var currentTotalMinutes = workStartHour * 60 + passedMinutes;
+                var currentHour = currentTotalMinutes / 60;
+                var currentMinute = currentTotalMinutes % 60;
 
                 timerText.text = $"{currentHour:00}:{currentMinute:00}";
             }
@@ -128,8 +128,8 @@ public class ShiftGameTimeManager : MonoBehaviour
         // --- aktualizacja okr?gu czasu ---
         if (timeCircleImage != null && gameDuration > 0f)
         {
-            float t = Mathf.Clamp01(elapsedTime / gameDuration); // 0..1 (ile min?o)
-            float remaining01 = 1f - t; // 1..0 (ile zosta?o)
+            var t = Mathf.Clamp01(elapsedTime / gameDuration); // 0..1 (ile min?o)
+            var remaining01 = 1f - t; // 1..0 (ile zosta?o)
 
             timeCircleImage.fillAmount = remaining01;
         }

@@ -122,7 +122,7 @@ public class UIPathRedirectBlocker : MonoBehaviour, IPointerClickHandler
         if (fromPath == null || toPath == null)
             return;
 
-        WaypointMover[] movers = FindObjectsOfType<WaypointMover>();
+        var movers = FindObjectsOfType<WaypointMover>();
 
         foreach (var mover in movers)
         {

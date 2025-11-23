@@ -52,8 +52,8 @@ public class Npc : MonoBehaviour
         Debug.Log($"[NPC {name}] Weakness: " + $"Head={_data.Head?.Weakness}, Body={_data.Body?.Weakness}, " +
                   $"Item={item.Weakness}");
 
-        bool headMatch = _data.Head != null && _data.Head.Weakness == item.Weakness;
-        bool bodyMatch = _data.Body != null && _data.Body.Weakness == item.Weakness;
+        var headMatch = _data.Head != null && _data.Head.Weakness == item.Weakness;
+        var bodyMatch = _data.Body != null && _data.Body.Weakness == item.Weakness;
 
         Debug.Log($"[NPC {name}] headMatch={headMatch}, bodyMatch={bodyMatch}");
 

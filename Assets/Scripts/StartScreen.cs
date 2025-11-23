@@ -44,7 +44,7 @@ public class StartScreen : MonoBehaviour
     private async void PlayAndHide()
     {
         videoPlayer.source = VideoSource.Url;
-        string path = Path.Combine(Application.streamingAssetsPath, videoToPlay.name + ".mp4");
+        var path = Path.Combine(Application.streamingAssetsPath, videoToPlay.name + ".mp4");
         path = path.Replace("\\", "/");
         videoPlayer.url = path;
 

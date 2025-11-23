@@ -23,7 +23,7 @@ public class SingleStage
         {
             if (npcSet == null || npcSet.NpcType == null) continue;
 
-            for (int i = 0; i < npcSet.Amount; i++)
+            for (var i = 0; i < npcSet.Amount; i++)
             {
                 result.Add(npcSet);
             }
@@ -36,9 +36,9 @@ public class SingleStage
 
     private void Shuffle(List<NpcSet> list)
     {
-        for (int i = list.Count - 1; i > 0; i--)
+        for (var i = list.Count - 1; i > 0; i--)
         {
-            int j = UnityEngine.Random.Range(0, i + 1);
+            var j = UnityEngine.Random.Range(0, i + 1);
             (list[i], list[j]) = (list[j], list[i]);
         }
     }

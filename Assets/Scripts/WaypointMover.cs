@@ -48,7 +48,7 @@ public class WaypointMover : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, target.position, _moveSpeed * Time.deltaTime);
 
-        float distance = Vector3.Distance(transform.position, target.position);
+        var distance = Vector3.Distance(transform.position, target.position);
         if (distance <= reachDistance)
         {
             OnReachWaypoint();

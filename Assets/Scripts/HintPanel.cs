@@ -22,7 +22,7 @@ public class HintPanel : MonoBehaviour
         _itemsList ??= FindObjectsOfType<MurderousItemClickableCanvas>().ToList();
         var uniqueNpcs = new HashSet<NpcPartData>();
 
-        for (int i = 0; i <= stageIndex; i++)
+        for (var i = 0; i <= stageIndex; i++)
         {
             var stage = flow.Stages[i];
             foreach (var npc in stage.AvailableNpcs)

@@ -84,35 +84,35 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
         if (_rectTransform == null)
             return;
 
-        Vector3 itemWorldPos = _rectTransform.TransformPoint(_rectTransform.rect.center);
-        Vector2 itemPos2D = new Vector2(itemWorldPos.x, itemWorldPos.y);
+        var itemWorldPos = _rectTransform.TransformPoint(_rectTransform.rect.center);
+        var itemPos2D = new Vector2(itemWorldPos.x, itemWorldPos.y);
 
-        Npc[] allNpcs = FindObjectsOfType<Npc>(true);
+        var allNpcs = FindObjectsOfType<Npc>(true);
         if (allNpcs == null || allNpcs.Length == 0)
             return;
 
-        bool killedSomeone = false;
-        bool wrongItemUsedOnNpc = false;
+        var killedSomeone = false;
+        var wrongItemUsedOnNpc = false;
 
         foreach (var npc in allNpcs)
         {
             if (npc == null || !npc.gameObject.activeInHierarchy)
                 continue;
 
-            RectTransform npcRect = npc.GetComponent<RectTransform>();
+            var npcRect = npc.GetComponent<RectTransform>();
             if (npcRect == null)
                 continue;
 
-            Vector3 npcWorldPos = npcRect.TransformPoint(npcRect.rect.center);
+            var npcWorldPos = npcRect.TransformPoint(npcRect.rect.center);
 
-            bool inRange = false;
+            var inRange = false;
 
             // Range check using KillingRange + slack
             if (rangeVisual != null)
             {
-                Vector2 screenCenter = RectTransformUtility.WorldToScreenPoint(_uiCamera, npcWorldPos);
+                var screenCenter = RectTransformUtility.WorldToScreenPoint(_uiCamera, npcWorldPos);
 
-                Vector2[] testPoints = new Vector2[]
+                var testPoints = new Vector2[]
                 {
                     screenCenter,
                     screenCenter + new Vector2(npcHitSlack, 0),
@@ -133,7 +133,7 @@ public class MurderousItemClickableCanvas : MonoBehaviour, IPointerEnterHandler,
             else
             {
                 // fallback to simple radius
-                float dist = Vector2.Distance(
+                var dist = Vector2.Distance(
                     itemPos2D,
                     new Vector2(npcWorldPos.x, npcWorldPos.y)
                 );
