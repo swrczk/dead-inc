@@ -1,5 +1,6 @@
 using System.IO;
 using System.Threading;
+using BrunoMikoski.AnimationSequencer;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,6 +25,8 @@ public class StartScreen : MonoBehaviour
 
     [SerializeField]
     private GameObject screenToHide;
+    [SerializeField]
+    private AnimationSequencerController descriptionAnimation;
 
     private CancellationTokenSource _cts = new();
 
@@ -38,8 +41,7 @@ public class StartScreen : MonoBehaviour
     {
         _cts.Cancel();
         videoPlayer.Stop();
-        screenToHide.SetActive(false);
-        skipButton.gameObject.SetActive(false);
+        ShowMainScreen();
     }
 
     private async void PlayAndHide()
@@ -52,7 +54,14 @@ public class StartScreen : MonoBehaviour
         await UniTask.WaitUntil(() => videoPlayer.isPlaying, cancellationToken: _cts.Token);
         await UniTask.WaitUntil(() => !videoPlayer.isPlaying, cancellationToken: _cts.Token);
 
+        ShowMainScreen();
+    }
+
+    private void ShowMainScreen()
+    {
+        skipButton.gameObject.SetActive(false);
         screenToHide.SetActive(false);
+        descriptionAnimation.Play();
     }
 
     private void StartGame()

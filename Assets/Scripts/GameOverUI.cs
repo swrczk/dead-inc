@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +21,15 @@ public class GameOverUI : MonoBehaviour
     [SerializeField]
     private Button menuButton;
 
+    [SerializeField]
+    private AudioSource backgroundMusic;
+
+    [SerializeField]
+    private AudioClip endMusic;
+
+    [SerializeField]
+    private List<GameObject> objectsToHide;
+
     private void Start()
     {
         restartButton.onClick.AddListener(OnRestartButton);
@@ -28,6 +38,14 @@ public class GameOverUI : MonoBehaviour
 
     private void OnEnable()
     {
+        foreach (GameObject obj in objectsToHide)
+        {
+            obj.SetActive(false);
+        }
+
+        backgroundMusic.Stop();
+        backgroundMusic.clip = endMusic;
+        backgroundMusic.Play();
         finalScoreText.text = ScoreManager.Instance.CurrentScore.ToString();
         bodyCountText.text = ScoreManager.Instance.BodyCount.ToString();
         taskCountText.text = ScoreManager.Instance.JiraTicketsDoneCount.ToString();
