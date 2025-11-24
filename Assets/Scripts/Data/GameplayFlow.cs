@@ -52,7 +52,7 @@ public class NpcSet
     [Range(1, 10)]
     public int Amount = 1;
 
-    [Range(1, 1000)]
+    [Range(20, 60)]
     public float Speed = 1;
 
     public WaypointPath shoppingPath;
